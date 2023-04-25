@@ -1,0 +1,23 @@
+{% render 'prefooter-lines' %}
+<span>{{ section.settings.title }}</span>
+
+{% schema %}
+{
+  "name": "Collection Prefooter",
+  "tag": "section",
+  "class": "collection-prefooter wrapper",
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "default": "Rest <em>is a</em> revolution",
+      "label": "Headline"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection Prefooter"
+    }
+  ]
+}
+{% endschema %}

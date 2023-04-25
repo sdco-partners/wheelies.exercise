@@ -1,0 +1,16 @@
+<div class="not-found">
+  <div class="not-found__content wrapper">
+    <div class="not-found__bg">
+        {% render 'not-found-graphic-one' %}
+        {% render 'not-found-graphic-two' %}
+    </div>
+    <div class="not-found__text">
+      <span class="h4">You're not lost</span>
+      <span class="h1">You're on a journey</span>
+    </div>
+    <a class="big-btn js-circle-btn" href="{{ routes.root_url }}">
+        {% render 'circle-btn' %}
+        <span>Back to home</span>
+    </a>
+  </div>
+</div>

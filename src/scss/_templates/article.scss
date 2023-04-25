@@ -1,0 +1,188 @@
+.article-hero {
+    margin-top: 5rem;
+    border-top: 1px solid $gray;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    @include breakpoint($laptop) {
+        flex-direction: row;
+        border-bottom: 1px solid $gray;
+        height: calc(100dvh - 80px);
+        align-items: stretch;
+    }
+    .content {
+        padding: 0 2rem;
+        width: 100%;
+        position: relative;
+        @include breakpoint($laptop) {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            padding-left: 100px;
+        }
+        &__bg {
+            position: absolute;
+            width: 100%;
+            max-width: 550px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            svg {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+        &__inner {
+            position: relative;
+        }
+        &__scroll-indicator {
+            position: absolute;
+            bottom: 100px;
+            right: 100px;
+            width: 19px;
+            display: none;
+            @include breakpoint($laptop) {
+                display: block;
+            }
+            svg {
+                display: block;
+            }
+        }
+    }
+    .image {
+        width: 100%;
+        @include breakpoint($laptop) {
+            width: 50%;
+        }
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.article-body {
+    margin: 4rem auto;
+    // padding: 0 4rem;
+    display: flex;
+    flex-direction: column;
+    @include breakpoint($laptop){
+        margin: 6rem auto;
+        // padding: 0 6rem;
+        // max-width: calc(100% - 300px);
+    }
+    p > img, img {
+        display: block;
+        margin: 2rem auto;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        @include breakpoint($laptop) {
+            
+        }
+    }
+    h2 {
+        font-size: $h2_mobile; 
+        font-family: $serif;
+        margin-bottom: 1.5rem;
+        @include breakpoint($laptop) {
+            font-size: $h2;
+        }
+    }
+    h3 {
+        font-size: $h3_mobile;
+        font-family: $serif;
+        margin: 2rem 0 1rem 0;
+        @include breakpoint($laptop) {
+            font-size: $h3;
+        }
+    }
+    h4 {
+    
+        font-size: $h5_mobile;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-top: 2rem;
+        @include breakpoint($laptop) {
+            font-size: $h5;
+        }
+    }
+    h5 {
+        font-size: $h5_mobile;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        width: 100vw;
+        &:not(:first-of-type) {
+            &::before {
+                content: "";
+                display: block;
+                max-width: calc(100% - 2rem);
+                padding-top: 3rem;
+                margin-left: -3rem;
+                border-top: 1px solid $gray;
+            }
+        }
+        @include breakpoint($laptop) {
+            font-size: $h5;
+        }
+    }
+    p {
+        font-size: $body;
+        margin-bottom: 0;
+    }
+    a {
+        color: $black;
+        text-decoration: none;
+    }
+    ol {
+        font-size: $body;
+        margin-top: 0.5rem;
+        list-style: decimal-leading-zero;
+        list-style-position: inside;
+        li {
+            &::before {
+                content: "";
+                width: 1.5rem;
+                display: inline-block;
+            }
+            padding: 1rem 0;
+            border-bottom: 1px solid $gray;
+            &:last-of-type {
+                margin-bottom: 2rem;
+            }
+        }
+    }
+    ul {
+        font-size: $body;
+        list-style: disc;
+        list-style-position: inside;
+        li {
+            &::before {
+                content: "";
+                width: 1.5rem;
+                display: inline-block;
+            }
+            padding: 0.5rem 0;
+            &:last-of-type {
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}
+
+.article-footer {
+    width: 100vw;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 11rem;
+    text-align: center;
+    em {
+        font-family: $serif;
+    }
+}

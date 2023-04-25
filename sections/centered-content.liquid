@@ -1,0 +1,31 @@
+<div class="centered-copy__subheadline">
+    {% render 'centered-content-line' %}
+    <h3 class="h5">{{ section.settings.title }}</h3>
+</div>
+{{ section.settings.copy }}
+  
+{% schema %}
+    {
+    "name": "Centered Copy",
+    "tag": "section",
+    "class": "centered-copy wrapper wrapper--narrow",
+    "settings": [
+        {
+        "type": "text",
+        "id": "title",
+        "label": "Headline",
+        "default": "Lorem Ipsum"
+        },
+        {
+        "type": "richtext",
+        "id": "copy",
+        "label": "Copy"
+        }
+    ],
+    "presets": [
+        {
+        "name": "Centered Copy"
+        }
+    ]
+    }
+{% endschema %}

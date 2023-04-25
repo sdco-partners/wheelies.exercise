@@ -1,0 +1,66 @@
+{% for block in section.blocks %}
+
+<div class="moment js-moment">
+    {% if block.settings.image %}
+        {{ block.settings.image | image_url: width: 1920 | image_tag }}
+    {% elsif block.settings.video %}
+        {{ block.settings.video | video_tag: muted: true, loop: true, controls: false, autoplay: true }}
+    {% endif %}
+    <div class="moment__content">
+        <span class="h1">{{ block.settings.title }}</span>
+        {% if block.settings.title contains '3' %}
+        <div class="big-btn js-countdown">
+            {% render 'circle-btn' %}
+            <span>3</span>
+        </div>    
+        {% endif %}
+
+
+    </div>
+</div>
+{% endfor %}
+
+<div class="moments__btns">
+    <button class="small-btn js-circle-btn" onclick="unmute();">
+        {% render 'circle-btn-white' %}
+        <span>{% render 'icon-audio' %}</span>
+    </button>
+    <button class="big-btn js-circle-btn js-close-moment">
+        {% render 'circle-btn-white' %}
+        <span>Back to Reality</span>
+    </button>
+</div>
+
+
+
+{% schema %}
+{
+  "name": "Moments of Pause",
+  "tag": "aside",
+  "class": "moments js-moments",
+  "settings": [],
+  "blocks": [
+    {
+        "type": "Moment",
+        "name": "Moment",
+        "settings": [
+          {
+            "type": "inline_richtext",
+            "id": "title",
+            "label": "Headline"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "video",
+            "id": "video",
+            "label": "Video"
+          }
+        ]
+      }
+  ]
+}
+{% endschema %}  

@@ -1,0 +1,54 @@
+/* 	Base Files
+-------------------------------------------------- */
+@import "_globals/vars";
+@import "_globals/mixins";
+@import "_globals/base";
+@import "_globals/normalize";
+@import "_globals/globals";
+@import "_globals/css-animations";
+@import "_globals/typography";
+
+
+/* 	Vendor Templates
+-------------------------------------------------- */
+@import "_vendor/swiper-bundle";
+
+/* 	Global Templates
+-------------------------------------------------- */
+@import "header"; 
+@import "footer";
+@import "grid";
+@import "minicart";
+@import "account";
+@import "product";
+@import "blog";
+@import "legal";  
+@import "contact";  
+@import "404";  
+@import "cursor";
+
+/* 	Section Templates
+-------------------------------------------------- */
+@import "_sections/hero"; 
+@import "_sections/split-hero";
+@import "_sections/tertiary-hero";
+@import "_sections/collection-grid";
+@import "_sections/collection-prefooter"; 
+@import "_sections/centered-copy";
+@import "_sections/ingredients"; 
+@import "_sections/related-product";
+@import "_sections/image-content";
+@import "_sections/text-slider";
+@import "_sections/sustainability";
+@import "_sections/prefooter";
+@import "_sections/faqs";
+@import "_sections/moments";
+@import "_sections/wellbeing-gallery";
+@import "_sections/pause-gallery";
+
+/* 	Page Templates
+-------------------------------------------------- */
+@import "_templates/wellbeing";
+@import "_templates/blog";
+@import "_templates/article";
+@import "_templates/contact";

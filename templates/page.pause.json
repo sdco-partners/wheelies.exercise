@@ -1,0 +1,52 @@
+{
+  "sections": {
+    "40598be2-7fe5-40e4-acbd-6abdb2b42da5": {
+      "type": "tertiary-hero",
+      "blocks": {
+        "ea2b7965-be40-4b9b-8179-675de1d66d44": {
+          "type": "Headline",
+          "settings": {
+            "title": "<p>Pause for a <em>moment<\/em><\/p>"
+          }
+        },
+        "82ee26c8-4e95-450a-8f6f-e9db8e31b83f": {
+          "type": "Tagline",
+          "settings": {
+            "title": "When life gets overwhelming and complicated, we streamline and simplify"
+          }
+        }
+      },
+      "block_order": [
+        "ea2b7965-be40-4b9b-8179-675de1d66d44",
+        "82ee26c8-4e95-450a-8f6f-e9db8e31b83f"
+      ],
+      "settings": {
+      }
+    },
+    "1dfc2a78-8931-4560-9dee-9e0d1578da76": {
+      "type": "pause-gallery",
+      "settings": {
+        "image_one": "shopify:\/\/shop_images\/original_64e83496d9ab478c2927b502440cdaa2.jpg",
+        "image_two": "shopify:\/\/shop_images\/DTS_Desert_Sunrise_Grant_Spanier_2702.jpg",
+        "image_three": "shopify:\/\/files\/videos\/oceans_1383a7c3-9f9a-427b-b47a-0d5186bc8138.mp4",
+        "image_four": "shopify:\/\/shop_images\/DTS_Misc_1__Nich_Fancher__Nick_Fancher_3470.jpg",
+        "image_five": "shopify:\/\/shop_images\/DTS_Open_Water_Copson_London_5588.jpg",
+        "image_six": "shopify:\/\/shop_images\/face-forward-01.jpg",
+        "image_seven": "shopify:\/\/shop_images\/DTS_Desert_Sunrise_Grant_Spanier_2702.jpg",
+        "image_eight": "shopify:\/\/files\/videos\/oceans_1383a7c3-9f9a-427b-b47a-0d5186bc8138.mp4",
+        "image_nine": "shopify:\/\/shop_images\/DTS_Open_Water_Copson_London_5588.jpg",
+        "image_ten": "shopify:\/\/shop_images\/original_77d9c7a018b122a2fdff5becc6f933a1_1.jpg",
+        "image_eleven": "shopify:\/\/shop_images\/face-forward-01.jpg",
+        "image_twelve": "shopify:\/\/shop_images\/face-forward-04.jpg",
+        "image_thirteen": "shopify:\/\/shop_images\/DTS_Misc_1__Nich_Fancher__Nick_Fancher_3470.jpg",
+        "image_fourteen": "shopify:\/\/shop_images\/DTS_Open_Water_Copson_London_5588.jpg",
+        "image_fifteen": "shopify:\/\/shop_images\/original_64e83496d9ab478c2927b502440cdaa2.jpg",
+        "image_sixteen": "shopify:\/\/shop_images\/DTS_Misc_1__Nich_Fancher__Nick_Fancher_3470.jpg"
+      }
+    }
+  },
+  "order": [
+    "40598be2-7fe5-40e4-acbd-6abdb2b42da5",
+    "1dfc2a78-8931-4560-9dee-9e0d1578da76"
+  ]
+}

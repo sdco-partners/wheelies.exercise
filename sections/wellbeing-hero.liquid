@@ -1,0 +1,48 @@
+<div class="wellbeing-hero__graphic js-wellbeing-graphic-one">
+    {% render 'wellbeing-hero-graphic' %}
+</div>
+
+<h1 class="h5 tertiary-hero__subheadline">{{ section.settings.title }}<h1>
+<h2 class="h2 tertiary-hero__headline">{{ section.settings.headline | remove: '<p>' | remove: '</p>' }}</h2>
+<a class="big-btn js-circle-btn" href="{{ section.settings.cta_url }}">
+    {% render 'circle-btn' %}
+    <span>{{ section.settings.cta_label }}</span>
+</a>
+
+{% schema %}
+{
+  "name": "Wellbeing Hero",
+  "tag": "div",
+  "class": "wellbeing-hero tertiary-hero wrapper",
+  "settings": [
+    {
+        "type": "text",
+        "id": "title",
+        "label": "Subheadline",
+        "default": "Wellbing is a feeling"
+    },
+    {
+      "type": "richtext",
+      "id": "headline",
+      "label": "Headline",
+      "default": "<p>It’s more than numbers on a chart. It’s a lifelong <em>journey</em>.</p>"
+    },
+    {
+      "type": "url",
+      "id": "cta_url",
+      "label": "CTA"
+    },
+    {
+      "type": "text",
+      "id": "cta_label",
+      "label": "CTA Label",
+      "default": "Shop Now"
+    } 
+  ],
+  "presets": [
+    {
+      "name": "Wellbeing Hero"
+    }
+  ]
+}
+{% endschema %}

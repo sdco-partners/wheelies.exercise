@@ -1,0 +1,93 @@
+*, html {
+    // cursor: none;
+    @include breakpoint($tablet) {
+        cursor: none !important;
+    }
+}
+
+
+.custom-cursor {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: transform .4s;
+    overflow: hidden; 
+    border-radius: 50%;
+    @include breakpoint($tablet) {
+        display: block;
+    }
+}
+
+
+.cursor__inner {
+    width: 16px;
+    height: 16px;
+    background: $black;
+    transition: background .5s, width .5s, height .5s, opacity .5s;
+    span {
+        color: $medgray;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        display: none;
+        text-align: center;
+        line-height: 1;
+        text-transform: uppercase;
+        font-size: $ui;
+        letter-spacing: 0.1em;
+    }
+    &.active {
+        width: 33px;
+        height: 33px;
+        opacity: 0.33;
+        background: $medgray;
+    }
+    &.big {
+        width: 160px;
+        height: 160px;
+        opacity: 0.1;
+    }
+    &.drag {
+        width: 160px;
+        height: 160px;
+        background: transparent;
+        opacity: 1;
+        span {
+            display: block; 
+        }
+    }
+}
+
+.cursor__outer {
+    width: 50px;
+    height: 50px;
+    border: 1px solid $black;
+    background: transparent;
+    transition: border .5s, background .5s, width .5s, height .5s, opacity .5s;
+    &.active {
+        width: 33px;
+        height: 33px;
+        opacity: 0;
+    }
+    &.big {
+        width: 160px;
+        height: 160px;
+    }
+    &.drag {
+        width: 160px;
+        height: 160px;
+        border: 1px solid $medgray;
+        opacity: 1;
+    }
+}
+
+body.touchDevice {
+    .custom-cursor {
+        display: none !important;
+    }
+}

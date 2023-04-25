@@ -1,0 +1,128 @@
+.shopify-policy__container {
+    margin: 0 auto;
+    // padding: 0 2rem;
+    max-width: calc(100% - 2rem);
+    @include breakpoint($laptop) {
+        max-width: calc(100% - 200px);
+        padding: 0;
+    }
+    .shopify-policy__title {
+        margin: 11rem 0 5rem 0;
+        h1 {
+            font-size: $h1;
+            font-family: $serif;
+            text-align: left;
+        }
+    }
+    .shopify-policy__body {
+        border-left: 1px solid $gray;
+        margin-bottom: 11rem;
+        > .rte {
+            padding-left: 1.5rem;
+            @include breakpoint($laptop) {
+                padding-left: 3rem;
+            }
+        }
+        h2 {
+            font-size: $h2_mobile;
+            font-family: $serif;
+            margin-bottom: 1rem;
+            @include breakpoint($laptop) {
+                font-size: $h2;
+            }
+        }
+        h3 {
+            font-size: $h3_mobile;
+            font-family: $serif;
+            margin: 2rem 0 1rem 0;
+            @include breakpoint($laptop) {
+                font-size: $h3;
+            }
+        }
+        h4 {
+            font-size: $h5_mobile;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-top: 2rem;
+            @include breakpoint($laptop) {
+                font-size: $h5;
+            }
+        }
+        h5 {
+            font-size: $h5_mobile;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            width: 100%;
+            &:not(:first-of-type) {
+                &::before {
+                    content: "";
+                    display: block;
+                    max-width: calc(100% - 2rem);
+                    padding-top: 3rem;
+                    margin-left: -3rem;
+                    border-top: 1px solid $gray;
+                    @include breakpoint($laptop) {
+                        max-width: calc(100% - 200px);
+                    }
+                }
+            }
+            @include breakpoint($laptop) {
+                font-size: $h5;
+            }
+        }
+        p {
+            font-size: $body;
+            margin-bottom: 0;
+            max-width: calc(100% - 2rem);
+            @include breakpoint($laptop) {
+                max-width: calc(100% - 200px);
+            }
+        }
+        a {
+            color: $black;
+        }
+        ol {
+            font-size: $body;
+            margin-top: 0.5rem;
+            list-style: decimal-leading-zero;
+            list-style-position: inside;
+            li {
+                &::before {
+                    content: "";
+                    width: 1.5rem;
+                    display: inline-block;
+                }
+                padding: 1rem 0;
+                border-bottom: 1px solid $gray;
+            }
+        }
+        ul {
+            font-size: $body;
+            list-style: disc;
+            list-style-position: inside;
+            li {
+                &::before {
+                    content: "";
+                    width: 1.5rem;
+                    display: inline-block;
+                }
+                padding: 0.5rem 0;
+            }
+        }
+
+
+        // table {
+        //     margin-bottom: 2em;
+        //     th {
+        //         background: $black;
+        //         color: $white;
+        //     }
+        //     td {
+        //         border: 1px solid $black;
+        //         padding: 5px;
+        //     }
+        // }
+
+    }
+    
+}

@@ -1,0 +1,305 @@
+.article-template {
+    margin: 0 auto;
+    @include breakpoint($laptop) {
+    }
+    .container {
+        margin: 11rem 0 5rem 0;
+    }
+    &__header {
+        display: none;
+    }
+}
+
+
+.article-template__content {
+    display: grid;
+    grid-gap: 0 2rem;
+    @include breakpoint($laptop) {
+        grid-template-columns: repeat(14, minmax(0, 1fr));
+        grid-template-rows: [row1-start] 100vh auto;
+    }
+
+    :nth-child(1) {
+        @include breakpoint($laptop) {
+            grid-column: 2 / 8;
+            grid-row: 1;
+            padding: 10% 0;
+            // align-self: center;
+        }
+    }
+    :nth-child(2) {
+        @include breakpoint($laptop) {
+            padding: 10% 0;
+            height: 100vh;
+            grid-column: 2 / 8;
+            grid-row: 1;
+            // align-self: center;
+        }
+    }
+    :nth-child(3) {
+        @include breakpoint($laptop) {
+            height: 100vh;
+            grid-column: 8 / 15;
+            grid-row: 1;
+        }
+    }
+    
+    h1 {
+        font-size: $h1;
+        font-family: $serif;
+        text-align: left;
+        @include breakpoint($laptop) {
+            grid-column: 4 / 12;
+        }
+    }
+    img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+        @include breakpoint($laptop) {
+            grid-column: 4 / 12;
+        }
+    }
+    h2 {
+        font-size: $h2_mobile; 
+        font-family: $serif;
+        margin-bottom: 1rem;
+        @include breakpoint($laptop) {
+            font-size: $h2;
+            grid-column: 4 / 12;
+        }
+    }
+    h3 {
+        font-size: $h3_mobile;
+        font-family: $serif;
+        margin: 2rem 0 1rem 0;
+        @include breakpoint($laptop) {
+            font-size: $h3;
+            grid-column: 4 / 12;
+        }
+    }
+    h4 {
+    
+        font-size: $h5_mobile;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-top: 2rem;
+        @include breakpoint($laptop) {
+            font-size: $h5;
+            grid-column: 4 / 12;
+        }
+    }
+    h5 {
+        font-size: $h5_mobile;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        width: 100vw;
+        &:not(:first-of-type) {
+            &::before {
+                content: "";
+                display: block;
+                max-width: calc(100% - 2rem);
+                padding-top: 3rem;
+                margin-left: -3rem;
+                border-top: 1px solid $gray;
+                @include breakpoint($laptop) {
+                    grid-column: 4 / 12;
+                }
+            }
+        }
+        @include breakpoint($laptop) {
+            font-size: $h5;
+            grid-column: 4 / 12;
+        }
+    }
+    p {
+        font-size: $body;
+        margin-bottom: 0;
+        max-width: calc(100% - 2rem);
+        @include breakpoint($laptop) {
+            grid-column: 4 / 12;
+        }
+    }
+    a {
+        color: $black;
+    }
+    ol {
+        font-size: $body;
+        margin-top: 0.5rem;
+        list-style: decimal-leading-zero;
+        list-style-position: inside;
+        li {
+            &::before {
+                content: "";
+                width: 1.5rem;
+                display: inline-block;
+            }
+            padding: 1rem 0;
+            border-bottom: 1px solid $gray;
+        }
+    }
+    ul {
+        font-size: $body;
+        list-style: disc;
+        list-style-position: inside;
+        li {
+            &::before {
+                content: "";
+                width: 1.5rem;
+                display: inline-block;
+            }
+            padding: 0.5rem 0;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+// .blog {
+//     display: grid;
+//     grid-gap: 40px 40px;
+//     padding-bottom: 40px;
+//     @include breakpoint($laptop) {
+//         padding-bottom: 80px;
+//         grid-template-columns: repeat(2, minmax(0, 1fr));
+//     }
+// }
+
+// .article__title {
+//     text-decoration: none;
+//     color: $black;
+//     display: block;
+// }
+
+// .article__content {
+//     text-decoration: none;
+//     color: $black;
+//     hr {
+//         border: none;
+//         height: 1px;
+//         background: $black;
+//         display: block;
+//         margin: 20px 0;
+//     }
+// }
+
+// .article__excerpt {
+//     font-size: $ui;
+// }
+
+
+// .article-template__hero-image {
+//     @include breakpoint($laptop) {
+//         grid-column: 2 / 12;
+//     }
+// }
+
+// .article-template__date {
+//     @include breakpoint($laptop) {
+//         grid-column: 2 / 6;
+//     }
+// }
+
+// .article-template__title {
+//     @include breakpoint($laptop) {
+//         grid-column: 6 / 12;
+//     }
+// }
+
+// .article-template__content {
+//     display: grid;
+//     grid-gap: 20px 20px;
+//     @include breakpoint($laptop) {
+//         grid-gap: 40px 40px;
+//         grid-template-columns: repeat(12, minmax(0, 1fr));
+//         grid-column: span 12;
+//     }
+//     > p, > ul, > ol {
+//         @include breakpoint($laptop) {
+//             grid-column: 6 / span 6; 
+//         }
+//     }
+//     > blockquote {
+//         p {
+//             font-size: $h4;
+//         }
+//         @include breakpoint($laptop) {
+//             grid-column: 4 / span 8; 
+//             p {
+//                 font-size: $h3;
+//             }
+//         }
+//     }
+//     li {
+//         font-size: $h5;
+//         margin-bottom: 20px;
+//     }
+//     ol {
+//         list-style-type: decimal;
+//         list-style-position: inside;
+//     }
+//     ul {
+//         list-style-type: disc;
+//     }
+//     ol, li {
+//         padding-left: 20px;
+//     }
+//     p:not(.images) img {
+//         width: 100%;
+//         display: block;
+//     }
+//     .images {
+//         display: grid;
+//         grid-gap: 20px 20px;
+//         @include breakpoint($laptop) {
+//             grid-column: span 12;
+//             grid-template-columns: repeat(2, minmax(0, 1fr));
+//         }
+//         img {
+//             width: 100%;
+//             display: block;
+//         }
+//     }
+// }
+
+
+// .article__img {
+//     display: block;
+//     width: 100%;
+//     height: 0;
+//     padding-top: 56.25%;
+//     position: relative;
+//     margin-bottom: 20px;
+//     img {
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         width: 100%;
+//         height: 100%;
+//         object-fit: cover;
+//         display: block;
+//     }
+// }
+
+// .article-template__hero-image {
+//     width: 100%;
+//     img {
+//         width: 100%;
+//         height: auto;
+//         display: block;
+//     }
+// }
+
+// .article-template__footer {
+//     display: flex;
+//     justify-content: center;
+//     padding: 80px 0;
+// }

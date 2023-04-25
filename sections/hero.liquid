@@ -1,0 +1,96 @@
+{%- if section.settings.image != blank and section.settings.video == blank -%}
+{{ section.settings.image | image_url: width: 1920 | image_tag: class: 'hero__image' }}
+{%- endif -%}
+
+{%- if section.settings.video != blank -%}
+{{ section.settings.video | video_tag: class: 'hero__video', muted: true, loop: true, controls: false, autoplay: true }}
+{%- endif -%}
+
+<div class="hero__content">
+    <h1 class="h4">{{ section.settings.subheadline }}</h2>
+    <h2 class="h1">
+    {%- for block in section.blocks -%}
+    <span>{{ block.settings.title }}</span>
+    {%- endfor -%}
+    </h2>
+</div> 
+
+<div class="hero__bottom">
+    <span class="h4">{{ section.settings.tagline }}</span>
+    <div class="hero__btns">
+        <button class="small-btn js-circle-btn" onclick="unmute();">
+            {% render 'circle-btn' %}
+            <span>{% render 'icon-audio' %}</span>
+        </button>
+        <a class="big-btn js-circle-btn" href="{{ section.settings.collection.url }}">
+            {% render 'circle-btn' %}
+            <span>{{ section.settings.cta_label }}</span>
+        </a>
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Hero",
+  "tag": "section",
+  "class": "hero js-hero",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+        "type": "video",
+        "id": "video",
+        "label": "Video"
+    },
+    {
+        "type": "collection",
+        "id": "collection",
+        "label": "Collection"
+    },
+    {
+        "type": "text",
+        "id": "cta_label",
+        "label": "Subheadline",
+        "default": "Begin Journey"
+    },
+    {
+        "type": "text",
+        "id": "subheadline",
+        "label": "Subheadline"
+    },
+    {
+        "type": "inline_richtext",
+        "id": "tagline",
+        "label": "Tagline",
+        "default": "Skincare for a centered self designed to disrupt the chaos of modern life and reconnect you to you."
+    }  
+  ],
+  "blocks": [
+    {
+      "type": "headline",
+      "name": "Headline",
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "title",
+          "default": "Life can be <em>chaotic</em> — We can forget to slow down and think about how we’re feeling.",
+          "label": "Headline"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero",
+      "blocks": [
+        {
+          "type": "headline"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %} 

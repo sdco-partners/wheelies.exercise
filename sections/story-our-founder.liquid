@@ -1,0 +1,63 @@
+<div class="centered-copy wrapper wrapper--narrow">
+    <div class="centered-copy__subheadline">
+        {% render 'centered-content-line' %}
+        <h3 class="h5">{{ section.settings.title }}</h3>
+    </div>
+    {{ section.settings.copy }}
+
+    {% render 'moments-trigger' %}
+</div>
+
+<div class="image-content wrapper">
+    <div class="image">
+        {{ section.settings.image | image_url: width: 1920 | image_tag }}
+    </div>
+    <div class="content">
+        {{ section.settings.copy_two }}
+        <span class="h5">{{ section.settings.signature }}</span>
+    </div>
+</div>
+
+
+  
+{% schema %}
+    {
+    "name": "Our Founder",
+    "tag": "section",
+    "class": "our-founder",
+    "settings": [
+        {
+        "type": "text",
+        "id": "title",
+        "label": "Headline",
+        "default": "Lorem Ipsum"
+        },
+        {
+        "type": "richtext",
+        "id": "copy",
+        "label": "Copy"
+        },
+        {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+        },
+        {
+        "type": "richtext",
+        "id": "copy_two",
+        "label": "Copy"
+        },
+        {
+        "type": "text",
+        "id": "signature",
+        "label": "Signature",
+        "default": "Jessica Park"
+        }
+    ],
+    "presets": [
+        {
+        "name": "Story - Our Founder"
+        }
+    ]
+    }
+{% endschema %}

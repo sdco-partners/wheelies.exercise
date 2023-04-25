@@ -1,0 +1,52 @@
+{% unless product.metafields.custom.ingredients == blank %}
+<div class="ingredients">
+    <div class="ingredients__bg">{% render 'bg-dots-wide' %}</div>
+    <div class="media">
+        {% unless product.metafields.custom.ingredients_video %}
+            {{ section.settings.image | image_url: width: 1200 | image_tag }}
+        {% else %}
+            {{ section.settings.video | video_tag: muted: true, loop: true, controls: false, autoplay: true }}
+        {% endunless %}
+    </div>
+    <div class="content">
+        <span class="h5">Ingredients</span>
+        {{ section.settings.ingredients }}
+    </div>
+</div>
+{% endunless %}
+      
+{% schema %}
+    {
+    "name": "Product - Ingredients",
+    "tag": "section",
+    "class": "ingredients-container wrapper",
+    "settings": [
+        {
+        "type": "text",
+        "id": "title",
+        "label": "Headline",
+        "default": "How to Use"
+        },
+        {
+        "type": "richtext",
+        "id": "ingredients",
+        "label": "Ingredients"
+        },
+        {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+        },
+        {
+        "type": "video",
+        "id": "video",
+        "label": "Video"
+        }
+    ],
+    "presets": [
+        {
+        "name": "Product - Ingredients"
+        }
+    ]
+    }
+{% endschema %}

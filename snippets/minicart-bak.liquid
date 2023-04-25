@@ -1,0 +1,98 @@
+<div class="minicart-container js-fade-me js-minicart">
+    <div class="minicart-bg js-toggle-cart">
+        <div class="minicart-bg__overlay js-minicart-bg-overlay"></div>
+    </div>
+    <div class="close-minicart js-toggle-cart"></div>
+    <div class="minicart">
+        <div class="minicart__header">
+            <div class="minicart__close js-toggle-cart">{% render 'close' %}<span>Your Cart</span></div>
+            <div>
+                <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="header__icon header__icon--account focus-inset hide-on-mobile">
+                    {% render 'icon-account' %}
+                    <span class="visually-hidden">
+                        {%- liquid
+                        if customer
+                            echo 'customer.account_fallback' | t
+                        else
+                            echo 'customer.log_in' | t
+                        endif
+                        -%}
+                    </span>
+                </a>
+                <button class="header__icon header__icon--cart focus-inset">
+                    <div class="header__cart-count js-cart-count js-toggle-cart">{{ cart.item_count }}</div>
+                </button>
+            </div>
+        </div>
+        <div class="minicart__body">
+            {% comment %} <span class="minicart__promotion js-minicart-promo">{% if cart.total_price >= 4000 or hasSub == true %}This order ships FREE{% else %}Free shipping over $40{% endif %}</span> {% endcomment %}
+            <div class="js-minicart-items">
+                {% if cart.items.size == 0 %}
+                <p>You currently have no items in your cart.</p>
+                {% endif %}
+
+                {% for item in cart.items %}
+                <div class="minicart__item js-item" data-id="{{ item.variant.id }}">
+                    <a class="minicart__item-image {% unless item.product.metafields.settings.color %}gradient{% endunless %}" href="{{ item.variant.url }}" style="--bg: {{ item.product.metafields.settings.color }}">
+                        <img width="300" height="300" loading="lazy" src="{{ item.image | img_url: '80x', scale: 2 }}"
+                            alt="{{ item.product.image.alt | escape }}" />
+                    </a>
+                    <div class="minicart__item-details">
+                        <a class="minicart__item-title" href="{{ item.variant.url }}">{{ item.product.title }}</a>
+                        <span class="minicart__item-price">{{ item.final_line_price | money | remove: '.00' }}</span>
+                        <div class="minicart__item-qty">
+                            <button class="js-update-qty less">-</button>
+                            <input class="js-minicart-qty" type="number" data-id="{{ item.variant.id }}" value="{{ item.quantity }}" min="1"   />
+                            <button class="js-update-qty more">+</button>
+                        </div>
+                        <div class="minicart__item-remove h5 js-remove-item" data-id="{{ item.variant.id }}">Remove</div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            
+            {% for item in cart.items %}
+            {% capture cart_items %}
+                {{cart_items}} {{item.product.id}}
+            {% endcapture %}
+            {% endfor %}
+
+            {% assign count = 0 %}
+            {% comment %} {% for product in collections.all-products.products %}
+                {% if cart_items contains product.id %}
+                {% else %}
+                {% assign count = count | plus: 1 %}
+                {% if count <= 1 %}
+                <div class="minicart__cross-sell js-minicart-cross-sell">
+                <span class="h5">You might also like...</span>
+                <div class="minicart__item js-item" data-id="{{ product.selected_or_first_available_variant.id }}">
+                    <a class="minicart__item-image {% unless product.metafields.settings.color %}gradient{% endunless %}" href="{{ product.url }}" style="--bg: {{ product.metafields.settings.color }}">
+                        <img width="300" height="300" loading="lazy" src="{{ product.featured_media | img_url: '80x', scale: 2 }}"
+                            alt="{{ product.image.alt | escape }}" />
+                    </a>
+                    <div class="minicart__item-details">
+                        <a class="minicart__item-title" href="{{ product.url }}">{{ product.title }}</a>
+                        <span class="minicart__item-flavor">{{ product.metafields.settings.flavor }} <br />{{ product.metafields.settings.size }} Bars {% if selling_plan_allocation.selling_plan.name %}<span class="frequency">{{ selling_plan_allocation.selling_plan.name }}</span>{% endif %}</span>
+                        <span class="minicart__item-price">{{ product.price | money | remove: '.00' }}</span>
+                        <div class="minicart__item-qty minicart__item-qty--no-outline">
+                            <button class="btn btn--outline js-add-to-cart js-cross-sell" data-id="{{ product.selected_or_first_available_variant.id }}">ADD+</button>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                {% endif %}
+                {% endif %}
+            {% endfor %} {% endcomment %}
+            
+        </div>
+        <div class="minicart__footer">
+            <div class="container">
+                <div class="minicart__subtotal">
+                    <span class="small">Subtotal</span>
+                    <span class="amount js-minicart-total">{{ cart.total_price | money_with_currency }}</span>
+                </div>
+                <a class="btn minicart__checkout js-checkout" href="/checkout">Checkout</a>
+            </div>
+        </div>
+    </div>
+</div>

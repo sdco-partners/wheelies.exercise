@@ -1,0 +1,46 @@
+<div class="blog__filter-container">
+    <div class="blog__filter wrapper wrapper--wide">
+        <span class="h5 blog__filter-trigger js-filter-trigger">Filter <div class="blog-filter__icon"><span></span><span></span></div></span>
+        <ul class="blog__filter-items js-filter-items" data-ref="controls">
+            <li class="h5 blog__filter-item js-filter" data-ref="filter" data-filter=".all">All</li>
+            <li class="h5 blog__filter-item js-filter" data-ref="filter" data-filter=".press">Press</li>
+            <li class="h5 blog__filter-item js-filter" data-ref="filter" data-filter=".product">Product</li>
+            <li class="h5 blog__filter-item js-filter" data-ref="filter" data-filter=".wellness-routine">Wellness Routine</li>
+        </ul>
+    </div>
+</div>
+
+{%- paginate blog.articles by 50 -%}
+
+    <div class="blog__articles wrapper wrapper--wide" data-ref="container">
+      {%- for article in blog.articles -%}
+          {%- render 'article-card', article: article -%}
+      {%- endfor -%}
+    </div>
+
+    <div class="blog__pagination">
+        <div><span class="js-match">8</span> <em>of</em> <span class="js-total">{{ blog.articles_count }}</span></div>
+        <button class="big-btn js-circle-btn js-load-more">
+            {% render 'circle-btn' %}
+            <span>Load More</span>
+        </button>
+    </div>
+    
+ 
+    
+
+    {% comment %} {%- if paginate.pages > 1 -%}
+      {%- render 'pagination', paginate: paginate -%}
+    {%- endif -%} {% endcomment %}
+
+{%- endpaginate -%}
+
+
+{% schema %}
+{
+  "name": "Main Blog",
+  "tag": "section",
+  "class": "blog js-blog",
+  "settings": []
+}
+{% endschema %}

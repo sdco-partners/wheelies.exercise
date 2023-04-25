@@ -1,0 +1,19 @@
+{%- layout none -%}
+{
+	"articles":[
+	{%- for article in blog.articles -%}
+
+        {% assign category = article.metafields.custom.category.value | escape | remove: '&quot;' | remove: '[' | remove: ']' %}
+
+		{
+            "id": {{ forloop.index | json }},
+            "title": {{ article.title | json }},
+            "excerpt": {{ article.excerpt | json }},
+            "url": {{ article.url | json }},
+            "category": {{ category | handleize | json }},
+            "category_title": {{ category | json }},
+            "image": {{ article.image | image_url: width: 1200 | json }}
+		}{% unless forloop.last %},{% endunless %}
+	{%- endfor -%}
+	]
+}

@@ -1,0 +1,82 @@
+<script src="{{ 'accounts.js' | asset_url }}" defer="defer"></script>
+
+<section class="account">
+    <div class="wrapper">
+        
+        <div class="account__header">
+            <h1 class="h3">Please login</h1>
+        </div>
+        <div class="form form-vertical">
+            {% form 'customer_login', novalidate: 'novalidate' %}
+            {%- if form.errors -%}
+            <div class="form-message form-message--error">
+                <h2 class="h3 form-message__title " tabindex="-1" data-form-status>Please adjust the following:</h2>
+                {{ form.errors | default_errors }}
+            </div>
+            {%- endif -%}
+            <div class="form__group">
+            	<label for="CustomerEmail">Email address</label>
+           		<input type="email" name="customer[email]" id="CustomerEmail" autocomplete="email" placeholder="Enter email address" autocorrect="off" autocapitalize="off" {%- if form.errors contains 'form' -%} class="input--error" aria-invalid="true" {%- endif -%}>
+           	</div>
+            {% if form.password_needed %}
+            <div class="form__group">
+	            <label for="CustomerPassword">Password</label>
+	            <input type="password" value="" placeholder="Enter password" name="customer[password]" id="CustomerPassword" {%- if form.errors contains 'form' -%} class="input--error" aria-invalid="true" {%- endif -%}>
+	        </div>
+            {% endif %}
+            <div class="form__ctas">
+                {% comment %}<input type="submit" class="btn" value="login">{% endcomment %}
+                <button class="btn js-btn" type="submit" value="login">
+                  <span>Sign In</span>
+                </button>
+                <a class="btn btn--outline js-btn" href="/account/register">
+                  <span>Create Account</span>
+                </a>
+                {% if form.password_needed %}
+                <p><a href="#recover" class="js-recover-password" id="RecoverPassword">Forgot your password?</a></p>
+                {% endif %}
+            </div>
+            {% endform %}
+        </div>
+        
+        <div id="RecoverPasswordForm" class="js-recover-password-form form hide">
+            <div class="text-center">
+                <h2 id="RecoverHeading">{{ 'customer.recover_password.title' | t }}</h2>
+            </div>
+            {% form 'recover_customer_password' %}
+            {% if form.posted_successfully? %}
+                <span class="hide reset-password-success">Please check your email.</span>
+            {% endif %}
+            <div class="form__group">
+                <label for="RecoverEmail">Email Address</label>
+                <input type="email" value="" placeholder="Enter email address" name="email" id="RecoverEmail" class="input-full{% if form.errors %} input--error{% endif %}" autocorrect="off" autocapitalize="off" {% if form.errors %} aria-invalid="true" aria-describedby="RecoverEmail-email-error" {%- endif -%}>
+                {%- if form.errors -%}
+                <span id="RecoverEmail-email-error" class="input-error-message">
+                    <span class="visually-hidden">Error </span>
+                    {% include 'icon-error' %}
+                    <span>{{ form.errors.messages['form'] }}</span>
+                </span>
+                {%- endif -%}
+            </div>
+            
+            <div class="form__ctas">
+                <input type="submit" class="btn" value="Submit">
+                <button class="btn btn--outline js-cancel-recover-password">Cancel</button></p>
+            </div>
+            {% endform %}
+        </div>
+        {% comment %}
+        If accounts are set as optional, the following will be shown as an option
+        during checkout, not on the default /login page.
+        {% endcomment %}
+        {% if shop.checkout.guest_login %}
+        <div class="text-center">
+            <hr class="hr--invisible">
+            <h2>Please login</h2>
+            {% form 'guest_login' %}
+            <input type="submit" class="btn" value="{{ 'customer.login.guest_continue' | t }}">
+            {% endform %}
+        </div>
+        {% endif %}
+    </div>
+</section>

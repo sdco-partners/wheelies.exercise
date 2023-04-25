@@ -1,0 +1,70 @@
+<div class="container">
+    
+    <div class="contact-footer__logomark-container">
+        <div class="contact-footer__logomark">
+            {% render 'footer-logo' %}
+        </div>
+    </div>
+
+    <nav class="contact-footer__nav">
+    {% for block in section.blocks %}
+        {% if block.type == 'link_list' %}
+        <div class="footer__nav-item">
+            <span class="label">{{ block.settings.heading }}</span>
+            <ul>
+            {% for link in block.settings.menu.links %}
+                {% unless link.url == '#' %}<li><a href="{{ link.url}}">{{ link.title | escape }}</a></li>{% endunless %}
+            {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+    {% endfor %}
+    <div class="contact-footer__nav-item">
+        <ul class="social">
+            <li><a class="instagram" href="{{ section.settings.instagram }}">{% render 'instagram' %}</a></li>
+            <li><a class="facebook" href="{{ section.settings.facebook }}">{% render 'facebook' %}</a></li>
+            <li><a class="tiktok" href="{{ section.settings.tiktok }}">{% render 'tiktok' %}</a></li>
+            <li><a class="youtube" href="{{ section.settings.youtube }}">{% render 'youtube' %}</a></li>
+        </ul>
+    </div>
+    </nav>
+
+</div>
+
+
+
+{% schema %}
+{
+"name": "Contact Footer",
+"tag": "footer",
+"class": "contact-footer wrapper",
+  "settings": [
+    {
+      "type": "url", 
+      "id": "instagram",
+      "label": "Instagram"
+    },
+    {
+        "type": "url", 
+        "id": "facebook",
+        "label": "Facebook"
+      },
+      {
+        "type": "url", 
+        "id": "tiktok",
+        "label": "Tiktok"
+      },
+      {
+        "type": "url", 
+        "id": "youtube",
+        "label": "Youube"
+      }
+  ],
+  "presets": [
+    {
+      "category": "Tertiary",
+      "name": "Contact Footer"
+    }
+  ]
+}
+{% endschema %}

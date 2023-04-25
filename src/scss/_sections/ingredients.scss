@@ -1,0 +1,66 @@
+.ingredients-container {
+    position: relative;
+    z-index: -1;
+}
+
+.ingredients {
+    position: relative;
+    padding: 0 0 2rem 0;
+    @include breakpoint($laptop) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 4rem 0;
+    }
+    &__bg {
+        position: absolute;
+        width: 100%;
+        max-width: 1150px;
+        z-index: -1;
+        svg {
+            display: block;
+            width: 100%;
+        }
+    }
+    .media {
+        flex-grow: 1;
+        max-width: 700px;
+        aspect-ratio: 16 / 9;
+        img, video {
+            display: block;
+            width: 100%;
+        }
+        video {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .content {
+        width: 100%;
+        margin-top: 2rem;
+        @include breakpoint($laptop) {
+            width: 310px;
+            flex-shrink: 0;
+            margin-left: 3rem;
+        }
+        ol {
+            counter-reset: zero-numbers;
+            margin-top: 0.5rem;
+            li {
+                padding-bottom: 0.5rem;
+                padding-top: 0.5rem;
+                &:before {
+                    content: counter(zero-numbers, decimal-leading-zero);
+                    font-size: $ui;
+                    counter-increment: zero-numbers;
+                    width: 2rem; 
+                    margin-right: 2rem;
+
+                }
+                // list-style-type: decimal-leading-zero;
+                border-bottom: 1px solid $gray;
+                list-style-position: inside;
+            }
+        }
+    }
+}

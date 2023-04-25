@@ -1,0 +1,49 @@
+{% for block in section.blocks %}
+  {% if block.type == 'Header' %}
+    <div class="contact-info__divider js-draw-right"></div>
+    <h2 class="contact-info__title">
+      {{ block.settings.title }}
+    </h2>
+  {% elsif block.type == 'Contact-Method' %}
+    <p class="contact-info__tagline">
+      {{ block.settings.title }}
+    </p>
+  {% endif %}
+{% endfor %}
+
+{% schema %}
+  {
+    "name": "Contact Info",
+    "tag": "section",
+    "class": "contact-info wrapper",
+    "blocks": [
+      {
+        "name": "Header",
+        "type": "Header",
+        "settings": [
+          {
+            "type": "inline_richtext",
+            "id": "title",
+            "label": "Contact Header"
+          }
+        ]
+      }, {
+        "name": "Contact Method",
+        "type": "Contact-Method",
+        "settings": [
+          {
+            "type": "inline_richtext",
+            "id": "title",
+            "label": "Contact Method"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "category": "Contact",
+        "name": "Contact"
+      }
+    ]
+  }
+{% endschema %}

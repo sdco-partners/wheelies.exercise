@@ -1,0 +1,88 @@
+<div class="wrapper wrapper--{{ section.settings.wrapper_width }}">
+{% for block in section.blocks %}
+  {% if block.type == 'Headline' %}
+    <h2 class="h1 tertiary-hero__headline">
+      {{ block.settings.title | remove: '<p>' | remove: '</p>' }}
+    </h2>
+  {% elsif block.type == 'Subheadline' %}
+    <h1 class="h5 tertiary-hero__subheadline">
+      {{ block.settings.title }}
+    </h1>
+  {% elsif block.type == 'Tagline' %}
+    <h3 class="h5 tertiary-hero__tagline">
+      {{ block.settings.title }}
+    </h3>
+  {% endif %}
+{% endfor %} 
+</div>
+
+{% schema %}
+  {
+    "name": "Tertiary Hero",
+    "tag": "section",
+    "class": "tertiary-hero",
+    "settings": [
+        {
+        "type": "select",
+        "id": "wrapper_width",
+        "label": "Wrapper Width",
+        "options": [
+            {
+            "value": "default",
+            "label": "Default"
+            },
+            {
+            "value": "wide",
+            "label": "Wide"
+            },
+            {
+            "value": "narrow",
+            "label": "Narrow"
+            }
+        ],
+        "default": "default"
+        }
+    ],
+    "blocks": [
+    {
+    "name": "Tagline",
+    "type": "Tagline",
+    "settings": [
+        {
+        "type": "inline_richtext", 
+        "id": "title",
+        "label": "Tagline"
+        }
+    ]
+    },
+    {
+    "name": "Headline",
+    "type": "Headline",
+    "settings": [
+        {
+        "type": "richtext",
+        "id": "title",
+        "label": "Page Title"
+        }
+    ]
+    }, 
+    {
+    "name": "Subheadline",
+    "type": "Subheadline",
+    "settings": [
+        {
+        "type": "inline_richtext",
+        "id": "title",
+        "label": "Subheadline"
+        }
+    ]
+    }
+    ],
+    "presets": [
+      {
+        "category": "Tertiary",
+        "name": "Tertiary Hero"
+      }
+    ]
+  }
+{% endschema %}

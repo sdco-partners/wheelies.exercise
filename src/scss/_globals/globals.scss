@@ -1,0 +1,385 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+	background: $bg;
+    height: -webkit-fill-available;
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+    font-size: 93.8%; /*15px*/
+    background: $bg;
+}
+
+::selection {
+	background: $black; /* WebKit/Blink Browsers */
+	color: $white;
+    fill: $white;
+}
+::-moz-selection {
+	background: $black; /* Gecko Browsers */
+	color: $white;
+    fill: $white;
+}
+
+
+#smooth-wrapper {
+    overflow: hidden;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#smooth-content {
+    overflow: visible;
+    width: 100%;
+    /* set a height because the contents are position: absolute, thus natively there's no height */
+    // height: 4000px;
+}
+
+.fade-container {
+	animation: fadeSiteIn 1s ease forwards; /* [1] */
+}
+
+.fade-container.fadeSiteOut {
+	animation: fadeSiteOut 0.5s ease forwards; /* [2] */
+}
+
+@keyframes fadeSiteIn {
+	/* [1] */
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeSiteOut {
+	/* [2] */
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+
+
+
+body {
+	background: $bg;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* mobile viewport bug fix */
+    min-height: -webkit-fill-available;
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
+html, body {
+    font-family: $sans;
+    width: 100%;
+    color: var(--text-color, $black);
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.focus-none {
+    &:focus {
+        outline: none;
+    }
+}
+
+p {
+	line-height: 1.5;
+}
+
+.big-btn {
+    position: relative;
+    text-align: center;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $black;
+    line-height: 1.5;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    padding: 0;
+    border: none;
+    background: transparent;
+    @include breakpoint($laptop) {
+        font-size: 0.6975rem;
+        width: 160px;
+        height: 160px;
+    }
+    svg {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    span {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 2rem;
+    }
+}
+
+.small-btn {
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    cursor: pointer;
+    border: none;
+    position: relative;
+    padding: 0;
+    @include breakpoint($laptop) {
+        width: 50px;
+        height: 50px;
+    }
+    span {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        svg {
+            width: 20px;
+            display: block;
+        }
+    }
+    > svg {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    
+}
+
+.btn {
+    background: $black;
+    border: 1px solid $black;
+    color: $white;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-size: $body;
+    transition: all .4s;
+    cursor: pointer;
+    position: relative;
+    font-size: $h5;
+    height: 40px;
+    padding: 0 20px;
+    line-height: 38px;
+    min-width: 100px;
+    &:hover {
+        background: transparent;
+        color: $black;
+        transition: all .4s;
+    }
+    .spinner {
+        display: block;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        top: 50%;
+        margin-top: -10px;
+        opacity: 0;
+        @include animation(spin 500ms infinite linear);
+
+        svg {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    &.loading {
+        .spinner {
+            position: absolute;
+            opacity: 1;
+            transition: opacity .25s;
+        }
+
+        span {
+            opacity: 0;
+        }
+    }
+}
+
+select.btn {
+    background-position: right 10px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('chevron-white.svg');
+    background-position: center right 15px;
+    padding-right: 45px;
+    background-size: 12px;
+    background-repeat: no-repeat;
+    &:focus {
+        outline: none;
+    }
+    &:hover {
+        background-image: url('chevron.svg'); 
+        background-repeat: no-repeat;
+        background-size: 12px;
+        background-position: center right 15px;
+    }
+}
+
+
+.btn--outline, select.btn--outline {
+    background: $white;
+    color: $black;
+    border: 1px solid $black;
+    
+    &:hover {
+        background: $black;
+        color: $white;
+        transition: all .4s;
+    }
+}
+
+select.btn--outline {
+    background-image: url('chevron.svg');
+    background-position: center right 10px;
+    padding-right: 20px;
+    background-size: 12px;
+    background-repeat: no-repeat;
+    &:hover {
+        background-image: url('chevron-white.svg'); 
+        background-repeat: no-repeat;
+        background-size: 12px;
+        background-position: center right 10px;
+    }
+}
+
+.btn--reverse {
+    background: $white;
+    color: $black;
+    border: 1px solid $white;
+    &:hover {
+        background: $black;
+        color: $white;
+        transition: all .4s;
+    }
+}
+.cta {
+    font-size: $body;
+    text-decoration: underline;
+    background: transparent;
+    border: none;
+    appearance: none;
+    font-family: $sans;
+    cursor: pointer;
+    padding: 0;
+    color: $black;
+}
+
+.wrapper, .page-width {
+    margin: 0 auto;
+    padding: 0 2rem;
+    width: 100%;
+    // max-width: calc(100% - 2rem);
+    margin: 0 auto;
+    @include breakpoint($laptop) {
+        max-width: calc(100% - 200px);
+        padding: 0;
+    }
+}
+
+.wrapper--wide {
+    @include breakpoint($laptop) {
+        max-width: calc(100% - 100px);
+    }
+    @include breakpoint(1700px) {
+        max-width: 1600px; 
+    }
+}
+
+.wrapper--mid {
+    max-width: 1100px;
+}
+
+.wrapper--narrow {
+    max-width: 810px;
+}
+
+.main-page-title {
+    margin-top: 80px;
+    display: block;
+}
+
+.hide-on-desktop {
+	@include breakpoint(min-width $laptop) {
+		display: none;
+	}
+}
+
+.hide-on-tablet {
+    @include breakpoint(min-width $tablet) {
+        display: none;
+    }
+}
+
+.hide-on-mobile {
+	@include breakpoint(max-width 1023px) {
+		display: none;
+	}
+}
+
+.show-on-tablet {
+    @include breakpoint(min-width $tablet) {
+        display: inline-block;
+    }
+}
+
+
+.bg {
+    background: var(--bg, $black);
+    &.gradient {
+        background: url('gradient.png');
+        background-size: cover;
+    }
+}
+
+input[type="radio"] {
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    border: 1px solid $black;
+    border-radius: 6px;
+    margin-right: 10px;
+    flex-shrink: 0;
+    &:checked {
+        background: $black;
+    }
+}

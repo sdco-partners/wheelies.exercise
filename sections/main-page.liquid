@@ -1,0 +1,23 @@
+
+<div class="wrapper wrapper--narrow">
+  <h1 class="h1 main-page-title page-title h0">
+    {{ page.title | escape }}
+  </h1>
+  <div class="rte">
+    {% if page.handle == 'privacy-policy' %}
+        {{ shop.privacy_policy }}
+    {% elsif page.handle == 'terms-conditions' %}
+        {{ shop.privacy_policy }}
+    {% else %}
+    {{ page.content }}
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.main-page.name",
+  "tag": "section",
+  "class": "spaced-section"
+}
+{% endschema %}

@@ -1,0 +1,192 @@
+<div class="header-wrapper js-header">
+  <div class="header">
+      
+      <div class="header__menu-trigger js-hover js-menu-trigger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+
+      {%- if request.page_type == 'index' -%}
+        <h1>
+      {%- endif -%}
+          <a href="{{ routes.root_url }}" class="header__logo focus-inset">
+            {% render 'logo' %}
+            <span class="visually-hidden">Link to homepage</span> 
+          </a>
+      {%- if request.page_type == 'index' -%}
+        </h1>
+      {%- endif -%}
+
+      <div class="header__icons">
+        
+        <button class="header__icon header__icon--audio js-toggle-audio muted">
+            {% render 'icon-audio' %}
+        </button>
+
+        {%- if section.settings.cta -%}
+          <a class="header__cta" href="{{ section.settings.cta }}" href="{{ section.settings.cta }}">{{ section.settings.cta_label }}</a>
+        {%- endif -%}
+
+        <button class="header__icon header__icon--cart focus-inset js-toggle-cart">
+          <span>Cart</span>
+          <div class="header__cart-count js-cart-count {% if cart.item_count == 0 %}hidden{% endif %}">{{ cart.item_count | prepend: '00' | slice: -2, 2 }}</div>
+        </button>
+      </div>
+  </div>
+</div>
+
+<div  class="header-nav-container js-nav">
+    <div class="header-nav">
+        <div class="header-nav__left">
+            <nav class="header-nav__menu" role="navigation">
+                <ul>
+                {% for block in section.blocks %}
+                    {%- liquid 
+                    if block.settings.page != blank
+                    assign link = block.settings.page.url
+                    elsif block.settings.collection != blank 
+                    assign link = block.settings.collection.url
+                    elsif block.settings.blog != blank 
+                    assign link = block.settings.blog.url
+                    endif
+                    %}
+                    <li class="header-nav__menu-item js-menu-item">
+                        <a class="h1" href="{{ link }}">{{ block.settings.title }}</a>
+                        <div class="image js-image">{{ block.settings.image | image_url: width: 550 | image_tag }}
+                            {% render 'menu-item-lines' %}
+                        </div>
+                    </li>
+                {% endfor %}
+                </ul>
+            </nav> 
+        </div>
+        <div class="header-nav__right">
+            <div class="header-nav__secondary-menu">
+                <ul>
+                {% assign secondary_menu = section.settings.secondary_menu %}
+                {% for link in secondary_menu.links %}
+                    <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                {% endfor %}
+                </ul>
+            </div>
+            <div class="header-nav__tagline">
+                <p class="h3">{{ section.settings.menu_tagline }}</p>
+            </div>
+        </div>
+        <div class="header-nav__bottom">
+            <a href="{{ routes.account_url }}">Login <em>to your</em> Account</a>
+        </div>
+    </div>
+</div>
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "name": {{ shop.name | json }},
+    {% if section.settings.logo %}
+      {% assign image_size = section.settings.logo.width | append: 'x' %}
+      "logo": {{ section.settings.logo | img_url: image_size | prepend: "https:" | json }},
+    {% endif %}
+    "sameAs": [
+      {{ settings.social_twitter_link | json }},
+      {{ settings.social_facebook_link | json }},
+      {{ settings.social_pinterest_link | json }},
+      {{ settings.social_instagram_link | json }},
+      {{ settings.social_tumblr_link | json }},
+      {{ settings.social_snapchat_link | json }},
+      {{ settings.social_youtube_link | json }},
+      {{ settings.social_vimeo_link | json }}
+    ],
+    "url": {{ shop.url | append: page.url | json }}
+  }
+</script>
+
+{%- if request.page_type == 'index' -%}
+  {% assign potential_action_target = shop.url | append: routes.search_url | append: "?q={search_term_string}" %}
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "name": {{ shop.name | json }},
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {{ potential_action_target | json }},
+        "query-input": "required name=search_term_string"
+      },
+      "url": {{ shop.url | append: page.url | json }}
+    }
+  </script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "t:sections.header.name",
+  "tag": "header",
+  "class": "header-container js-header",
+  "settings": [
+    {
+      "type": "link_list",
+      "id": "secondary_menu",
+      "label": "Secondary Menu"
+    },
+    {
+        "type": "inline_richtext",
+        "id": "menu_tagline",
+        "label": "Menu Tagline",
+        "default": "Daily, intentional practices that <em>refocus</em>, <em>reset</em>, and <em>transform</em>."
+    },
+    {
+      "type": "url",
+      "id": "cta",
+      "label": "Call to Action" 
+    },
+    {
+      "type": "text",
+      "id": "cta_label",
+      "label": "CTA Label" 
+    }
+  ],
+  "blocks": [
+    {
+        "type": "menu_item",
+        "name": "Menu Item",
+        "settings": [
+          {
+            "type": "page",
+            "id": "page",
+            "label": "Page"
+          },
+          {
+            "type": "collection",
+            "id": "collection",
+            "label": "Collection"
+          },
+          {
+            "type": "blog",
+            "id": "blog",
+            "label": "Blog"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Label"
+          }, 
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "video",
+            "id": "video",
+            "label": "Video"
+          }
+        ]
+      }
+  ]
+}
+{% endschema %} 

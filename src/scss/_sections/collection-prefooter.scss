@@ -1,0 +1,25 @@
+.collection-prefooter {
+    width: 100%;
+    position: relative;
+    padding: 4rem 0;
+    svg {
+        width: 100%;
+        display: block;
+    }
+    > span {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        text-align: center;
+        transform: translateY(-50%);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        em {
+            text-transform: lowercase;
+            font-family: $serif;
+            letter-spacing: unset;
+        }
+    }
+}

@@ -1,0 +1,58 @@
+.prefooter {
+    text-align: center;
+    padding: 5rem 0;
+    background: linear-gradient(to top, rgba(242, 236, 223, 0) 0%, #ede7d9 60.1%, #d9e1e2 100%);
+    @include breakpoint($laptop) {
+        padding: 11rem 0;
+    }
+    .h2 {
+        font-family: $serif;
+    }
+    form {
+        display: inline-flex;
+        border: 1px solid $black;
+        align-items: center;
+        height: 60px;
+        border-radius: 30px;
+        padding: 0 1rem;
+        margin-top: 2rem;
+        @include breakpoint($laptop) {
+            width: 445px;
+        }
+        input, button {
+            border: none;
+            background: transparent;
+            svg {
+                width: 25px;
+                display: block;
+            }
+        }
+        input {
+            padding: 1rem;
+            color: $black;
+            font-size: $ui;
+            width: 100%;
+            &:focus {
+                outline: none;
+            }
+            @include placeholder() {
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+                color: $black;
+            }
+        }
+        .submit {
+            display: inline-flex;
+        }
+        button {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .email {
+            flex-grow: 1;
+            text-align: left;
+        }
+    }
+}

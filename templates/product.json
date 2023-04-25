@@ -1,0 +1,78 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+          }
+        },
+        "2f0002bb-16e1-4289-b773-792f2558b826": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "f1b5acbf-de7a-4975-a7e1-f862de450cec": {
+          "type": "options",
+          "settings": {
+          }
+        },
+        "7875b8a9-563f-4220-9c47-35f60eb29aeb": {
+          "type": "divider",
+          "settings": {
+          }
+        },
+        "63da4b24-3b69-4a2e-8bb5-f468f7ce6d91": {
+          "type": "benefits",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "description",
+        "2f0002bb-16e1-4289-b773-792f2558b826",
+        "f1b5acbf-de7a-4975-a7e1-f862de450cec",
+        "7875b8a9-563f-4220-9c47-35f60eb29aeb",
+        "63da4b24-3b69-4a2e-8bb5-f468f7ce6d91"
+      ],
+      "settings": {
+      }
+    },
+    "554f56de-0ea3-4811-9faa-88a35234fc83": {
+      "type": "product-how-to-use",
+      "settings": {
+        "title": "How to Use",
+        "copy": "{{ product.metafields.custom.how_to_use | metafield_tag }}"
+      }
+    },
+    "60affe38-6a64-4b43-b724-a6bd1f25f3be": {
+      "type": "product-ingredients",
+      "settings": {
+        "title": "Ingredients",
+        "ingredients": "{{ product.metafields.custom.ingredients | metafield_tag }}",
+        "image": "{{ product.metafields.custom.ingredients_image.value }}",
+        "video": "{{ product.metafields.custom.ingredients_video.value }}"
+      }
+    },
+    "a3ef0ac7-c9fd-4278-b3cf-2c0ca67616ab": {
+      "type": "product-related-products",
+      "settings": {
+        "title": "You may also like",
+        "products": "{{ product.metafields.custom.related_products.value }}"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "554f56de-0ea3-4811-9faa-88a35234fc83",
+    "60affe38-6a64-4b43-b724-a6bd1f25f3be",
+    "a3ef0ac7-c9fd-4278-b3cf-2c0ca67616ab"
+  ]
+}

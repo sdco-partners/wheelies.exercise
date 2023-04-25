@@ -1,0 +1,30 @@
+.image-content {
+    @include breakpoint($laptop) {
+        display: flex;
+        align-items: center;
+    }
+    .image {
+        flex-grow: 1;
+        width: 100%;
+        margin-bottom: 2rem;
+        @include breakpoint($laptop) {
+            width: 60%;
+            margin-bottom: 0;
+        }
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+    .content {
+        width: 100%;
+        @include breakpoint($laptop) {
+            width: 40%;
+            margin-left: 3rem;
+        }
+        p {
+            max-width: 340px; 
+        }
+    }
+}

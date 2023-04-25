@@ -1,0 +1,65 @@
+{% if product.metafields.custom.related_products == blank %}
+{% assign products = collections.all-products.products %}
+{% else %}
+{% assign products = section.settings.products %}
+{% endif %}
+
+<div class="js-draw-down vertical-line">
+{% render 'vertical-line-short' %}
+</div>
+
+<h4 class="h5">{{ section.settings.title }}</h4>
+
+<div class="js-related-products swiper">
+    <div class="swiper-wrapper js-drag">
+    {% for product in products %}
+        
+        <div class="swiper-slide">
+            <div class="related-products__slide">
+                <a class="title h2" href="{{ product.url }}">
+                    {% assign title_words = product.title | split: ' ' %}
+                    {%- for word in title_words -%}
+                    {%- if forloop.first -%}<em>{{- word -}}</em> {% else %}{{ word }}{%- endif -%}
+                    {%- endfor -%}
+                </a>
+                <a class="image" href="{{ product.url }}">
+                    {% if product.metafields.custom.related_product_image %}
+                    {{ product.metafields.custom.related_product_image | image_url: width: 300 | image_tag }}
+                    {% endif %}
+                </a>
+                <div class="details">
+                    {% if product.metafields.custom.benefits %}
+                        <p>{{ product.metafields.custom.benefits }}</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+</div>
+      
+{% schema %}
+    {
+    "name": "Related Products",
+    "tag": "section",
+    "class": "related-products",
+    "settings": [
+        {
+        "type": "text",
+        "id": "title",
+        "label": "Headline",
+        "default": "You May Also Like"
+        },
+        {
+        "type": "product_list",
+        "id": "products",
+        "label": "Related Products"
+        }
+    ],
+    "presets": [
+        {
+        "name": "Related Products"
+        }
+    ]
+    }
+{% endschema %}

@@ -1,0 +1,40 @@
+<script src="{{ 'collection-grid.js' | asset_url }}" defer="defer"></script>
+
+<div class="collection-grid__header wrapper">
+    <h1 class="h1">{{ section.settings.title }}</h2>
+    <div class="collection-grid__btns">
+        <button class="collection-grid__btn active js-update-grid" onclick="updateGrid(2)">{% render 'icon-two-column' %}</button>
+        <button class="collection-grid__btn js-update-grid" onclick="updateGrid(1)">{% render 'icon-single-column' %}</button>
+    </div>
+</div>
+<div class="grid-container">
+<ul class="grid grid--2 js-grid" role="list">
+    {%- for product in collection.products -%}
+    <li class="grid__item">
+        {% render 'collection-card',
+        product: product
+        %}
+    </li>
+    {%- endfor -%}
+</ul>
+{% render 'moments-trigger' %}
+</div>
+
+
+
+
+{% schema %}
+{
+  "name": "Main Collection Grid",
+  "tag": "section",
+  "class": "collection-grid js-collection-grid",
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "default": "Featured collection",
+      "label": "Headline"
+    }
+  ]
+}
+{% endschema %}

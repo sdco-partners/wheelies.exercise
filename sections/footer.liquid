@@ -1,0 +1,132 @@
+<footer class="footer wrapper">
+    <div class="container">
+      
+      <div class="footer__logo-container">
+        <a class="footer__logo" href="{{ routes.root_url }}">{% render 'logo' %}<span class="visually-hidden">Link to homepage</span></a>
+      </div>
+
+      <nav class="footer__nav">
+        {% for block in section.blocks %}
+          {% if block.type == 'link_list' %}
+            <div class="footer__nav-item">
+              <span class="label">{{ block.settings.heading }}</span>
+              <ul>
+                {% for link in block.settings.menu.links %}
+                  {% unless link.url == '#' %}<li><a href="{{ link.url}}">{{ link.title | escape }}</a></li>{% endunless %}
+                {% endfor %}
+              </ul>
+            </div>
+          {% endif %}
+        {% endfor %}
+        <div class="footer__nav-item">
+            <span class="label">Connect</span>
+            <ul class="social">
+              <li><a class="instagram" href="{{ section.settings.instagram }}">{% render 'instagram' %}</a></li>
+              <li><a class="facebook" href="{{ section.settings.facebook }}">{% render 'facebook' %}</a></li>
+              <li><a class="tiktok" href="{{ section.settings.tiktok }}">{% render 'tiktok' %}</a></li>
+              <li><a class="youtube" href="{{ section.settings.youtube }}">{% render 'youtube' %}</a></li>
+            </ul>
+            <div class="footer__newsletter">
+                <span class="label">{{ section.settings.newsletter_heading }}</span>
+            </div>
+        </div>
+      </nav>
+
+      <div class="footer__copyright">&copy; Torreya {{ "today" | date: "%Y" }}. <ul><li><a href="/policies/privacy-policy">Privacy Policy</a></li><li><a href="/policies/terms-of-service">Terms & Conditions</a></li></div>
+
+        <div class="footer__logomark-container">
+            <div class="footer__logomark">
+                {% render 'footer-logo' %}
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+
+
+{% schema %}
+{
+  "name": "Footer",
+  "blocks": [
+    {
+      "type": "link_list",
+      "name": "Menu",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Quick links",
+          "label": "t:sections.footer.blocks.link_list.settings.heading.label",
+          "info": "t:sections.footer.blocks.link_list.settings.heading.info"
+        },
+        {
+          "type": "link_list",
+          "id": "menu",
+          "default": "footer",
+          "label": "t:sections.footer.blocks.link_list.settings.menu.label",
+          "info": "t:sections.footer.blocks.link_list.settings.menu.info"
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "name": "CTA",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Heading",
+          "label": "Heading"
+        },
+        {
+          "type": "text",
+          "id": "url",
+          "label": "URL"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "default": "Label",
+          "label": "Label"
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "inline_richtext", 
+      "id": "newsletter_heading",
+      "default": "Sign up to our emails",
+      "label": "Email Sign-up Headline"
+    },
+    {
+      "type": "url", 
+      "id": "instagram",
+      "label": "Instagram"
+    },
+    {
+        "type": "url", 
+        "id": "facebook",
+        "label": "Facebook"
+      },
+      {
+        "type": "url", 
+        "id": "tiktok",
+        "label": "Tiktok"
+      },
+      {
+        "type": "url", 
+        "id": "youtube",
+        "label": "Youube"
+      }
+  ],
+  "default": {
+    "blocks": [
+      {
+        "type": "link_list"
+      }
+    ]
+  }
+}
+{% endschema %}

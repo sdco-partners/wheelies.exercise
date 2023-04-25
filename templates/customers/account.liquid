@@ -1,0 +1,63 @@
+{% render 'smartrr-account' %}
+
+<script src="{{ 'accounts.js' | asset_url }}" defer="defer"></script>
+
+<section class="account">
+  <div class="wrapper">
+    <div class="account__header text-center">
+      <h1 class="h3">{{ 'customer.account.title' | t }}</h1>
+      <a href="/account/logout" class="btn btn--outline"><span>Sign Out</span> <span>Account</span></a>
+    </div>
+
+    <div class="account__grid">
+      <div class="account__grid-item myaccount__order-history">
+        <h2 class="h4">{{ 'customer.orders.title' | t }}</h2>
+
+        {% paginate customer.orders by 20 %}
+          {% if customer.orders.size != 0 %}
+
+            <table class="responsive-table">
+              <thead>
+                <tr>
+                  <th scope="col">{{ 'customer.orders.order_number' | t }}</th>
+                  <th scope="col">{{ 'customer.orders.date' | t }}</th>
+                  <th scope="col">{{ 'customer.orders.payment_status' | t }}</th>
+                  <th scope="col">{{ 'customer.orders.fulfillment_status' | t }}</th>
+                  <th scope="col">{{ 'customer.orders.total' | t }}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for order in customer.orders %}
+                  <tr>
+                    <th data-label="{{ 'customer.orders.order_number' | t }}" scope="row">
+                      <a href="{{ order.customer_url }}" class="btn btn--secondary btn--small" aria-label="{{ 'customer.orders.order_number_link' | t: number: order.name }}">{{ order.name }}</a>
+                    </th>
+                    <td data-label="{{ 'customer.orders.date' | t }}">{{ order.created_at | time_tag: format: 'date' }}</td>
+                    <td data-label="{{ 'customer.orders.payment_status' | t }}">{{ order.financial_status_label }}</td>
+                    <td data-label="{{ 'customer.orders.fulfillment_status' | t }}">{{ order.fulfillment_status_label }}</td>
+                    <td data-label="{{ 'customer.orders.total' | t }}">{{ order.total_price | money }}</td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+
+          {% else %}
+
+            <p>{{ 'customer.orders.none' | t }}</p>
+
+          {% endif %}
+          {%- if paginate.pages > 1 -%}
+            {% include 'pagination', paginate: paginate %}
+          {%- endif -%}
+        {% endpaginate %}
+      </div>
+      <div class="account__grid-item myaccount__account-details">
+        <h2 class="h4">{{ 'customer.account.details' | t }}</h2>
+
+        {{ customer.default_address | format_address }}
+
+        <p><a class="cta js-cta" href="{{ routes.account_addresses_url }}"><span>View Addresses</span> <span>({{ customer.addresses_count }})</span></a></p>
+      </div>
+    </div>
+  </div>
+</section>

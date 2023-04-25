@@ -1,0 +1,18 @@
+.tertiary-hero {
+    width: 100%;
+    padding-top: 8rem;
+    padding-bottom: 1rem;
+    @include breakpoint($laptop) {
+        padding-top: 11rem;
+        padding-bottom: 3rem;
+    }
+    &__headline {
+        margin-bottom: 1rem;
+    }
+    &__subheadline {
+        margin-bottom: 1em;
+    }
+    &__tagline {
+        max-width: 380px;
+    }
+}

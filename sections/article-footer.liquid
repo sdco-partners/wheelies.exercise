@@ -1,0 +1,49 @@
+{%- if section.settings.blog_show_previous_and_next_buttons -%}
+  {% if blog.previous_article %}
+    <a class="article-footer__btn-back big-btn js-circle-btn" href="{{ blog.previous_article }}">
+      {% render 'circle-btn' %}
+      <span>Back</span>
+    </a>
+  {% else %}
+    <a class="article-footer__btn-back big-btn js-circle-btn" href="{{ blog.articles[0].url }}">
+      {% render 'circle-btn' %}
+      <span>Back</span>
+    </a>
+  {% endif %}
+  <div class="article-footer__title">
+    <span>FACE <em>forward</em></span>
+  </div>
+
+  {% if blog.next_article %}
+    <a class="article-footer__btn-next big-btn js-circle-btn" href="{{ blog.next_article }}">
+      {% render 'circle-btn' %}
+      <span>Next</span>
+    </a>
+  {% else %}
+    <a class="article-footer__btn-back big-btn js-circle-btn" href="{{ blog.articles[-1].url }}">
+      {% render 'circle-btn' %}
+      <span>Next</span>
+    </a>
+  {% endif %}
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Article Footer",
+  "tag": "section",
+  "class": "article-footer wrapper",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "blog_show_previous_and_next_buttons",
+      "label": "Show next/ previous buttons",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "Article Footer"
+    }
+  ]
+}
+{% endschema %}

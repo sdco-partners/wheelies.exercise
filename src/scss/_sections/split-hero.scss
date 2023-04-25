@@ -1,0 +1,42 @@
+.split-hero {
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    @include breakpoint($laptop) {
+        flex-direction: row;
+    }
+    .image, .content {
+        height: 50%;
+        @include breakpoint($laptop) {
+            width: 50%;
+            height: 100dvh;
+        }
+    }
+    .image {
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .content {
+        background: linear-gradient(to top, #e5dbc8 0%, #ede7d9 48.28%, #d9e1e2 100%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 2rem;
+        @include breakpoint($laptop) {
+            padding: 4rem;
+        }
+        .h2 {
+            font-family: $serif;
+        }
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .content__inner {
+        max-width: 450px;
+    }
+}

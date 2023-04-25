@@ -1,0 +1,33 @@
+{% unless product.metafields.custom.how_to_use == blank %}
+    <div class="centered-copy__subheadline">
+        {% render 'centered-content-line' %}
+        <h3 class="h5">{{ section.settings.title }}</h3>
+    </div>
+    {{ section.settings.copy }}
+{% endunless %}
+  
+{% schema %}
+    {
+    "name": "Product - How to Use",
+    "tag": "section",
+    "class": "centered-copy wrapper wrapper--narrow",
+    "settings": [
+        {
+        "type": "text",
+        "id": "title",
+        "label": "Headline",
+        "default": "How to Use"
+        },
+        {
+        "type": "richtext",
+        "id": "copy",
+        "label": "Copy"
+        }
+    ],
+    "presets": [
+        {
+        "name": "Product - How to Use"
+        }
+    ]
+    }
+{% endschema %}

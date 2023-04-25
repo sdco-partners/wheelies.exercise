@@ -1,0 +1,54 @@
+.not-found {
+    height: 100dvh;
+    width: 100vw;
+    background: linear-gradient(to top, #e5dbc8 0%, #ede7d9 48.28%, #d9e1e2 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-content: center;
+    
+    &__content {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        background: url("404_torreya.svg");
+        background-size: 66vw;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+    }
+    &__bg {
+        svg {
+            position: absolute;
+            &:first-child {
+                width: 94px;
+                top: 10rem;
+                left: 2rem;
+                @include breakpoint($laptop) {
+                    left: 0;
+                }
+            }
+            &:last-child {
+                width: 43px;
+                bottom: 10rem;
+                right: 2rem;
+                @include breakpoint($laptop) {
+                    right: 0;
+                }
+            }
+        }
+    }
+    span {
+        display: block;
+    }
+    
+    .big-btn {
+        margin: 0 auto;
+        margin-top: 2rem;
+    }
+}

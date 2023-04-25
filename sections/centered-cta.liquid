@@ -1,0 +1,71 @@
+<div style="--bg: {{ section.settings.bg }}">
+      <div class="wrapper">
+            <h3 class="h3">{{ section.settings.headline }}</h3>
+            {% if section.settings.copy %}
+            {{ section.settings.copy }}
+            {% endif %}
+            <a class="btn" href="{{ section.settings.url }}">{{ section.settings.cta_label }}</a>
+            {% if section.settings.image %}
+                  <div class="image">
+                        <img
+                        srcset="{%- if section.settings.image.width >= 275 -%}{{ section.settings.image | img_url: '275x' }} 275w,{%- endif -%}
+                        {%- if section.settings.image.width >= 550 -%}{{ section.settings.image | img_url: '550x' }} 550w,{%- endif -%}
+                        {%- if section.settings.image.width >= 710 -%}{{ section.settings.image | img_url: '710x' }} 710w,{%- endif -%}
+                        {%- if section.settings.image.width >= 1420 -%}{{ section.settings.image | img_url: '1420x' }} 1420w,{%- endif -%}"
+                        src="{{ section.settings.image | img_url: '550x' }}"
+                        sizes="(min-width: 990px) {% if section.blocks.size <= 2 %}710px{% else %}550px{% endif %},
+                        (min-width: 750px) {% if section.blocks.size == 1 %}710px{% else %}550px{% endif %},
+                        calc(100vw - 30px)"
+                        alt="{{ section.settings.image.alt }}"
+                        height="{{ section.settings.image.height }}"
+                        width="{{ section.settings.image.width }}"
+                        loading="lazy"
+                        >
+                  </div> 
+            {% endif %}
+      </div>
+</div>
+
+
+{% schema %}
+{
+      "name": "Centered CTA",
+      "class": "centered-cta",
+      "tag": "section",
+      "settings": [
+            {
+            "type": "text",
+            "id": "headline",
+            "label": "Headline"
+            },
+            {
+            "type": "richtext",
+            "id": "copy",
+            "label": "Copy"
+            },
+            {
+            "type": "url",
+            "id": "url",
+            "label": "URL"
+            },
+            {
+            "type": "text",
+            "id": "cta_label",
+            "label": "CTA Label"
+            },
+            {
+            "type": "color",
+            "id": "bg",
+            "label": "Background Color"
+            },
+            {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+            }
+      ],
+      "presets": [{
+            "name": "Centered CTA"
+      }] 
+}
+{% endschema %} 

@@ -1,0 +1,32 @@
+<h4 class="h2">{{ section.settings.title | remove: '<p>' | remove: '</p>' }}</h4>
+
+{% form 'customer' %}
+    <div class="email">
+      <input  placeholder="Enter Email" type="email" name="contact[email]" />
+    </div>
+  
+    <div class="submit">
+      <button type="submit">{% render 'arrow' %}</button>
+    </div>
+{% endform %}
+
+{% schema %}
+{
+  "name": "Prefooter",
+  "tag": "section",
+  "class": "prefooter", 
+  "settings": [
+    {
+        "type": "richtext",
+        "id": "title",
+        "label": "Headline",
+        "default": "<p>Be a part of <em>our</em> <br/>community</p>"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Prefooter"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,29 @@
+{% assign hasSub = false %}
+{%- layout none -%}
+{
+	"items":[
+	{%- for item in cart.items -%}
+        {% if item.selling_plan_allocation.selling_plan.name %}
+            {% assign hasSub = true %}
+        {% endif %}
+        {% assign color = item.product.metafields.settings.color | prepend: "'" | append: "'" %}
+		{
+            "title": {{ item.product.title | json }},
+            "url": {{ item.variant.url | json }},
+            "image": {{ item.image | image_url: width: '320px' | json }},
+            "alt": {{ item.image.alt | json }},
+			"color": {{ color | json }},
+            "options": {{ item.options_with_values | json }},
+			"quantity": {{ item.quantity | json }},
+            "price": {{ item.price | money | json }},
+            "subtotal": {{ item.final_line_price | money | json }},
+            "id": {{ item.variant.id | json }},
+			"frequency": {{ item.selling_plan_allocation.selling_plan.name | json }}
+		}{% unless forloop.last %},{% endunless %}
+	{%- endfor -%}
+	],
+    "subtotal": "{{ cart.total_price | money }}",
+    "pennies": "{{ cart.total_price }}",
+	"count": "{{ cart.item_count }}",
+    "hasSub": {{ hasSub | json }}
+}

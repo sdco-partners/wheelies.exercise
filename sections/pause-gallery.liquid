@@ -1,0 +1,178 @@
+<div class="image-container image-container--one">
+    <div class="image js-image image--one">
+        {{ section.settings.image_one | image_url: width: 1200 | image_tag: class: 'js-media', data-speed: 'auto' }}
+    </div>
+
+    <div class="image js-image image--two" data-speed="0.9">
+        {{ section.settings.image_two | image_url: width: 1200 | image_tag: class: 'js-media', data-speed: 'auto' }}
+    </div>
+
+    <div class="image js-image image--three" data-speed="1.3">
+        {{ section.settings.image_three | video_tag: class: 'js-media', muted: true, loop: true, controls: false, autoplay: true }}
+    </div>
+    
+    <div class="image js-image image--four" data-speed="0.8">
+        {{ section.settings.image_four | image_url: width: 1200 | image_tag: class: 'js-media', data-speed: 'auto' }}
+    </div>
+
+    <div class="graphic graphic--one js-graphic-one">
+        {% render 'less-chaos' %}
+    </div>
+
+    <div class="line js-vertical-line">
+        {% render 'vertical-line' %}
+    </div>
+
+</div>
+
+<div class="image-container image-container--two">
+    <div class="image js-image image--five" data-speed="1.3">
+        {{ section.settings.image_five | image_url: width: 1200 | image_tag: class: 'js-media', data-speed: 'auto' }}
+    </div>
+
+    <div class="image js-image image--six" data-speed="0.9">
+        {{ section.settings.image_six | image_url: width: 1200 | image_tag: class: 'js-media', data-speed: 'auto' }}
+    </div>
+
+    <div class="image js-image image--seven">
+        {{ section.settings.image_seven | image_url: width: 1200 | image_tag: class: 'js-media', data-speed: 'auto' }}
+    </div>
+    
+    <div class="image js-image image--eight" data-speed="1.1">
+        {{ section.settings.image_eight | video_tag: class: 'js-media', muted: true, loop: true, controls: false, autoplay: true }}
+    </div>
+
+    <div class="graphic graphic--two js-graphic-two">
+        {% render 'more-clarity' %}
+    </div>
+
+</div>
+
+<div class="image-container image-container--three" data-speed="0.9">
+    <div class="image js-image image--nine">
+        {{ section.settings.image_nine | image_url: width: 1200 | image_tag: class: 'js-media', data-speed: 'auto' }}
+    </div>
+
+    <div class="image js-image image--ten" data-speed="1.5">
+        {{ section.settings.image_ten | image_url: width: 1200 | image_tag: class: 'js-media', data-speed: 'auto' }}
+    </div>
+
+    <div class="image js-image image--eleven" data-speed="0.6">
+        {{ section.settings.image_eleven | image_url: width: 1200 | image_tag: class: 'js-media', data-speed: 'auto' }}
+    </div>
+    
+    <div class="image js-image image--twelve" data-speed="1.1">
+        {{ section.settings.image_twelve | image_url: width: 1200 | image_tag: class: 'js-media', data-speed: 'auto' }}
+    </div>
+
+    <div class="horizontal-lines js-horizontal-lines">
+        {% render 'horizontal-lines' %}
+    </div>
+
+</div>
+
+<div class="image-container image-container--three">
+    <div class="image js-image image--thirteen" data-speed="1.5">
+        {{ section.settings.image_thirteen | image_url: width: 1200 | image_tag: class: 'js-media', data-speed: 'auto' }}
+    </div>
+
+    <div class="image js-image image--fourteen" data-speed="0.8">
+        {{ section.settings.image_fourteen | image_url: width: 1200 | image_tag: class: 'js-media', data-speed: 'auto' }}
+    </div>
+
+    <div class="image js-image image--fifteen">
+        {{ section.settings.image_fifteen | image_url: width: 1200 | image_tag: class: 'js-media', data-speed: 'auto' }}
+    </div>
+</div>
+
+
+
+{% schema %}
+{
+  "name": "Pause Gallery",
+  "tag": "div",
+  "class": "pause-gallery js-pause-gallery js-gallery wrapper",
+  "settings": [
+    {
+        "type": "image_picker",
+        "id": "image_one",
+        "label": "Image #1 (Square)"
+    },
+    {
+        "type": "image_picker",
+        "id": "image_two",
+        "label": "Image #1 (Portrait)"
+    },
+    {
+        "type": "video",
+        "id": "image_three",
+        "label": "Video #3 (Portrait)"
+    },
+    {
+        "type": "image_picker",
+        "id": "image_four",
+        "label": "Image #4 (Square)"
+    },
+    {
+        "type": "image_picker",
+        "id": "image_five",
+        "label": "Image #5 (Portrait)"
+    },
+    {
+        "type": "image_picker",
+        "id": "image_six",
+        "label": "Image #6 (Square)"
+    },
+    {
+        "type": "image_picker",
+        "id": "image_seven",
+        "label": "Image #7 (Circle)"
+    },
+    {
+        "type": "video",
+        "id": "image_eight",
+        "label": "Video #8 (Landscape)"
+    },
+    {
+        "type": "image_picker",
+        "id": "image_nine",
+        "label": "Image #9 (Portrait)"
+    },
+    {
+        "type": "image_picker",
+        "id": "image_ten",
+        "label": "Image #10 (Portrait)"
+    },
+    {
+        "type": "image_picker",
+        "id": "image_eleven",
+        "label": "Image #11 (Portrait)"
+    },
+    {
+        "type": "image_picker",
+        "id": "image_twelve",
+        "label": "Image #12 (Square)"
+    }, 
+    {
+        "type": "image_picker",
+        "id": "image_thirteen",
+        "label": "Image #13 (Circle)"
+    },
+    {
+        "type": "image_picker",
+        "id": "image_fourteen",
+        "label": "Image #14 (Square)"
+    },
+    {
+        "type": "image_picker",
+        "id": "image_fifteen",
+        "label": "Image #15 (Landscape)"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Pause Gallery"
+    }
+  ]
+}
+{% endschema %}

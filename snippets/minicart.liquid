@@ -1,0 +1,52 @@
+<div class="minicart-container js-fade-me js-minicart">
+    <div class="minicart-bg js-toggle-cart">
+        <div class="minicart-bg__overlay js-minicart-bg-overlay"></div>
+    </div>
+    <div class="close-minicart js-toggle-cart"></div>
+    <div class="minicart">
+        <div class="minicart__header">
+            <span class="h2"><em>Your</em> cart</span>
+            <div class="minicart__close js-toggle-cart">{% render 'close' %}</div>
+        </div>
+        <div class="minicart__body">
+            {% comment %} <span class="minicart__promotion js-minicart-promo">{% if cart.total_price >= 4000 or hasSub == true %}This order ships FREE{% else %}Free shipping over $40{% endif %}</span> {% endcomment %}
+            <div class="js-minicart-items">
+                {% if cart.items.size == 0 %}
+                <p>You currently have no items in your cart.</p>
+                {% endif %}
+
+                {% for item in cart.items %}
+                <div class="minicart__item js-item" data-id="{{ item.variant.id }}">
+                    <a class="minicart__item-image" href="{{ item.variant.url }}">
+                        <img width="300" height="300" loading="lazy" src="{{ item.image | image_url: width: '320px' }}"
+                            alt="{{ item.product.image.alt | escape }}" />
+                    </a>
+                    <div class="minicart__item-details">
+                        <a class="minicart__item-title" href="{{ item.variant.url }}">{{ item.product.title }}</a>
+                        <span class="minicart__item-price">{{ item.price | money }}</span>
+                        <span class="minicart__item-options">
+                            {%- for option in item.options_with_values -%}
+                                {% unless option.value == 'Default Title' %}
+                                    <span class="minicart__item-option h5">{{ option.value }}</span>
+                                {% endunless %}
+                            {% endfor %}
+                        </span>
+                        <div class="minicart__item-qty">
+                            <button class="js-update-qty less">-</button>
+                            <input class="js-minicart-qty" type="number" data-id="{{ item.variant.id }}" value="{{ item.quantity }}" min="1"   />
+                            <button class="js-update-qty more">+</button>
+                        </div>
+                        <div class="minicart__item-remove h5 js-remove-item" data-id="{{ item.variant.id }}">Remove</div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="minicart__footer">
+            <a class="big-btn js-circle-btn" name="Checkout" href="/checkout">
+                {% render 'circle-btn' %}
+                <span>Checkout</span>
+            </a>
+        </div>
+    </div>
+</div>

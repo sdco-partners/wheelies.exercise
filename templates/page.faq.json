@@ -1,0 +1,104 @@
+{
+  "sections": {
+    "133f2772-20a1-4da0-952e-89ac7f6cf1ed": {
+      "type": "tertiary-hero",
+      "blocks": {
+        "29747e57-9585-4d16-929a-c07da891dab5": {
+          "type": "Headline",
+          "settings": {
+            "title": "<em>Frequently<\/em> asked questions"
+          }
+        }
+      },
+      "block_order": [
+        "29747e57-9585-4d16-929a-c07da891dab5"
+      ],
+      "settings": {
+      }
+    },
+    "5290b71f-feef-40df-aafc-f5d8f6af4eeb": {
+      "type": "faq",
+      "blocks": {
+        "cc24277a-bc36-4dd7-aa6c-ba8cce8c7e2c": {
+          "type": "faq",
+          "settings": {
+            "title": "My hands look older than the rest of my body. Which one of your moisturizers can help reverse this curse?",
+            "answer": "<p>We've got the solution for you: it's a one-two punch of our EXCELLENT MOISTURIZER, followed by a thick slab of SPF 50 MINERAL SUNSCREEN.<\/p>"
+          }
+        },
+        "98a02519-b70d-4847-9da7-355195880ca1": {
+          "type": "faq",
+          "settings": {
+            "title": "Do y'all have anything that'll reverse balding?",
+            "answer": "<p>Sorry friend, we do not. Just embrace it and start using sunscreen on yr dome or maybe wear a cool beanie like all the web developers.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "cc24277a-bc36-4dd7-aa6c-ba8cce8c7e2c",
+        "98a02519-b70d-4847-9da7-355195880ca1"
+      ],
+      "settings": {
+        "header": "Product Information"
+      }
+    },
+    "3e3a1c4c-3930-43a5-99cd-9f8d4aa49ff8": {
+      "type": "faq",
+      "blocks": {
+        "64a19209-afeb-4626-a846-993e4d60005a": {
+          "type": "faq",
+          "settings": {
+            "title": "Can I get free shipping or what?",
+            "answer": "<p>Totally, we offer free shipping on all orders over $99.<\/p>"
+          }
+        },
+        "1dd285a1-a712-446c-9fdb-8cfc7ee1a138": {
+          "type": "faq",
+          "settings": {
+            "title": "How long does it take to receive international orders?",
+            "answer": "<p>USPS provides reliable and affordable international delivery to about 180 countries through Priority Mail International. Most Priority Mail International shipments include tracking and insurance.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "64a19209-afeb-4626-a846-993e4d60005a",
+        "1dd285a1-a712-446c-9fdb-8cfc7ee1a138"
+      ],
+      "settings": {
+        "header": "Shipping"
+      }
+    },
+    "3df24b44-ddea-4feb-a2df-f2dcf91d92fa": {
+      "type": "faq",
+      "blocks": {
+        "ab0c31e4-ac6d-4b4e-b06a-555bb1ec12e4": {
+          "type": "faq",
+          "settings": {
+            "title": "Can I return something if I've used it a lil bit?",
+            "answer": "<p>How much is a <em>lil bit?<\/em> Like a lot?<\/p>"
+          }
+        },
+        "36fed12a-3819-41e8-ae9e-c770dcfe3a60": {
+          "type": "faq",
+          "settings": {
+            "title": "What's your window for returns and exchanges?",
+            "answer": "<p>You have 14 days (from the date of delivery) to return any unopened product for a refund or exchange.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "ab0c31e4-ac6d-4b4e-b06a-555bb1ec12e4",
+        "36fed12a-3819-41e8-ae9e-c770dcfe3a60"
+      ],
+      "settings": {
+        "header": "Returns & Exchanges"
+      }
+    }
+  },
+  "order": [
+    "133f2772-20a1-4da0-952e-89ac7f6cf1ed",
+    "5290b71f-feef-40df-aafc-f5d8f6af4eeb",
+    "3e3a1c4c-3930-43a5-99cd-9f8d4aa49ff8",
+    "3df24b44-ddea-4feb-a2df-f2dcf91d92fa"
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "current": {
+    "colors_solid_button_labels": "#f3f1ef",
+    "colors_accent_1": "#accacd",
+    "colors_accent_2": "#eee29f",
+    "colors_text": "#1c1c1c",
+    "colors_outline_button_labels": "#1c1c1c",
+    "colors_background_1": "#f3f1ef",
+    "colors_background_2": "#ffffff",
+    "favicon": "shopify:\/\/shop_images\/torreya-favicon.svg",
+    "checkout_logo_image": "shopify:\/\/shop_images\/torreya-logo.png",
+    "checkout_logo_position": "center",
+    "checkout_logo_size": "small",
+    "checkout_body_background_color": "#f3f1ef",
+    "checkout_input_background_color_mode": "transparent",
+    "checkout_sidebar_background_color": "#eae6e1",
+    "checkout_accent_color": "#1c1c1c",
+    "checkout_button_color": "#1c1c1c",
+    "sections": {
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "settings": {
+        }
+      },
+      "header": {
+        "type": "header",
+        "blocks": {
+          "4a969fc4-6a04-480d-8715-edfc27ab5418": {
+            "type": "menu_item",
+            "settings": {
+              "page": "",
+              "collection": "all-products",
+              "blog": "",
+              "title": "Shop",
+              "image": "shopify:\/\/shop_images\/original_64e83496d9ab478c2927b502440cdaa2.jpg"
+            }
+          },
+          "a53c3aef-05ba-4b4e-b7c2-a1668a06a437": {
+            "type": "menu_item",
+            "settings": {
+              "page": "wellbeing",
+              "collection": "",
+              "blog": "",
+              "title": "Wellbeing",
+              "image": "shopify:\/\/shop_images\/DTS_Desert_Sunrise_Grant_Spanier_2702.jpg"
+            }
+          },
+          "c94b5324-8ca1-409e-b60d-47919d151022": {
+            "type": "menu_item",
+            "settings": {
+              "page": "story",
+              "collection": "",
+              "blog": "",
+              "title": "Story",
+              "image": "shopify:\/\/shop_images\/original_8ab04cdcdc429fdfc14647937573b1f7.jpg"
+            }
+          },
+          "f887409e-1df9-4181-8511-9962ce12aa95": {
+            "type": "menu_item",
+            "settings": {
+              "page": "",
+              "collection": "",
+              "blog": "face-forward",
+              "title": "Face forward",
+              "image": "shopify:\/\/shop_images\/DTS_Misc_1__Nich_Fancher__Nick_Fancher_3470.jpg"
+            }
+          },
+          "e509b881-3539-4cc8-b970-eedcd53e4973": {
+            "type": "menu_item",
+            "settings": {
+              "page": "pause",
+              "collection": "",
+              "blog": "",
+              "title": "Pause",
+              "image": "shopify:\/\/shop_images\/DTS_Open_Water_Copson_London_5588.jpg"
+            }
+          }
+        },
+        "block_order": [
+          "4a969fc4-6a04-480d-8715-edfc27ab5418",
+          "a53c3aef-05ba-4b4e-b7c2-a1668a06a437",
+          "c94b5324-8ca1-409e-b60d-47919d151022",
+          "f887409e-1df9-4181-8511-9962ce12aa95",
+          "e509b881-3539-4cc8-b970-eedcd53e4973"
+        ],
+        "settings": {
+          "secondary_menu": "secondary-menu",
+          "menu_tagline": "Daily, intentional practices that <em>refocus<\/em>, <em>reset<\/em>, and <em>transform<\/em>.",
+          "cta": "\/account",
+          "cta_label": "Login"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "footer-0": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Explore",
+              "menu": "footer-explore"
+            }
+          },
+          "5756bfb5-faba-42a0-a011-abfb18143e09": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Concierge",
+              "menu": "footer-concierge"
+            }
+          }
+        },
+        "block_order": [
+          "footer-0",
+          "5756bfb5-faba-42a0-a011-abfb18143e09"
+        ],
+        "settings": {
+          "newsletter_heading": "Join <em>our<\/em> community"
+        }
+      },
+      "pop-up": {
+        "type": "pop-up",
+        "settings": {
+          "headline": "",
+          "image": "shopify:\/\/shop_images\/web_Smpl_r1_1093.jpg",
+          "enable-pop-up": false
+        }
+      },
+      "main-password-header": {
+        "type": "main-password-header",
+        "settings": {
+          "logo": "shopify:\/\/shop_images\/Smpl-Logo.png",
+          "logo_max_width": 100,
+          "color_scheme": "background-1"
+        }
+      },
+      "main-password-footer": {
+        "type": "main-password-footer",
+        "settings": {
+          "color_scheme": "accent-2"
+        }
+      },
+      "moments-of-pause": {
+        "type": "moments-of-pause",
+        "blocks": {
+          "e0df0404-302f-4761-9936-8a0a0d813430": {
+            "type": "Moment",
+            "settings": {
+              "title": "Been outside <em>today<\/em>?",
+              "image": "shopify:\/\/shop_images\/original_8ab04cdcdc429fdfc14647937573b1f7.jpg"
+            }
+          },
+          "211223aa-6bbd-4f08-b68a-2e0cbb58ffc4": {
+            "type": "Moment",
+            "settings": {
+              "title": "<em>Less<\/em> chaos, <em>more<\/em> clarity",
+              "image": "shopify:\/\/shop_images\/DTS_Open_Water_Copson_London_5588.jpg"
+            }
+          },
+          "21ba99fe-cb2a-47a8-884e-80beb40c4f5c": {
+            "type": "Moment",
+            "settings": {
+              "title": "Take 3 <em>deep<\/em> breathes",
+              "image": "shopify:\/\/shop_images\/DTS_Misc_1__Nich_Fancher__Nick_Fancher_3470.jpg"
+            }
+          },
+          "e9d31a8e-977a-4068-b721-b69a9fbfb40a": {
+            "type": "Moment",
+            "settings": {
+              "title": "<em>Waves<\/em> breaking",
+              "image": "shopify:\/\/shop_images\/DTS_Desert_Sunrise_Grant_Spanier_2702.jpg"
+            }
+          }
+        },
+        "block_order": [
+          "e0df0404-302f-4761-9936-8a0a0d813430",
+          "211223aa-6bbd-4f08-b68a-2e0cbb58ffc4",
+          "21ba99fe-cb2a-47a8-884e-80beb40c4f5c",
+          "e9d31a8e-977a-4068-b721-b69a9fbfb40a"
+        ],
+        "settings": {
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
+  }
+}

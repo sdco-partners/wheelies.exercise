@@ -1,0 +1,59 @@
+@import "../bower_components/node_modules/breakpoint-sass/stylesheets/breakpoint";
+
+$black: #382932;
+$darkgray: #605B54;
+$medgray: #C6BEB5;
+$gray: #D6CFC7;
+$white: #ECE7E4;
+$bg: #F4F1ED;
+$secondary_bg: #eae6e1;
+$minicart_bg: #F2EEE9;
+
+
+@font-face {
+    font-family: 'Gestura Display';
+    src: url('GesturaDisplay-Regular.eot');
+    src: url('GesturaDisplay-Regular.eot?#iefix') format('embedded-opentype'),
+         url('GesturaDisplay-Regular.woff2') format('woff2'),
+         url('GesturaDisplay-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pangea Afrikan';
+    src: url('PangeaAfrikan-Regular.woff2') format('woff2'),
+         url('PangeaAfrikan-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+} 
+
+$sans: 'Pangea Afrikan', sans-serif;
+$serif: 'Gestura Display', serif;
+
+$hh: 4rem;
+$h1: 3rem;
+$h1_mobile: 2rem;
+$h1_tablet: 3rem;
+$h2: 2.333rem;
+$h2_tablet: 2.333rem; 
+$h2_mobile: 1.666rem;
+$h3: 1.666rem;
+$h3_mobile: 1.333rem;
+$h4: 1rem;
+$h4_mobile: 0.8rem;
+$h5: 0.75rem;
+$h5_mobile: 0.625rem;
+$body: 1rem;
+$ui: 0.8rem;
+$small: 0.666rem;
+
+
+// BREAKPOINTS 
+$mobile: 400px;
+$tablet: 650px;
+$laptop: 960px;
+$desktop: 1600px;
+$bigscreen: 1800px;

@@ -1,0 +1,94 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "e9dcbf2c-15de-45dd-bf38-4c2e60472796": {
+      "type": "tertiary-hero",
+      "blocks": {
+        "a1e6b8c4-aae7-45fd-adf8-de0ac512e7a9": {
+          "type": "Headline",
+          "settings": {
+            "title": "<p><em>Reach<\/em> out to us<\/p>"
+          }
+        },
+        "1fe12fd9-efdb-40cb-bdc0-747ccc0c1e2c": {
+          "type": "Tagline",
+          "settings": {
+            "title": "We would love to connect"
+          }
+        }
+      },
+      "block_order": [
+        "a1e6b8c4-aae7-45fd-adf8-de0ac512e7a9",
+        "1fe12fd9-efdb-40cb-bdc0-747ccc0c1e2c"
+      ],
+      "settings": {
+        "wrapper_width": "default"
+      }
+    },
+    "6fbe417a-8011-464a-ac4b-72d8936a2285": {
+      "type": "contact",
+      "blocks": {
+        "8e68e404-4a94-4bff-99e7-c4b1fdcb3d6c": {
+          "type": "Header",
+          "settings": {
+            "title": "Send us a message"
+          }
+        },
+        "bbe0090c-7ac2-4af3-9965-1e94335f28f6": {
+          "type": "Contact-Method",
+          "settings": {
+            "title": "<em>Text: <\/em>123.867.5309"
+          }
+        },
+        "26d713bf-c063-4929-a470-fde819e2714e": {
+          "type": "Contact-Method",
+          "settings": {
+            "title": "<em>Email: <\/em>hi@torreyabeauty.com"
+          }
+        },
+        "2e7226ac-c6df-46ce-8b81-4b00ce370067": {
+          "type": "Header",
+          "settings": {
+            "title": "Press"
+          }
+        },
+        "a4bafe9c-8e1e-4474-b979-8440e092424e": {
+          "type": "Contact-Method",
+          "settings": {
+            "title": "<em>Email: <\/em>pr@torreyabeauty.com"
+          }
+        },
+        "06a2093e-7118-47e6-b912-075e596b8b44": {
+          "type": "Header",
+          "settings": {
+            "title": "Live chat"
+          }
+        }
+      },
+      "block_order": [
+        "8e68e404-4a94-4bff-99e7-c4b1fdcb3d6c",
+        "bbe0090c-7ac2-4af3-9965-1e94335f28f6",
+        "26d713bf-c063-4929-a470-fde819e2714e",
+        "2e7226ac-c6df-46ce-8b81-4b00ce370067",
+        "a4bafe9c-8e1e-4474-b979-8440e092424e",
+        "06a2093e-7118-47e6-b912-075e596b8b44"
+      ],
+      "settings": {
+      }
+    },
+    "4a5a67cd-660c-4abb-ba09-537deb7d6801": {
+      "type": "contact-footer"   
+    }
+  },
+  "order": [
+    "main",
+    "e9dcbf2c-15de-45dd-bf38-4c2e60472796",
+    "6fbe417a-8011-464a-ac4b-72d8936a2285",
+    "4a5a67cd-660c-4abb-ba09-537deb7d6801"
+  ]
+}

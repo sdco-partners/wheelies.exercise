@@ -1,0 +1,38 @@
+{% comment %}
+    Renders a collection card
+
+    Accepts:
+    - product: {Object} Product Liquid object (optional)
+
+    Usage:
+    {% render 'collection-card', product: product %}
+{% endcomment %}
+
+
+<a class="collection-card" href="{{ product.url }}">
+
+
+    <div class="product__media">
+        {% for media in product.media limit: 2 %}
+            {% if forloop.first %}
+            <div class="static">
+            {% else %}
+            <div class="hover">
+            {% endif %}
+            {% if media.media_type == 'video' %}
+                {{ media | video_tag: muted: true, loop: true, controls: false, autoplay: true }}
+            {% else  %}
+                {{ media | image_url: width: 1200 | image_tag }}
+            {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="product__details">
+        <span>{{ product.title | capitalize }}</span>
+        <span>{{ product.price | money }}</span>
+    </div>
+
+    
+
+</a>  

@@ -1,0 +1,62 @@
+<div class="faqs">
+    <div class="faqs__category">
+        <h2 class="h4">{{ section.settings.header }}</h2>
+    </div>
+
+    <div class="faqs__content">
+    {% for block in section.blocks %}
+        <div class="faq js-accordion">
+            <div class="faq__title js-accordion-trigger">
+                <span class="faq__number">{{ forloop.index | prepend: "00" | slice: -2, 2 }}</span>
+                <h3 class="h3">{{ block.settings.title }}</h3>
+                <div class="faq__trigger js-accordion-icon">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="faq__body js-accordion-content">
+                {{ block.settings.answer }}
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+
+</div>
+
+{% schema %}
+  {
+    "name": "FAQ Category",
+    "tag": "section",
+    "class": "faqs-container wrapper",
+    "settings": [
+      {
+        "type": "text",
+        "id": "header",
+        "label": "FAQ Category"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "New FAQ Entry",
+        "type": "faq",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Question"
+          }, {
+            "type": "richtext",
+            "id": "answer",
+            "label": "Answer"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "category": "FAQ",
+        "name": "Frequently Asked Questions"
+      }
+    ]
+  }
+{% endschema %}

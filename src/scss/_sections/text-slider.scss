@@ -1,0 +1,62 @@
+.text-slider-container {
+    padding: 5rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    @include breakpoint($laptop) {
+        padding: 10rem 0;
+    }
+    > svg {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 110%;
+        transform: translateY(-50%);
+        max-width: 1400px;
+    }
+    @include breakpoint($laptop) {
+        padding: 50vh 0;
+    }
+    .swiper {
+        overflow: unset;
+    }
+    .swiper-slide {
+        padding: 0 2rem;
+        @include breakpoint($laptop) {
+            padding: 0;
+        }
+    }
+    .h5 {
+        display: block;
+        margin-bottom: 1rem;
+        em {
+            font-family: $serif;
+            text-transform: none;
+        }
+    }
+    .h2 {
+        font-family: $serif;
+        max-width: 630px;
+        width: 100%;
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+.text-slider {
+    .swiper-pagination {
+        position: relative;
+        bottom: 0;
+        margin-top: 1rem;
+    }
+    .swiper-pagination-bullet {
+        border: 1px solid $black;
+        background: $black;
+        opacity: 1;
+        &.swiper-pagination-bullet-active {
+            background: transparent;
+        }
+    }
+}

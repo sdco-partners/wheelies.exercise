@@ -1,0 +1,133 @@
+<script src="{{ 'product-slider.js' | asset_url }}" defer="defer"></script>
+
+<a class="skip-to-content-link button visually-hidden" href="#ProductInfo-{{ section.id }}">
+{{ "accessibility.skip_to_product_info" | t }}
+</a>
+
+
+<div class="product__slider-container">
+    <div class="product__slider js-product-slider swiper">
+        <div class="swiper-wrapper">
+        {% for media in product.media %}
+            <div class="swiper-slide">
+                <div class="product__image">
+                    {% if media.media_type == 'video' %}
+                        {{ media | video_tag: muted: true, loop: true, controls: false, autoplay: true }}
+                    {% else  %}
+                        {{ media | image_url: width: 1200 | image_tag }}
+                    {% endif %}
+                </div> 
+            </div>
+        {% endfor %} 
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+
+<div class="product__content">
+
+    <div class="product__content-inner">
+
+        {%- for block in section.blocks -%}
+        {%- case block.type -%}
+        {%- when '@app' -%}
+        {% render block %}
+        {%- when 'title' -%}
+        <header class="product__header">
+            {% assign title_words = product.title | split: ' ' %}
+            <h1 class="product__title h2">
+                {%- for word in title_words -%}
+                    {%- if forloop.first -%}<em>{{- word -}}</em> {% else %}{{ word }}{%- endif -%}
+                {%- endfor -%}
+            </h1>
+        </header>
+        
+        {%- when 'description' -%}
+        {%- if product.description != blank -%}
+        <p class="product__description">
+            {{ product.description }}
+        </p>
+        {%- endif -%}
+
+        {%- when 'price' -%}
+        <span class="h4">{{ product.price | money }}</span>
+    
+        {%- when 'options' -%}
+        {% unless product.options.size > 1 %}
+        <div class="product__options">
+            {% for option in product.options_with_values %}
+                <span class="h5">{{ option.values }}</span>
+            {% endfor %}
+        </div>
+        {% else %}
+        {% comment %} this is where a product select would go {% endcomment %}
+        {% endunless %}
+
+        {% when 'divider' %}
+        <hr />
+
+        {%- when 'benefits' -%}
+        {% unless product.metafields.custom.benefits == blank %}
+        <span class="h5">Benefits</span>
+        <p>{{ product.metafields.custom.benefits }}</p>
+        {% endunless %}
+        {%- endcase -%}
+        {% endfor %} 
+
+
+        
+        <div class="product__btn">
+            <button class="big-btn js-add-to-cart js-circle-btn" type="submit" name="Add to bag" data-id="{{ product.selected_or_first_available_variant.id }}">
+                {% render 'circle-btn' %}
+                <span>Add to Bag</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+
+  
+
+{% schema %}
+{
+  "name": "Product Information",
+  "tag": "section",
+  "class": "main-product",
+  "blocks": [
+    {
+      "type": "@app"
+    },
+    {
+      "type": "title",
+      "name": "Product Title",
+      "limit": 1
+    },
+    {
+      "type": "description",
+      "name": "Description",
+      "limit": 1
+    },
+    {
+      "type": "price",
+      "name": "Price",
+      "limit": 1
+    },
+    {
+      "type": "options",
+      "name": "Options",
+      "limit": 1
+    },
+    {
+        "type": "divider",
+        "name": "Divider",
+        "limit": 1
+    },
+    {
+        "type": "benefits",
+        "name": "Benefits",
+        "limit": 1
+    }
+  ],
+  "settings": []
+}
+{% endschema %}

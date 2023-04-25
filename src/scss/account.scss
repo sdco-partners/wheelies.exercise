@@ -1,0 +1,225 @@
+.account {
+	padding: 80px 0; 
+	background: $secondary_bg;
+}
+
+.account__header {
+	text-align: center;
+    margin-bottom: 40px;
+    h1 {
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 40px;
+    }
+    p {
+        margin-bottom: 20px;
+    }
+    .cta {
+        margin: 0 auto;
+        text-align: center;
+        display: inline-block;
+    }
+}
+
+.account__grid {
+	display: grid;
+	row-gap: 40px;
+	@include breakpoint($laptop) {
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 40px;
+	}
+}
+
+.account__grid-item {
+	&:last-child {
+		@include breakpoint($laptop) {
+			justify-self: end;
+		}
+	}
+	.h4 {
+		color: $black;
+		display: block;
+		margin-bottom: 10px;
+	}
+	p {
+		margin-bottom: 20px;
+		font-size: $ui;
+	}
+	.responsive-table {
+		th, td {
+			text-align: left;
+		}
+	}
+}
+
+.form {
+	width: 100%;
+	max-width: 540px;
+	margin: 0 auto;
+	&.hide {
+		display: none;
+	}
+	h2, #RecoverHeading {
+		font-size: $body;
+		display: block;
+		text-align: center;
+		margin-bottom: 40px;
+	}
+	.h4 {
+		margin-bottom: 40px;
+	}
+	.text-center {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	.errors {
+		margin-bottom: 20px;
+		color: red;
+	}
+	#RecoverHeading {
+		margin-bottom: 20px;
+	}
+}
+
+.form__group-container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	column-gap: 20px;
+}
+
+.form__group--full-width {
+	grid-column: span 2;
+}
+
+.form__group {
+	margin-bottom: 20px;
+	label {
+		font-family: $sans;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		display: block;
+		margin-bottom: 10px;
+		font-size: $ui;
+		color: $black;
+		&.error {
+			color: red;
+			margin-bottom: 0;
+			margin-top: 10px;
+		}
+	}
+	input {
+		display: block;
+		border: none;
+		border-bottom: 2px solid $black;
+		width: 100%;
+		background: transparent;
+		font-size: $h5;
+		border-radius: 0;
+		appearance: none;
+		line-height: 1;
+		&:focus {
+			outline: none;
+		}
+		@include placeholder() {
+			color: $black;
+		}
+	}
+	input[type="checkbox"] {
+		display: inline-block;
+		width: 24px;
+		height: 20px;
+		border: 2px solid $black;
+		background: transparent;
+		appearance: none;
+		vertical-align: middle;
+		margin-right: 5px;
+		border-radius: 0;
+		appearance: none;
+		&:checked {
+			background: $black;
+		}
+		+ label {
+			display: inline-block;
+			margin-bottom: 0;
+			vertical-align: middle;
+		}
+	}
+	.selectric {
+		border-bottom: 2px solid $black;
+		.label {
+			font-size: $h5;
+
+			letter-spacing: 0;
+			line-height: 1;
+			padding: 5px 0;
+		}
+	}
+}
+
+.form__ctas {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 40px;
+	.btn {
+		margin-right: 10px;
+	}
+	a.btn {
+		margin-right: 0px;
+	}
+	p a {
+		display: inline-block;
+		color: $black;
+        font-family: $sans;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 0.1em;
+        font-size: $ui;
+        cursor: pointer;
+        margin-top: 20px;
+        &:hover {
+            text-decoration: underline;
+        }
+	}
+	p {
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+
+}
+
+.form__ctas--flex {
+	flex-direction: row;
+	.cta {
+		&:first-child {
+			margin-right: 20px;
+		}
+	}
+}
+
+.address {
+	margin-bottom: 50px;
+	&.default {
+		&:before {
+			content: 'Default';
+			color: $black;
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+			font-family: $sans;
+			font-size: $ui;
+		}
+	}
+	p {
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		display: block;
+		margin-bottom: 20px;
+		font-size: $ui;
+		color: $black;
+	}
+	&.hide {
+		display: none;
+	}
+}

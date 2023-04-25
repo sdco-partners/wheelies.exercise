@@ -1,0 +1,37 @@
+{
+  "sections": {
+    "hero": {
+      "type": "tertiary-hero",
+      "blocks": {
+        "6c043f27-249f-43a3-a313-e036c199ac56": {
+          "type": "Headline",
+          "settings": {
+            "title": "<p>Face <em>forward<\/em><\/p>"
+          }
+        },
+        "0eefe3ac-2456-4e76-9377-d3216050558a": {
+          "type": "Subheadline",
+          "settings": {
+            "title": "An inviting, transformative space and state of mind"
+          }
+        }
+      },
+      "block_order": [
+        "6c043f27-249f-43a3-a313-e036c199ac56",
+        "0eefe3ac-2456-4e76-9377-d3216050558a"
+      ],
+      "settings": {
+        "wrapper_width": "wide"
+      }
+    },
+    "main": {
+      "type": "main-blog",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "main"
+  ]
+}

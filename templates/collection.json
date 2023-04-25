@@ -1,0 +1,20 @@
+{
+  "sections": {
+    "product-grid": {
+      "type": "main-collection-grid",
+      "settings": {
+        "title": "Skincare for a <em>centered<\/em> self"
+      }
+    },
+    "ed6bd249-1f3f-419c-9dfe-7d12deb6ec47": {
+      "type": "collection-prefooter",
+      "settings": {
+        "title": "Rest <em>is a<\/em> revolution"
+      }
+    }
+  },
+  "order": [
+    "product-grid",
+    "ed6bd249-1f3f-419c-9dfe-7d12deb6ec47"
+  ]
+}

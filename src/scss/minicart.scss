@@ -1,0 +1,294 @@
+.minicart-container {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    transition: transform .4s;
+    font-family: $sans;
+    display: flex;
+    pointer-events: none;
+    z-index: 999;
+    display: flex;
+}
+
+.minicart {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    color: $white;
+    pointer-events: auto;
+    background: $white;
+    color: $black;
+    max-width: 640px;
+    position: relative;
+    z-index: 1;
+    transform: translateX(100%);
+    transition: transform .4s;
+    margin-left: auto;
+    background: $minicart_bg;
+}
+
+.minicart__close {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+    display: block;
+    svg {
+        pointer-events: none;
+    }
+}
+
+.minicart__header {
+    padding: 5rem 2rem 0rem 2rem;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    border-bottom: 1px solid $gray;
+    font-family: $serif;
+    @include breakpoint($laptop) {
+        padding: 5rem 3rem 0rem 3rem;
+    }
+    .h2 {
+        margin-bottom: 0.25em;
+    }
+    span, a {
+        letter-spacing: inherit;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    > div {
+        display: flex;
+        
+    }
+    button {
+        margin-right: 0;
+        appearance: none;
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.minicart__promotion {
+    text-align: center;
+    display: block;
+    margin-bottom: 20px;
+    font-size: $h5;
+}
+
+.minicart__body {
+    margin: 0 auto;
+    flex-grow: 1;
+    overflow-y: scroll;
+    width: 100%;
+    padding: 2rem;
+    @include breakpoint($laptop) {
+        padding: 3rem;
+    }
+}
+
+.minicart__item {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.minicart__item-image {
+    width: 100%;
+    min-width: 100px;
+    position: relative;
+    background: var(--bg, transparent);
+    @include breakpoint($laptop) {
+        min-width: 160px;
+    }
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.minicart__item-details {
+    grid-column: span 2;
+    display: grid;
+    grid-template-areas:
+                "a a . ."
+                "b b . ."
+                "c c . ."
+                "d d . e";
+    grid-auto-rows: auto;
+}
+
+.minicart__item-title {
+    color: $black;
+    display: block;
+    text-decoration: none;
+    grid-area: a;
+}
+
+.minicart__item-options {
+    grid-area: c;
+}
+
+.minicart__item-subtotal {
+    display: flex;
+    align-items: baseline;
+}
+
+.minicart__item-price {
+    display: block;
+    grid-area: b;
+}
+
+.minicart__item-remove {
+    grid-area: e;
+    justify-self: end;
+    align-self: flex-end;
+    cursor: pointer;
+    color: $gray;
+}
+
+.minicart__item-qty {
+    display: flex;
+    grid-area: d;
+    width: 105px;
+    border: 1px solid $black;
+    height: 40px;
+    font-size: $ui;
+    align-self: flex-end;
+    button {
+        border: none;
+        background: transparent;
+        appearance: none;
+        padding: 1rem;
+        cursor: pointer;
+        color: transparent;
+        &.less {
+            background-image: url('minus.svg');
+            background-size: 13px;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        &.more {
+            background-image: url('plus.svg');
+            background-size: 13px;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+    input {
+        border: none;
+        appearance: none;
+        text-align: center;
+        display: block;
+        width: 100%;
+        background: transparent;
+        -webkit-appearance: none;
+        margin: 0;
+        -moz-appearance: textfield;
+        &:focus {
+            outline: none;
+        }
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        /* display: none; <- Crashes Chrome on hover */
+        -webkit-appearance: none;
+        margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+    }
+
+}
+
+.minicart__item-qty--no-outline {
+    border: none;
+    .btn {
+        border: 1px solid $black;
+    }
+}
+
+.minicart__footer {
+    flex-shrink: 0;
+    align-items: center;
+    position: sticky;
+    bottom: 0;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    background: $minicart_bg;
+    border-top: 1px solid $gray;
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 3rem;
+        background: linear-gradient(to bottom, rgba($minicart_bg, 0), rgba($minicart_bg, 1));
+        transform: translateY(calc(-100% - 1px));
+        z-index: -1;
+        pointer-events: none;
+    }
+    @include breakpoint($laptop) {
+        position: relative;
+        padding: 3rem;
+    }
+}
+
+.minicart-bg {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+    background: rgba($black, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 0;
+    transition: opacity .4s;
+    @include breakpoint($laptop) {
+        display: block;
+    }
+}
+
+.minicart-container.active {
+    .minicart-bg {
+        opacity: 1;
+        transition: opacity .4s .2s;
+        pointer-events: auto;
+    }
+    .minicart {
+        transform: translateX(0%);
+        transition: transform .4s;
+    }
+}
+
+.minicart-bg__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba($gray, 0.5);
+    cursor: pointer;
+}
+
+.minicart__cross-sell {
+    border-top: 1px solid $black;
+    padding: 20px 0;
+    .h5 {
+        display: block;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .btn {
+        font-size: $ui;
+    }
+}

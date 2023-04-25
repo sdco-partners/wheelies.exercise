@@ -1,0 +1,142 @@
+.menu-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+    height: 100vh;
+    font-family: $sans;	
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background: $sansgray;
+    pointer-events: auto;
+    justify-content: center;
+    align-items: center;
+    @include breakpoint($laptop) {
+        width: 50%;
+        margin-right: auto;
+    }
+}
+
+.menu__content {
+	> ul li {
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		margin-bottom: 40px;
+		a {
+			color: $black;
+			text-decoration: none;
+            color: $black;
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                bottom: -2px;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background: $black;
+                transform: scaleX(0);
+                transition: transform .4s;
+                transform-origin: right;
+            }
+            &.active, &:hover {
+                &:after {
+                    transform: scaleX(1);
+                    transition: transform .4s;
+                    transform-origin: left;
+                }
+            }
+		}
+	}
+
+}
+
+.menu__utility-menu {
+	display: flex;
+	ul:first-child {
+		margin-right: 40px;
+	}
+	ul li {
+		margin-bottom: 5px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		span, a {
+			font-size: $small;
+			text-decoration: none;
+			color: $black;
+			cursor: pointer;
+            &:hover {
+                text-decoration: underline;
+            }
+		}
+	}
+}
+
+.close-menu {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    cursor: pointer;
+    display: none;
+    @include breakpoint($laptop) {
+    	display: block;
+    }
+    &.active {
+        pointer-events: auto;
+    }
+}
+
+.menu-bg {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    pointer-events: none;
+    display: none;
+    @include breakpoint($laptop) {
+    	display: block;
+    }
+    svg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: right center;
+        position: absolute;
+        top: 0;
+    }
+}
+
+.menu-bg__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba($black, 0.1);
+}
+
+.close-menu-trigger {
+	width: 12px;
+	height: 12px;
+	position: absolute;
+	top: 40px;
+	left: 40px;
+	cursor: pointer;
+	svg {
+		width: 100%;
+		display: block;
+	}
+}

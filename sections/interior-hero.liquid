@@ -1,0 +1,20 @@
+<div class="wrapper">
+    <div class="container">
+        <h1>{% if section.settings.title %}{{ section.settings.title }} {% else %}{{ page.title }}{% endif %}</h1>
+    </div>
+</div>
+
+{% schema %}
+{
+"name": "Interior Hero",
+"tag": "section",
+"class": "interior-hero",
+"settings": [
+  {
+    "type": "text",
+    "id": "title",
+    "label": "Headline"
+  }
+] 
+}
+{% endschema %} 

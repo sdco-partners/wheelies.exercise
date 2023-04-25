@@ -1,0 +1,148 @@
+.contact-info {
+  margin: 0 auto 11rem auto;
+  width: 100vw;
+  &__title {
+    &:first-of-type {
+      margin-top: 0;
+    }
+    margin: 1.5rem 0 0.5rem 0;
+    font-family: $serif;
+    font-size: $h3_mobile;
+    @include breakpoint($laptop) {
+      font-size: $h3;
+    }
+  }
+  &__tagline {
+    margin-bottom: 0;
+    em {
+      font-family: $serif;
+      padding-right: 2px;
+    }
+  }
+  div {
+    &:first-of-type {
+      display: none;
+    }
+    display: block;
+    height: 1px;
+    background-color: $black;
+    max-width: 450px;
+    margin: 1.5rem 0 0 0;
+  }
+}
+
+/////////////////////////
+/// NOT MY SASS, BRO ////
+/// Love, Erik //////////
+/////////////////////////
+
+// .contact {
+//   max-width: 1150px;
+//   width: 100%;
+//   margin: 0 auto;
+//   padding: calc(var(--ratio, 20px) * 5) 0;
+//   @include breakpoint($laptop) {
+//     display: flex;
+//     align-items: stretch;
+//     justify-content: space-between;
+//   }
+//   a {
+//     color: $secondary;
+//   }
+// }
+
+
+// .contact__sidebar {
+//   padding-right: calc(var(--ratio, 20px) * 2);
+//   display: none;
+//   @include breakpoint($laptop) {
+//     display: block;
+//   }
+//   ul {
+//     position: sticky;
+//     top: 50px;
+//   }
+// }
+
+// .contact__content {
+//   max-width: 735px;
+//   width: 100%;
+//   padding: 0 calc(var(--ratio, 20px) * 2);
+//   margin: 0 auto;
+//   @include breakpoint($laptop) {
+//     padding: 0;
+//   }
+//   section {
+//     padding-top: calc(var(--ratio, 20px) * 2);
+//     &.connect {
+//       padding-top: 0;
+//     }
+//     h2 {
+//       margin-bottom: calc(var(--ratio, 20px) * 1);
+//       text-transform: none;
+//       font-size: $h4;
+//       @include breakpoint($laptop) {
+//         font-size: $h3;
+//       }
+//     }
+//   }
+// }
+
+// .connect__block {
+//   padding: calc(var(--ratio, 20px) * 1) 0;
+//   border-bottom: $thickness solid $primary;
+//   &:first-child {
+//     margin-top: calc(var(--ratio, 20px) * 1) 0;
+//   }
+// }
+
+// .faq {
+//   margin-bottom: calc(var(--ratio, 20px) * 2);
+//   padding-bottom: calc(var(--ratio, 20px) * 1);
+//   border-bottom: $thickness solid $primary;
+//   .faq__chevron {
+//     transform: rotate(90deg);
+//   }
+//   &.active {
+//     .faq__chevron {
+//       transform: rotate(180deg);
+//       transition: transform .4s;
+//     }
+//   }
+// }
+
+// .faq__header {
+//   display: flex;
+//   cursor: pointer;
+// }
+
+// .faq__question {
+//   flex-grow: 1;
+// }
+
+// .faq__answer {
+//   display: none;
+//   p {
+//     &:last-child {
+//       margin-bottom: 0;
+//     }
+//   }
+// }
+
+
+// .faq__chevron {
+//   width: 24px;
+//   height: 24px;
+//   flex-shrink: 0;
+//   transition: transform .4s;
+//   transform-origin: center;
+//   svg {
+//     width: 100%;
+//     height: 100%;
+//     object-fit: contain;
+//     display: block;
+//     g, path {
+//       fill: $primary;
+//     }
+//   }
+// }

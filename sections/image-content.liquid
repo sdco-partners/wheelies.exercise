@@ -1,0 +1,130 @@
+<div class="image">
+    {%- if section.settings.image != blank -%}
+        {{ section.settings.image | image_url: width: 1920 | image_tag }}
+    {%- endif -%}
+    
+    {%- if section.settings.video != blank -%}
+        {{ section.settings.video | video_tag: muted: true, loop: true, controls: false, autoplay: true }}
+    {%- endif -%}
+</div>
+
+
+<div class="content">
+    {% for block in section.blocks %}
+        {% if block.type == 'subheadline' %}
+            <h2 class="h5">{{ block.settings.title }}</h2>
+        {% elsif block.type == 'h2' %}
+            <p class="h2">{{ block.settings.title | remove: '<p>' | remove: '</p>' }}</p>
+        {% elsif block.type == 'h3' %}
+            <p class="h3">{{ block.settings.title | remove: '<p>' | remove: '</p>' }}</p>
+        {% elsif block.type == 'copy' %}
+            {{ block.settings.title }}
+        {% elsif block.type == 'cta' %}
+            <a class="big-btn js-circle-btn" href="{{ block.settings.cta_url }}">
+                {% render 'circle-btn' %}
+                <span>{{ block.settings.cta_label }}</span>
+            </a>
+        {% endif %}
+    {% endfor %}
+</div>
+
+
+  
+{% schema %}
+{
+"name": "Image & Content",
+"tag": "section",
+"class": "image-content wrapper",
+"settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+        "type": "video",
+        "id": "video",
+        "label": "Video"
+    } 
+  ],
+  "blocks": [
+    {
+      "type": "subheadline",
+      "name": "Subheadline",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "default": "Story",
+          "label": "Headline"
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "name": "Headline (H2)",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "title",
+          "default": "<p><em>Less</em> chaos, <em>more</em> clarity</p>",
+          "label": "Headline"
+        }
+      ]
+    },
+    {
+        "type": "h3",
+        "name": "Headline (H3)",
+        "settings": [
+          {
+            "type": "richtext",
+            "id": "title",
+            "default": "<p><em>Less</em> chaos, <em>more</em> clarity</p>",
+            "label": "Headline"
+          }
+        ]
+    },
+    {
+      "type": "copy",
+      "name": "Copy",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "title",
+          "default": "<p>The one constant in life is change — and that includes our physical and mental health. Torreya is a community for anyone who wants to slow down, break free from the chaos, and start fresh. We’re out to transform skincare and wellbeing, so that taking care of yourself and feeling good is not only easier but more enjoyable.  And every moment is an opportunity to come back to you.</p>",
+          "label": "Copy"
+        }
+      ]
+    },
+    {
+        "type": "cta",
+        "name": "CTA",
+        "settings": [
+            {
+                "type": "url",
+                "id": "cta_url",
+                "label": "CTA URL"
+            },
+            {
+                "type": "text",
+                "id": "cta_label",
+                "label": "CTA Label"
+            }
+        ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image Content",
+      "blocks": [
+        {
+          "type": "h2"
+        },
+        {
+          "type": "copy"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,82 @@
+<span class="h3">{{ product.title | remove: 'Bar' }} Ingredients</span>
+
+{% assign ingredients = product.metafields.settings.functional_ingredients | split: '|' %}
+{% for ingredient in ingredients %}
+    <div class="ingredient">
+    {% case ingredient %}
+    {% when 'green-tea-caffeine' %}
+        <div class="ingredient__image">
+        <img src="{{ 'green-tea-caffeine.jpg' | asset_img_url: '215x215', scale: 2, crop: 'center' }}" width="215" height="215" loading="lazy" />
+        </div>
+        <div class="ingredient__details">
+            <span class="ingredient__title label">Green Tea Caffeine</span>
+            <span class="ingredient__dose label">Dose: 65MG</span>
+            <span class="ingredient__description">Delivers long-lasting energy boost without the jitters or crash from coffee</span>
+        </div>
+            {% when 'ginseng' %}
+        <div class="ingredient__image">
+        <img src="{{ 'ginseng.jpg' | asset_img_url: '215x215', scale: 2, crop: 'center' }}" width="215" height="215" loading="lazy" />
+        </div>
+        <div class="ingredient__details">
+            <span class="ingredient__title label">Ginseng</span>
+            <span class="ingredient__dose label">Dose: 100MG</span>
+            <span class="ingredient__description">Culpa proident fugiat culpa consectetur anim. Occaecat pariatur dolore.</span>
+        </div>
+            {% when 'magnesium' %}
+        <div class="ingredient__image">
+        <img src="{{ 'magnesium.jpg' | asset_img_url: '215x215', scale: 2, crop: 'center' }}" width="215" height="215" loading="lazy" />
+        </div>
+        <div class="ingredient__details">
+            <span class="ingredient__title label">Magnesium</span>
+            <span class="ingredient__dose label">Dose: 50MG</span>
+            <span class="ingredient__description">Culpa proident fugiat culpa consectetur anim. Occaecat pariatur dolore.</span>
+        </div>
+            {% when 'ashwagandha' %}
+        <div class="ingredient__image">
+        <img src="{{ 'ashwagandha.jpg' | asset_img_url: '215x215', scale: 2, crop: 'center' }}" width="215" height="215" loading="lazy" />
+        </div>
+        <div class="ingredient__details">
+            <span class="ingredient__title label">Ashwagandha</span>
+            <span class="ingredient__dose label">Dose: 200MG</span>
+            <span class="ingredient__description">Culpa proident fugiat culpa consectetur anim. Occaecat pariatur dolore.</span>
+        </div>
+            {% when 'lemon-balm' %}
+        <div class="ingredient__image">
+        <img src="{{ 'lemon-balm.jpg' | asset_img_url: '215x215', scale: 2, crop: 'center' }}" width="215" height="215" loading="lazy" />
+        </div>
+        <div class="ingredient__details">
+            <span class="ingredient__title label">Lemon Balm</span>
+            <span class="ingredient__dose label">Dose: 100MG</span>
+            <span class="ingredient__description">Culpa proident fugiat culpa consectetur anim. Occaecat pariatur dolore.</span>
+        </div>
+            {% when 'elderberry' %}
+        <div class="ingredient__image">
+        <img src="{{ 'elderberry.jpg' | asset_img_url: '215x215', scale: 2, crop: 'center' }}" width="215" height="215" loading="lazy" />
+        </div>
+        <div class="ingredient__details">
+            <span class="ingredient__title label">Elderberry</span>
+            <span class="ingredient__dose label">Dose: 100MG</span>
+            <span class="ingredient__description">Culpa proident fugiat culpa consectetur anim. Occaecat pariatur dolore.</span>
+        </div>
+            {% when 'probiotics' %}
+        <div class="ingredient__image">
+        <img src="{{ 'probiotics.jpg' | asset_img_url: '215x215', scale: 2, crop: 'center' }}" width="215" height="215" loading="lazy" />
+        </div>
+        <div class="ingredient__details">
+            <span class="ingredient__title label">Probiotics</span>
+            <span class="ingredient__dose label">Dose: 1 billion CFUs</span>
+            <span class="ingredient__description">Culpa proident fugiat culpa consectetur anim. Occaecat pariatur dolore.</span>      
+        </div>
+            {% when 'vitamin-c' %}
+        <div class="ingredient__image">
+        <img src="{{ 'vitamin-c.jpg' | asset_img_url: '215x215', scale: 2, crop: 'center' }}" width="215" height="215" loading="lazy" />
+        </div>
+        <div class="ingredient__details">
+            <span class="ingredient__title label">Vitamin C</span>
+            <span class="ingredient__dose label">100% DV</span>
+            <span class="ingredient__description">Culpa proident fugiat culpa consectetur anim. Occaecat pariatur dolore.</span>      
+        </div>
+            
+    {% endcase %}
+</div>
+{% endfor %}

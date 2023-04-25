@@ -1,0 +1,56 @@
+{% if section.settings.enable-pop-up %}
+
+<div class="pop-up-bg js-close-pop-up"></div>
+<div class="pop-up">
+    {% comment %} <div class="pop-up__image">
+        <img
+            srcset="{%- if section.settings.image.width >= 768 -%}{{ section.settings.image | img_url: '768x432', crop: 'center' }} 768w,{%- endif -%}
+                    {%- if section.settings.image.width >= 1024 -%}{{ section.settings.image | img_url: '1024x576', crop: 'center' }} 1024w,{%- endif -%}
+                    {%- if section.settings.image.width >= 1440 -%}{{ section.settings.image | img_url: '1440x810', crop: 'center' }} 1440w,{%- endif -%}
+                    {%- if section.settings.image.width >= 1920 -%}{{ section.settings.image | img_url: '1920x1080', crop: 'center' }} 1920w,{%- endif -%}"
+            src="{{ section.settings.image | img_url: '768x432', crop: 'center' }}"
+            sizes="(min-width: 1920px) 1920px,
+                   (min-width: 1440px) 1440px,
+                   (min-width: 1024px) 1024px,
+                   (min-width: 768px) 768px,
+                   100vw"
+            alt="{{ section.settings.image.alt }}"
+            height="{{ section.settings.image.height }}"
+            width="{{ section.settings.image.width }}"
+            loading="lazy"
+            >
+    </div> {% endcomment %}
+    <div class="close js-close-pop-up">{% render 'close' %}</div>
+    <div class="container">
+        <h4 class="h4">{{ section.settings.headline | remove: '<p>' | remove: '</p>' }}</h4> 
+    </div>
+</div>
+
+{% endif %}
+
+{% schema %}
+{
+  "name": "Pop-up",
+  "tag": "section",
+  "class": "pop-up-container js-pop-up hidden",
+  "settings": [
+    {
+        "type": "richtext",
+        "id": "headline",
+        "default": "<p>Hi, we’re smpl. We’re into delicious snack bars packed with superfoods. Reserve yours now.</p>",
+        "label": "Headline"
+    },
+    {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+    },
+    {
+    "type": "checkbox",
+    "id": "enable-pop-up",
+    "default": true,
+    "label": "Enable Pop-up"
+    }
+  ]
+}
+{% endschema %} 

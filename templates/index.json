@@ -1,0 +1,36 @@
+{
+  "sections": {
+    "aabfc60c-1231-4e6e-a446-ebd3bdf93ba3": {
+      "type": "hero",
+      "blocks": {
+        "b8ae1ae4-952d-4e4c-875f-8cecfe84722f": {
+          "type": "headline",
+          "settings": {
+            "title": "Life can be <em>chaotic<\/em> — We can forget to slow down and think about how we’re feeling."
+          }
+        },
+        "fd25447b-cbfa-49bd-bf48-d8273327afff": {
+          "type": "headline",
+          "settings": {
+            "title": "Like right now, how <em>are<\/em> you?"
+          }
+        }
+      },
+      "block_order": [
+        "b8ae1ae4-952d-4e4c-875f-8cecfe84722f",
+        "fd25447b-cbfa-49bd-bf48-d8273327afff"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/home-hero-fpo.jpg",
+        "video": "shopify:\/\/files\/videos\/Sequence 01_2.mp4",
+        "collection": "all-products",
+        "cta_label": "Begin Journey",
+        "subheadline": "Skincare that Gets you Back To You",
+        "tagline": "Skincare for a centered self designed to disrupt the chaos of modern life and reconnect you to you."
+      }
+    }
+  },
+  "order": [
+    "aabfc60c-1231-4e6e-a446-ebd3bdf93ba3"
+  ]
+}

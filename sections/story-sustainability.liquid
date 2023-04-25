@@ -1,0 +1,67 @@
+<h3 class="h5">{{ section.settings.title }}</h3>
+<h4 class="h3">{{ section.settings.headline }}</h4>
+
+<div class="sustainability__logos">
+    {% for block in section.blocks %}
+        <div class="sustainability__logo">{{ block.settings.logo | image_url: width: 400 | image_tag }}</div>
+    {% endfor %}
+</div>
+
+{% if section.settings.cta and section.settings.cta_label %}
+    <a class="big-btn js-circle-btn" href="{{ section.settings.collection.url }}">
+        {% render 'circle-btn' %}
+        <span>{{ section.settings.cta_label }}</span>
+    </a>
+{% endif %}
+
+  
+{% schema %}
+    {
+    "name": "Sustainability",
+    "tag": "section",
+    "class": "sustainability",
+    "settings": [
+        {
+        "type": "inline_richtext",
+        "id": "title",
+        "label": "Subheadline", 
+        "default": "Thinking Holistically"
+        },
+        {
+        "type": "inline_richtext",
+        "id": "headline",
+        "label": "Headline", 
+        "default": "Acting Sustainably"
+        },
+        {
+        "type": "url",
+        "id": "cta",
+        "label": "CTA" 
+        },
+        {
+        "type": "text",
+        "id": "cta_label",
+        "label": "CTA Label", 
+        "default": "Shop"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "Logo",
+            "name": "Logo",
+            "settings": [
+              {
+                "type": "image_picker",
+                "id": "logo",
+                "label": "Logo"
+              }
+            ] 
+        }
+    ],
+    "presets": [
+        {
+        "name": "Sustainability"
+        }
+    ]
+    }
+{% endschema %}

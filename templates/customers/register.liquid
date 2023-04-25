@@ -1,0 +1,65 @@
+{{ '//cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.js' | script_tag }}
+{{ '//cdn.jsdelivr.net/npm/jquery-validation@1.16.0/dist/additional-methods.min.js' | script_tag }}
+
+
+<div class="account">
+    <div class="wrapper">
+        <div class="account__header">
+            <h1 class="h3">Create Account</h1>
+        </div>
+        <div class="form">
+            {%- assign formId = 'create_customer' -%}
+            {% form 'create_customer', id: formId, novalidate: 'novalidate' %}{{ form.errors | default_errors }}
+            <div class="form__group">
+              <label for="{{ formId }}-FirstName">{{ 'customer.register.first_name' | t }}</label>
+              <input type="text" name="customer[first_name]" placeholder="First name" id="{{ formId }}-FirstName" {% if form.first_name %}value="{{ form.first_name }}" {% endif %} autocomplete="given-name" required>
+            </div>
+            <div class="form__group">
+              <label for="{{ formId }}-LastName">{{ 'customer.register.last_name' | t }}</label>
+              <input type="text" placeholder="Last name" name="customer[last_name]" id="{{ formId }}-LastName" {% if form.last_name %}value="{{ form.last_name }}" {% endif %} autocomplete="family-name" required>
+            </div>
+            <div class="form__group">
+              <label for="{{ formId }}-email">{{ 'customer.register.email' | t }}</label>
+              <input type="email" name="customer[email]" id="{{ formId }}-email" class="{% if form.errors contains 'email' %} input--error{% endif %}" {% if form.email %} value="{{ form.email }}" {% endif %} autocorrect="off" autocapitalize="off" autocomplete="email" placeholder="Email address" aria-required="true" {%- if form.errors contains 'email' -%} class="input--error" aria-invalid="true" aria-describedby="{{ formId }}-email-error" {%- endif -%} required>
+              {%- if form.errors contains 'email' -%}
+              <span id="{{ formId }}-email-error" class="input-error-message">
+                  <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
+                  {% include 'icon-error' %}
+                  <span>{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}.</span>
+              </span>
+              {%- endif -%}
+            </div>
+            <div class="form__group">
+              <label for="{{ formId }}-password">{{ 'customer.register.password' | t }}</label>
+              <input type="password" name="customer[password]" id="{{ formId }}-password" placeholder="Password" class="{% if form.errors contains 'password' %} input--error{% endif %}" aria-required="true" value="" />
+              {%- if form.errors contains 'password' -%}
+              <span id="{{ formId}}-password-error" class="input-error-message">
+                  {% include 'icon-error' %}
+                  <span>{{ form.errors.translated_fields['password'] | capitalize }} {{ form.errors.messages['password'] }}.</span>
+              </span>
+              {%- endif -%}
+            </div>
+            <div class="form__ctas">
+                <button class="btn js-btn" type="submit" value="Create">
+                  <span>Submit</span>
+                </button>
+            </div>
+            {% endform %}
+        </div>
+    </div>
+</div>
+
+<script>
+$("#RegisterForm").validate({
+  rules: {
+      password: {
+          pattern: /^(?=.*?[A-Z])(?=(.*[a-z]){1,})(?=(.*[\d]){1,})(?=(.*[\W]){1,})(?!.*\s).{8,}$/
+      },
+  },
+  messages: {
+      password: {
+          pattern: 'Password must be at least eight characters, with at least one uppercase letter, one lowercase letter, one special character, and one number.'
+      }
+  }
+});
+</script>

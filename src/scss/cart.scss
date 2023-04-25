@@ -1,0 +1,228 @@
+.cart-container {
+    // padding: calc(var(--ratio, 20px) * 7) 0;
+}
+
+.cart-header {
+    text-align: center;
+    margin: calc(var(--ratio, 20px) * 2) 0;
+    h1 {        
+        text-align: center;
+    }
+    p {
+        margin-bottom: var(--ratio, 20px);
+    }
+    .cta {
+        margin: 0 auto;
+        text-align: center;
+        display: inline-block;
+        color: $primary;
+    }
+}
+
+.cart {
+    position: relative;
+    padding: calc(var(--ratio, 20px) * 4) 0;
+    background: $white;
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: calc(var(--ratio, 20px) * 2);
+    }
+
+    th {
+        text-align: left;
+        padding-bottom: calc(var(--ratio, 20px) * 0.5);
+        font-weight: bold;
+        color: $primary;
+        &:last-child {
+            text-align: right;
+        }
+    }
+    tr {
+        border-bottom: 1px solid var(--primary-color, $primary);
+    }
+
+    td {
+        padding: calc(var(--ratio, 20px) * 2) 0;
+    }
+
+    thead {
+        border-bottom: 2px solid var(--primary-color, $primary);
+        font-size: $ui;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-weight: bold;
+        margin-bottom: calc(var(--ratio, 20px) * 0.5);
+    }
+    .cta {
+        font-size: $ui;
+    }
+}
+
+.cart__img {
+    width: 100px;
+    img {
+        display: block;
+        width: 100%;
+    }
+}
+
+.cart__content {
+    display: flex;
+}
+
+.cart__details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 20px;
+    .cta {
+        align-self: flex-start;
+        color: $primary;
+    }
+}
+
+.cart__title {
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: $primary;
+}
+
+.cart__subtitle {
+    text-transform: uppercase;
+    font-size: $ui;
+}
+
+.cart__price {
+    text-align: right;
+    vertical-align: middle;
+    > span {
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
+.cart__qty {
+    border: 1px solid var(--primary-color, $primary);
+    padding: 10px;
+    display: block;
+    display: inline-block;
+    text-align: center;
+    input {
+        appearance: none;
+        background: transparent;
+        border: none;
+        width: 2em;
+        text-align: center;
+        color: $primary;
+        &:focus {
+            outline: none; 
+        }
+    }
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+        -moz-appearance: textfield;
+    }
+
+}
+
+.cart__footer {
+    @include breakpoint($laptop) {
+        display: flex;
+    }
+}
+
+.cart__cta {
+    margin-left: auto;
+}
+
+.cart__subtotal {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    color: $primary;
+    > div {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        span {
+            
+            font-size: $h3;
+            &:first-child {
+                margin-right: 20px;
+            }
+        }
+    }
+    p {
+        margin-bottom: 20px;
+        font-size: $ui;
+    }
+    .btn {
+        font-size: $ui;
+        &:first-child {
+            margin-right: 20px;
+        }
+    }
+}
+
+.cart__gift {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: calc(var(--ratio, 20px) * 1);
+    width: 100%;
+    label[for="gift-checkbox"] {
+        display: flex;
+        align-items: center;
+        margin-bottom: calc(var(--ratio, 20px) * 1);
+        color: $primary;
+        font-size: $ui;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+    }
+    input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        border: 2px solid $primary;
+        appearance: none;
+        border-radius: 0;
+        background: transparent;
+        margin-right: calc(var(--ratio, 20px) * 0.5);
+        &:focus {
+            outline: none;
+        }
+        &:checked {
+            background: $primary;
+        }
+    }
+    label[for="gift-message"] {
+        display: block;
+        margin-bottom: calc(var(--ratio, 20px) * 0.5);
+        font-size: $ui;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: $primary;
+    }
+    textarea {
+        width: 100%;
+        max-width: 326px;
+        display: block;
+        border: 2px solid $primary;
+        background: transparent;
+        appearance: none;
+        padding: 10px;
+        &:focus {
+            outline: none;
+        }
+        @include breakpoint(326px) {
+            min-width: 326px;
+        }
+    }
+}
+

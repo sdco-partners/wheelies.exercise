@@ -1,0 +1,44 @@
+{
+  "sections": {
+    "c1636b0a-1a1c-4f8d-ad1f-1db0bd9d02cf": {
+      "type": "article-hero",
+      "blocks": {
+        "template--18169185960255__c1636b0a-1a1c-4f8d-ad1f-1db0bd9d02cf-168141134911abc812-0": {
+          "type": "subheadline",
+          "settings": {
+            "title": "{{ article.metafields.custom.category | metafield_text }}"
+          }
+        },
+        "template--18169185960255__c1636b0a-1a1c-4f8d-ad1f-1db0bd9d02cf-168141134911abc812-1": {
+          "type": "headline",
+          "settings": {
+            "title": "<p>{{ article.title }}<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--18169185960255__c1636b0a-1a1c-4f8d-ad1f-1db0bd9d02cf-168141134911abc812-0",
+        "template--18169185960255__c1636b0a-1a1c-4f8d-ad1f-1db0bd9d02cf-168141134911abc812-1"
+      ],
+      "settings": {
+        "image": "{{ article.image }}"
+      }
+    },
+    "5b4ee3bb-10b1-4651-b00b-1e427875b57a": {
+      "type": "article-body",
+      "settings": {
+      }
+    },
+    "e27ab4b0-5b19-4896-adff-c31306d35ee0": {
+      "type": "article-footer",
+      "settings": {
+        "blog_show_previous_and_next_buttons": true
+      }
+    }
+  },
+  "order": [
+    "c1636b0a-1a1c-4f8d-ad1f-1db0bd9d02cf",
+    "5b4ee3bb-10b1-4651-b00b-1e427875b57a",
+    "e27ab4b0-5b19-4896-adff-c31306d35ee0"
+  ]
+}

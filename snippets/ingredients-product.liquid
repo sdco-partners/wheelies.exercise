@@ -1,0 +1,43 @@
+<div class="container">
+
+    <div class="image full-unstyled-link {%- if product.media[1] != nil -%}has-hover{%- endif -%}">
+        
+        <img srcset="{%- if product.featured_media.width >= 165 -%}{{ product.featured_media | img_url: '165x' }} 165w,{%- endif -%}
+        {%- if product.featured_media.width >= 360 -%}{{ product.featured_media | img_url: '360x' }} 360w,{%- endif -%}
+        {%- if product.featured_media.width >= 533 -%}{{ product.featured_media | img_url: '533x' }} 533w,{%- endif -%}
+        {%- if product.featured_media.width >= 720 -%}{{ product.featured_media | img_url: '720x' }} 720w,{%- endif -%}
+        {%- if product.featured_media.width >= 940 -%}{{ product.featured_media | img_url: '940x' }} 940w,{%- endif -%}
+        {%- if product.featured_media.width >= 1066 -%}{{ product.featured_media | img_url: '1066x' }} 1066w{%- endif -%}"
+        src="{{ product.featured_media | img_url: '533x' }}"
+        sizes="(min-width: 1100px) 535px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+        alt="{{ product.featured_media.alt | escape }}"
+        loading="lazy"
+        class="motion-reduce"
+        width="{{ product.featured_media.width }}"
+        height="{{ product.featured_media.height }}"
+        >
+
+        {%- if product.media[1] != nil -%}
+        <img srcset="{%- if product.media[1].width >= 165 -%}{{ product.media[1] | img_url: '165x' }} 165w,{%- endif -%}
+            {%- if product.media[1].width >= 360 -%}{{ product.media[1] | img_url: '360x' }} 360w,{%- endif -%}
+            {%- if product.media[1].width >= 533 -%}{{ product.media[1] | img_url: '533x' }} 533w,{%- endif -%}
+            {%- if product.media[1].width >= 720 -%}{{ product.media[1] | img_url: '720x' }} 720w,{%- endif -%}
+            {%- if product.media[1].width >= 940 -%}{{ product.media[1] | img_url: '940x' }} 940w,{%- endif -%}
+            {%- if product.media[1].width >= 1066 -%}{{ product.media[1] | img_url: '1066x' }} 1066w{%- endif -%}"
+            src="{{ product.media[1] | img_url: '533x' }}"
+            sizes="(min-width: 1100px) 535px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+            alt="{{ product.media[1].alt | escape }}"
+            loading="lazy"
+            class="hover-image"
+        width="{{ product.media[1].width }}"
+        height="{{ product.media[1].height }}"
+        >
+        {%- endif -%}
+        
+    </div>
+
+    <div class="content">
+        {% render 'functional-ingredients-alt' product: product %}
+    </div>
+
+</div>

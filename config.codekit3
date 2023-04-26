@@ -7,8 +7,16 @@
       "uuidString" : "F32E9B0B-5856-4657-ADB0-7F1CA621DAF4"
     }
   ],
-  "creatorBuild" : "34472",
+  "creatorBuild" : "34484",
   "files" : {
+    "\/.gitattributes" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/.gitattributes",
+      "oF" : 0
+    },
     "\/.gitignore" : {
       "cB" : 0,
       "ft" : 8192,
@@ -16,16 +24,6 @@
       "oA" : 0,
       "oAP" : "\/.gitignore",
       "oF" : 0
-    },
-    "\/assets\/404_torreya.svg" : {
-      "ft" : 2097152,
-      "miP" : 0,
-      "oA" : 2,
-      "oAP" : "\/assets\/404_torreya.svg",
-      "oF" : 0,
-      "opt" : 0,
-      "plM" : 52780316221407,
-      "prP" : 0
     },
     "\/assets\/accounts.js" : {
       "bF" : 0,
@@ -37,45 +35,6 @@
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
-    },
-    "\/assets\/android-chrome-192x192.png" : {
-      "ft" : 32768,
-      "iS" : 12366,
-      "oA" : 0,
-      "oAP" : "\/assets\/android-chrome-192x192.png",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
-      "oT" : 1,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
-    "\/assets\/android-chrome-512x512.png" : {
-      "ft" : 32768,
-      "iS" : 35598,
-      "oA" : 0,
-      "oAP" : "\/assets\/android-chrome-512x512.png",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
-      "oT" : 1,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
-    "\/assets\/apple-touch-icon.png" : {
-      "ft" : 32768,
-      "iS" : 11690,
-      "oA" : 0,
-      "oAP" : "\/assets\/apple-touch-icon.png",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
-      "oT" : 1,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
     },
     "\/assets\/application.css" : {
       "aP" : 1,
@@ -96,39 +55,6 @@
       "mi" : 1,
       "oA" : 0,
       "oAP" : "\/assets\/application.min.min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/assets\/article.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/assets\/article.min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/assets\/article.min.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/assets\/article.min.min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/assets\/BlurPlugin.min.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/assets\/BlurPlugin.min.min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -185,19 +111,6 @@
       "sC" : 3,
       "tS" : 0
     },
-    "\/assets\/contact-bg.jpg" : {
-      "ft" : 16384,
-      "iS" : 34547,
-      "jF" : 0,
-      "oA" : 0,
-      "oAP" : "\/assets\/contact-bg.jpg",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
     "\/assets\/customer.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -253,62 +166,12 @@
       "sC" : 3,
       "tS" : 0
     },
-    "\/assets\/favicon-16x16.png" : {
-      "ft" : 32768,
-      "iS" : 1093,
-      "oA" : 0,
-      "oAP" : "\/assets\/favicon-16x16.png",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
-      "oT" : 1,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
-    "\/assets\/favicon-32x32.png" : {
-      "ft" : 32768,
-      "iS" : 1755,
-      "oA" : 0,
-      "oAP" : "\/assets\/favicon-32x32.png",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
-      "oT" : 1,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
     "\/assets\/favicon.ico" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/assets\/favicon.ico",
-      "oF" : 0
-    },
-    "\/assets\/GesturaDisplay-Regular.woff2" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/assets\/GesturaDisplay-Regular.woff2",
-      "oF" : 0
-    },
-    "\/assets\/GesturaDisplay-RegularItalic.woff" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/assets\/GesturaDisplay-RegularItalic.woff",
-      "oF" : 0
-    },
-    "\/assets\/GesturaDisplay-RegularItalic.woff2" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/assets\/GesturaDisplay-RegularItalic.woff2",
       "oF" : 0
     },
     "\/assets\/global.js" : {
@@ -420,87 +283,6 @@
       "sC" : 3,
       "tS" : 0
     },
-    "\/assets\/mstile-70x70.png" : {
-      "ft" : 32768,
-      "iS" : 3613,
-      "oA" : 0,
-      "oAP" : "\/assets\/mstile-70x70.png",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
-      "oT" : 1,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
-    "\/assets\/mstile-144x144.png" : {
-      "ft" : 32768,
-      "iS" : 4866,
-      "oA" : 0,
-      "oAP" : "\/assets\/mstile-144x144.png",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
-      "oT" : 1,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
-    "\/assets\/mstile-150x150.png" : {
-      "ft" : 32768,
-      "iS" : 4733,
-      "oA" : 0,
-      "oAP" : "\/assets\/mstile-150x150.png",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
-      "oT" : 1,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
-    "\/assets\/mstile-310x150.png" : {
-      "ft" : 32768,
-      "iS" : 4945,
-      "oA" : 0,
-      "oAP" : "\/assets\/mstile-310x150.png",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
-      "oT" : 1,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
-    "\/assets\/mstile-310x310.png" : {
-      "ft" : 32768,
-      "iS" : 19703,
-      "oA" : 0,
-      "oAP" : "\/assets\/mstile-310x310.png",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
-      "oT" : 1,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
-    "\/assets\/PangeaAfrikan-Regular.woff" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/assets\/PangeaAfrikan-Regular.woff",
-      "oF" : 0
-    },
-    "\/assets\/PangeaAfrikan-Regular.woff2" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/assets\/PangeaAfrikan-Regular.woff2",
-      "oF" : 0
-    },
     "\/assets\/plus.svg" : {
       "ft" : 2097152,
       "miP" : 0,
@@ -565,16 +347,6 @@
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
-    },
-    "\/assets\/safari-pinned-tab.svg" : {
-      "ft" : 2097152,
-      "miP" : 0,
-      "oA" : 2,
-      "oAP" : "\/assets\/safari-pinned-tab.svg",
-      "oF" : 0,
-      "opt" : 0,
-      "plM" : 52780316221407,
-      "prP" : 0
     },
     "\/assets\/ScrollSmoother.min.js" : {
       "bF" : 0,
@@ -1349,28 +1121,12 @@
       "oAP" : "\/sections\/main-search.liquid",
       "oF" : 0
     },
-    "\/sections\/moments-of-pause.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/moments-of-pause.liquid",
-      "oF" : 0
-    },
     "\/sections\/newsletter.liquid" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/sections\/newsletter.liquid",
-      "oF" : 0
-    },
-    "\/sections\/pause-gallery.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/pause-gallery.liquid",
       "oF" : 0
     },
     "\/sections\/pop-up.liquid" : {
@@ -1421,14 +1177,6 @@
       "oAP" : "\/sections\/split-hero.liquid",
       "oF" : 0
     },
-    "\/sections\/story-our-founder.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/story-our-founder.liquid",
-      "oF" : 0
-    },
     "\/sections\/story-sustainability.liquid" : {
       "cB" : 0,
       "ft" : 8192,
@@ -1443,38 +1191,6 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/sections\/tertiary-hero.liquid",
-      "oF" : 0
-    },
-    "\/sections\/text-slider.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/text-slider.liquid",
-      "oF" : 0
-    },
-    "\/sections\/text-subscribe.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/text-subscribe.liquid",
-      "oF" : 0
-    },
-    "\/sections\/wellbeing-gallery.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/wellbeing-gallery.liquid",
-      "oF" : 0
-    },
-    "\/sections\/wellbeing-hero.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/wellbeing-hero.liquid",
       "oF" : 0
     },
     "\/snippets\/arrow.liquid" : {
@@ -2186,17 +1902,6 @@
       "sC" : 3,
       "tS" : 0
     },
-    "\/src\/js\/modules\/moments.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/src\/js\/modules\/moments.min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
     "\/src\/js\/modules\/page-transitions.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -2204,17 +1909,6 @@
       "mi" : 1,
       "oA" : 1,
       "oAP" : "\/src\/js\/modules\/page-transitions.min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/src\/js\/modules\/policy-styles.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/src\/js\/modules\/policy-styles.min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -2270,17 +1964,6 @@
       "mi" : 1,
       "oA" : 1,
       "oAP" : "\/src\/js\/modules\/text-slider.min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/src\/js\/modules\/wellbeing.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/src\/js\/modules\/wellbeing.min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -2958,22 +2641,6 @@
       "pg" : 0,
       "sct" : 0
     },
-    "\/templates\/404.json" : {
-      "ft" : 524288,
-      "oA" : 1,
-      "oAP" : "\/templates\/404-min.json",
-      "oF" : 0,
-      "oO" : 1,
-      "oS" : 1
-    },
-    "\/templates\/article.json" : {
-      "ft" : 524288,
-      "oA" : 1,
-      "oAP" : "\/templates\/article-min.json",
-      "oF" : 0,
-      "oO" : 1,
-      "oS" : 1
-    },
     "\/templates\/blog.data.json.liquid" : {
       "cB" : 0,
       "ft" : 8192,
@@ -3086,58 +2753,10 @@
       "oO" : 1,
       "oS" : 1
     },
-    "\/templates\/list-collections.json" : {
-      "ft" : 524288,
-      "oA" : 1,
-      "oAP" : "\/templates\/list-collections-min.json",
-      "oF" : 0,
-      "oO" : 1,
-      "oS" : 1
-    },
-    "\/templates\/page.contact.json" : {
-      "ft" : 524288,
-      "oA" : 1,
-      "oAP" : "\/templates\/page.contact-min.json",
-      "oF" : 0,
-      "oO" : 1,
-      "oS" : 1
-    },
-    "\/templates\/page.faq.json" : {
-      "ft" : 524288,
-      "oA" : 1,
-      "oAP" : "\/templates\/page.faq-min.json",
-      "oF" : 0,
-      "oO" : 1,
-      "oS" : 1
-    },
     "\/templates\/page.json" : {
       "ft" : 524288,
       "oA" : 1,
       "oAP" : "\/templates\/page-min.json",
-      "oF" : 0,
-      "oO" : 1,
-      "oS" : 1
-    },
-    "\/templates\/page.pause.json" : {
-      "ft" : 524288,
-      "oA" : 1,
-      "oAP" : "\/templates\/page.pause-min.json",
-      "oF" : 0,
-      "oO" : 1,
-      "oS" : 1
-    },
-    "\/templates\/page.story.json" : {
-      "ft" : 524288,
-      "oA" : 1,
-      "oAP" : "\/templates\/page.story-min.json",
-      "oF" : 0,
-      "oO" : 1,
-      "oS" : 1
-    },
-    "\/templates\/page.wellbeing.json" : {
-      "ft" : 524288,
-      "oA" : 1,
-      "oAP" : "\/templates\/page.wellbeing-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -3193,7 +2812,7 @@
     "creationDate" : 649092768.19256699,
     "displayValue" : "Wheelies",
     "displayValueWasSetByUser" : 1,
-    "iconImageName" : "\/assets\/apple-touch-icon.png",
+    "iconImageName" : "brackets-glace",
     "iconImageWasSetByUser" : 0
   },
   "projectSettings" : {
@@ -4708,7 +4327,7 @@
       "moduleType" : 2,
       "removeComments" : 0,
       "sourceMapStyle" : 0,
-      "targetECMAVersion" : 0
+      "targetECMAVersion" : 2018
     },
     "languageDefaultsUserDefined" : [
 
@@ -4764,7 +4383,10 @@
     "skippedFoldersString" : "log, _logs, logs, _cache, cache, .idea, \/storage\/framework\/sessions, node_modules",
     "sourceFolderName" : "source",
     "susyVersion" : 3,
+    "tsAllowArbitraryExtensions" : 0,
+    "tsAllowImportingTSExtensions" : 0,
     "tsAllowSyntheticDefaultImports" : 0,
+    "tsAllowUMDGlobalAccess" : 0,
     "tsAllowUnreachableCode" : 0,
     "tsAllowUnusedLabels" : 0,
     "tsAlwaysStrict" : 0,
@@ -4773,36 +4395,36 @@
     "tsEmitDecoratorMetadata" : 0,
     "tsESModuleInterop" : 0,
     "tsExactOptionalPropertyTypes" : 0,
+    "tsExperimentalDecorators" : 0,
     "tsForceConsistentCasingInFileNames" : 0,
     "tsImportHelpers" : 0,
     "tsIsolatedModules" : 0,
     "tsJSXFactory" : "React.createElement",
-    "tsKeyofStringsOnly" : 0,
     "tsNoEmitHelpers" : 0,
     "tsNoFallthroughCasesInSwitch" : 0,
     "tsNoImplicitAny" : 0,
     "tsNoImplicitOverride" : 0,
     "tsNoImplicitReturns" : 0,
     "tsNoImplicitThis" : 0,
-    "tsNoImplicitUseStrict" : 0,
     "tsNoLib" : 0,
     "tsNoPropertyAccessFromIndexSignature" : 0,
     "tsNoResolve" : 0,
-    "tsNoStrictGenericChecks" : 0,
     "tsNoUncheckedIndexAccess" : 0,
     "tsNoUnusedLocals" : 0,
     "tsNoUnusedParameters" : 0,
     "tsPreserveConstEnums" : 0,
     "tsPreserveSymlinks" : 0,
     "tsResolveJsonModule" : 0,
+    "tsSkipDefaultLibCheck" : 0,
     "tsSkipLibCheck" : 0,
+    "tsStrictBindCallApply" : 0,
     "tsStrictFunctionTypes" : 0,
     "tsStrictNullChecks" : 0,
     "tsStrictPropertyInitialization" : 0,
     "tsStripInternal" : 0,
-    "tsSuppressExcessPropertyErrors" : 0,
-    "tsSuppressImplicitAnyIndexErrors" : 0,
+    "tsUseDefineForClassFields" : 0,
     "tsUseUnknownInCatchVariables" : 0,
+    "tsVerbatimModuleSyntax" : 0,
     "uglifyDefinesString" : "",
     "uglifyFlags2" : {
       "arguments" : {

@@ -185,26 +185,6 @@
       "sC" : 3,
       "tS" : 0
     },
-    "\/assets\/graphics\/minus.svg" : {
-      "ft" : 2097152,
-      "miP" : 0,
-      "oA" : 2,
-      "oAP" : "\/assets\/graphics\/minus.svg",
-      "oF" : 0,
-      "opt" : 0,
-      "plM" : 52780316221407,
-      "prP" : 0
-    },
-    "\/assets\/graphics\/plus.svg" : {
-      "ft" : 2097152,
-      "miP" : 0,
-      "oA" : 2,
-      "oAP" : "\/assets\/graphics\/plus.svg",
-      "oF" : 0,
-      "opt" : 0,
-      "plM" : 52780316221407,
-      "prP" : 0
-    },
     "\/assets\/gsap.min.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -260,6 +240,16 @@
       "sC" : 3,
       "tS" : 0
     },
+    "\/assets\/minus.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/minus.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
     "\/assets\/mixitup-pagination.min.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -292,6 +282,16 @@
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
+    },
+    "\/assets\/plus.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/plus.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
     },
     "\/assets\/product-form-min.js" : {
       "bF" : 0,
@@ -402,6 +402,16 @@
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
+    },
+    "\/assets\/WHEELIES_LOGO.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/WHEELIES_LOGO.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
     },
     "\/config\/settings_data.json" : {
       "ft" : 524288,

@@ -64,6 +64,10 @@
     "class": "header-container js-header",
     "settings": [
       {
+        "type": "link_list",
+        "id": "secondary_menu",
+        "label": "Secondary Menu"
+      }, {
         "type": "url",
         "id": "cta",
         "label": "Call to Action"
@@ -71,6 +75,42 @@
         "type": "text",
         "id": "cta_label",
         "label": "CTA Label"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "menu_item",
+        "name": "Menu Item",
+        "settings": [
+          {
+            "type": "page",
+            "id": "page",
+            "label": "Page"
+          },
+          {
+            "type": "collection",
+            "id": "collection",
+            "label": "Collection"
+          },
+          {
+            "type": "blog",
+            "id": "blog",
+            "label": "Blog"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Label"
+          }, {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }, {
+            "type": "video",
+            "id": "video",
+            "label": "Video"
+          }
+        ]
       }
     ]
   }

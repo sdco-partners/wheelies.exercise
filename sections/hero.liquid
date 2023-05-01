@@ -1,3 +1,12 @@
+<div class="hero__content">
+  {%- if section.blocks -%}
+    {% for block in section.blocks %}
+      <img src="{{ block.settings.slide | img_url: "medium"}}">
+    {% endfor %}
+  {%- endif -%}
+
+</div>
+
 {% schema %}
   {
     "name": "Hero Animation",

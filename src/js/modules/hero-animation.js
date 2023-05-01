@@ -1,4 +1,4 @@
-export function initHero() {
+export function initHeroAnimation() {
 
 
     let hero = document.querySelector('.js-hero');

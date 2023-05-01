@@ -1887,13 +1887,13 @@
       "sC" : 3,
       "tS" : 0
     },
-    "\/src\/js\/modules\/hero.js" : {
+    "\/src\/js\/modules\/hero-animation.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/src\/js\/modules\/hero.min.js",
+      "oAP" : "\/src\/js\/modules\/hero-animation.min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0

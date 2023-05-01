@@ -31,8 +31,7 @@
               "page": "",
               "collection": "all-products",
               "blog": "",
-              "title": "Shop",
-              "image": "shopify:\/\/shop_images\/original_64e83496d9ab478c2927b502440cdaa2.jpg"
+              "title": "Shop"
             }
           },
           "a53c3aef-05ba-4b4e-b7c2-a1668a06a437": {
@@ -41,8 +40,7 @@
               "page": "wellbeing",
               "collection": "",
               "blog": "",
-              "title": "Wellbeing",
-              "image": "shopify:\/\/shop_images\/DTS_Desert_Sunrise_Grant_Spanier_2702.jpg"
+              "title": "Wellbeing"
             }
           },
           "c94b5324-8ca1-409e-b60d-47919d151022": {
@@ -51,8 +49,7 @@
               "page": "story",
               "collection": "",
               "blog": "",
-              "title": "Story",
-              "image": "shopify:\/\/shop_images\/original_8ab04cdcdc429fdfc14647937573b1f7.jpg"
+              "title": "Story"
             }
           },
           "f887409e-1df9-4181-8511-9962ce12aa95": {
@@ -61,8 +58,7 @@
               "page": "",
               "collection": "",
               "blog": "face-forward",
-              "title": "Face forward",
-              "image": "shopify:\/\/shop_images\/DTS_Misc_1__Nich_Fancher__Nick_Fancher_3470.jpg"
+              "title": "Face forward"
             }
           },
           "e509b881-3539-4cc8-b970-eedcd53e4973": {
@@ -71,8 +67,7 @@
               "page": "pause",
               "collection": "",
               "blog": "",
-              "title": "Pause",
-              "image": "shopify:\/\/shop_images\/DTS_Open_Water_Copson_London_5588.jpg"
+              "title": "Pause"
             }
           }
         },
@@ -84,10 +79,8 @@
           "e509b881-3539-4cc8-b970-eedcd53e4973"
         ],
         "settings": {
-          "secondary_menu": "secondary-menu",
-          "menu_tagline": "Daily, intentional practices that <em>refocus<\/em>, <em>reset<\/em>, and <em>transform<\/em>.",
           "cta": "\/account",
-          "cta_label": "Login"
+          "cta_label": "Contact"
         }
       },
       "footer": {
@@ -136,47 +129,6 @@
         "type": "main-password-footer",
         "settings": {
           "color_scheme": "accent-2"
-        }
-      },
-      "moments-of-pause": {
-        "type": "moments-of-pause",
-        "blocks": {
-          "e0df0404-302f-4761-9936-8a0a0d813430": {
-            "type": "Moment",
-            "settings": {
-              "title": "Been outside <em>today<\/em>?",
-              "image": "shopify:\/\/shop_images\/original_8ab04cdcdc429fdfc14647937573b1f7.jpg"
-            }
-          },
-          "211223aa-6bbd-4f08-b68a-2e0cbb58ffc4": {
-            "type": "Moment",
-            "settings": {
-              "title": "<em>Less<\/em> chaos, <em>more<\/em> clarity",
-              "image": "shopify:\/\/shop_images\/DTS_Open_Water_Copson_London_5588.jpg"
-            }
-          },
-          "21ba99fe-cb2a-47a8-884e-80beb40c4f5c": {
-            "type": "Moment",
-            "settings": {
-              "title": "Take 3 <em>deep<\/em> breathes",
-              "image": "shopify:\/\/shop_images\/DTS_Misc_1__Nich_Fancher__Nick_Fancher_3470.jpg"
-            }
-          },
-          "e9d31a8e-977a-4068-b721-b69a9fbfb40a": {
-            "type": "Moment",
-            "settings": {
-              "title": "<em>Waves<\/em> breaking",
-              "image": "shopify:\/\/shop_images\/DTS_Desert_Sunrise_Grant_Spanier_2702.jpg"
-            }
-          }
-        },
-        "block_order": [
-          "e0df0404-302f-4761-9936-8a0a0d813430",
-          "211223aa-6bbd-4f08-b68a-2e0cbb58ffc4",
-          "21ba99fe-cb2a-47a8-884e-80beb40c4f5c",
-          "e9d31a8e-977a-4068-b721-b69a9fbfb40a"
-        ],
-        "settings": {
         }
       }
     },

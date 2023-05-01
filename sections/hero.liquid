@@ -1,19 +1,32 @@
 {% schema %}
-{
-  "name": "Hero",
-  "tag": "section",
-  "class": "hero js-hero",
-  "settings": [
-    {
-      "type": "image_picker",
-      "id": "image",
-      "label": "Image"
-    }
-  ],
-  "presets": [
-    {
-      "name": "Hero"
-    }
-  ]
-}
-{% endschema %} 
+  {
+    "name": "Hero",
+    "tag": "section",
+    "class": "hero js-hero",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Slideshow Animation"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Slide 1",
+        "type": "slide",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "slide-1",
+            "label": "Slide"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Hero"
+      }
+    ]
+  }
+{% endschema %}

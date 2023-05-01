@@ -24,60 +24,6 @@
       },
       "header": {
         "type": "header",
-        "blocks": {
-          "4a969fc4-6a04-480d-8715-edfc27ab5418": {
-            "type": "menu_item",
-            "settings": {
-              "page": "",
-              "collection": "all-products",
-              "blog": "",
-              "title": "Shop"
-            }
-          },
-          "a53c3aef-05ba-4b4e-b7c2-a1668a06a437": {
-            "type": "menu_item",
-            "settings": {
-              "page": "wellbeing",
-              "collection": "",
-              "blog": "",
-              "title": "Wellbeing"
-            }
-          },
-          "c94b5324-8ca1-409e-b60d-47919d151022": {
-            "type": "menu_item",
-            "settings": {
-              "page": "story",
-              "collection": "",
-              "blog": "",
-              "title": "Story"
-            }
-          },
-          "f887409e-1df9-4181-8511-9962ce12aa95": {
-            "type": "menu_item",
-            "settings": {
-              "page": "",
-              "collection": "",
-              "blog": "face-forward",
-              "title": "Face forward"
-            }
-          },
-          "e509b881-3539-4cc8-b970-eedcd53e4973": {
-            "type": "menu_item",
-            "settings": {
-              "page": "pause",
-              "collection": "",
-              "blog": "",
-              "title": "Pause"
-            }
-          }
-        },
-        "block_order": [
-          "4a969fc4-6a04-480d-8715-edfc27ab5418",
-          "a53c3aef-05ba-4b4e-b7c2-a1668a06a437",
-          "c94b5324-8ca1-409e-b60d-47919d151022",
-          "f887409e-1df9-4181-8511-9962ce12aa95",
-          "e509b881-3539-4cc8-b970-eedcd53e4973"
-        ],
         "settings": {
           "cta": "\/account",
           "cta_label": "Contact"

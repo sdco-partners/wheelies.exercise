@@ -1,18 +1,15 @@
 <div class="header-wrapper js-header">
   <div class="header">
 
-    {%- if request.page_type == 'index' -%}
-      <h1>
-      {%- endif -%}
-      <a href="{{ routes.root_url }}" class="header__logo focus-inset">
-        {% render 'logo' %}
-        <span class="visually-hidden">Link to homepage</span>
-      </a>
-      {%- if request.page_type == 'index' -%}
-      </h1>
+    {%- if section.settings.cta -%}
+      <a
+        class="header__cta"
+        href="{{ section.settings.cta }}"
+        href="{{ section.settings.cta }}">{{ section.settings.cta_label }}</a>
     {%- endif -%}
 
     <div class="header__icons"></div>
+
   </div>
 </div>
 
@@ -36,36 +33,7 @@
       {
         "type": "menu_item",
         "name": "Menu Item",
-        "settings": [
-          {
-            "type": "page",
-            "id": "page",
-            "label": "Page"
-          },
-          {
-            "type": "collection",
-            "id": "collection",
-            "label": "Collection"
-          },
-          {
-            "type": "blog",
-            "id": "blog",
-            "label": "Blog"
-          },
-          {
-            "type": "text",
-            "id": "title",
-            "label": "Label"
-          }, {
-            "type": "image_picker",
-            "id": "image",
-            "label": "Image"
-          }, {
-            "type": "video",
-            "id": "video",
-            "label": "Video"
-          }
-        ]
+        "settings": []
       }
     ]
   }

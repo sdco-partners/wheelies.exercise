@@ -7,8 +7,25 @@
     background: $pink;
 
     &__content {
-        margin: 0 auto;
-        display: flex;
-        
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-areas:
+        ". . ."
+        ". image ."
+        ". . .";
+        grid-template-columns: 1fr 40% 1fr;
+        grid-template-rows: 1fr 60% 1fr;
+        align-items: center;
+        @include breakpoint($laptop) {
+            grid-template-columns: 1fr 22.5% 1fr;
+        }
+        img {
+           grid-area: image;
+           margin: 0 auto;
+           width: 100%;
+           height: auto;
+        }
+
     }
 }

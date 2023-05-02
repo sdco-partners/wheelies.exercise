@@ -9,9 +9,10 @@ export function initHeroAnimation() {
         if(images) {
             console.log("found the images");
         };
-        gsap.set(images, { display: "none" });
+        // gsap.set(images, { display: "none" });
 
-        // let landingAnim = gsap.timeline
+        // let landingAnim = gsap.timeline({repeat: 0});
+        
     }
 
 

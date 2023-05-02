@@ -1,4 +1,9 @@
 <div class="hero__content">
+
+  {%- if section.settings.title -%}
+    <h2 class="hero__content__tagline">{{ section.settings.title }}</h2>
+  {%- endif -%}
+
   {%- if section.blocks -%}
     {% for block in section.blocks %}
       <img src="{{ block.settings.slide | img_url: "medium"}}">

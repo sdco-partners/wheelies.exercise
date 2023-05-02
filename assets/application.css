@@ -3849,6 +3849,12 @@ select:-webkit-autofill:focus {
   width: 100%;
   height: auto;
 }
+.hero__content__tagline {
+  grid-area: tagline;
+  justify-self: center;
+  color: #DE8958;
+  text-transform: uppercase;
+}
 
 .split-hero {
   display: flex;

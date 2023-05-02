@@ -11,7 +11,7 @@
         width: 100%;
         display: grid;
         grid-template-areas:
-        ". . ."
+        ". tagline ."
         ". image ."
         ". . .";
         grid-template-columns: 1fr 40% 1fr;

@@ -3833,7 +3833,7 @@ select:-webkit-autofill:focus {
   height: 100%;
   width: 100%;
   display: grid;
-  grid-template-areas: ". . ." ". image ." ". . .";
+  grid-template-areas: ". tagline ." ". image ." ". . .";
   grid-template-columns: 1fr 40% 1fr;
   grid-template-rows: 1fr 60% 1fr;
   align-items: center;

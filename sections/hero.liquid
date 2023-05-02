@@ -8,18 +8,20 @@
 
 {% schema %}
   {
-    "name": "Hero Animation",
+    "name": "Hero",
     "tag": "section",
     "class": "hero js-hero",
     "settings": [
       {
         "type": "inline_richtext",
-        "id": "tagline",
-        "label": "Tagline"
+        "id": "title",
+        "label": "Tagline",
+        "default": "Tastiest, Tiniest"
       }, {
         "type": "text",
-        "id": "title",
-        "label": "Slideshow Animation"
+        "id": "animation",
+        "label": "Slideshow Animation",
+        "placeholder": "You can leave this blank :)"
       }
     ],
     "blocks": [

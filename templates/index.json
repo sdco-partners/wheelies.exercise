@@ -86,9 +86,40 @@
       "settings": {
         "title": "Tastiest, Tiniest"
       }
+    },
+    "827c0226-20b0-442d-a475-fbf1a25d5018": {
+      "type": "contact",
+      "blocks": {
+        "41a34d5e-c9da-4b2f-bafe-4e21bb7bb74c": {
+          "type": "Header",
+          "settings": {
+            "title": "Yum for Everyone"
+          }
+        },
+        "f714f245-886d-44e0-b7f0-fb9e6f4137ef": {
+          "type": "Subheadline",
+          "settings": {
+            "subheadline": "Fresh, delicious, handmade-to-order mini donuts and locally roasted coffee served hot from our traveling Citroen kitchen, Wheelies is Atlanta-born and globally inspired."
+          }
+        },
+        "00fa2a1d-c321-4c46-a957-751c6fed5349": {
+          "type": "Graphic",
+          "settings": {
+            "graphic": "shopify:\/\/shop_images\/Wheelies_Illustration-web.png"
+          }
+        }
+      },
+      "block_order": [
+        "41a34d5e-c9da-4b2f-bafe-4e21bb7bb74c",
+        "f714f245-886d-44e0-b7f0-fb9e6f4137ef",
+        "00fa2a1d-c321-4c46-a957-751c6fed5349"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
-    "hero"
+    "hero",
+    "827c0226-20b0-442d-a475-fbf1a25d5018"
   ]
 }

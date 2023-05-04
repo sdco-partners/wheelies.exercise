@@ -1999,7 +1999,7 @@ button.swiper-pagination-bullet {
 }
 @media (min-width: 960px) {
   .header {
-    max-width: calc(100% - 200px);
+    max-width: calc(100% - 125px);
   }
 }
 

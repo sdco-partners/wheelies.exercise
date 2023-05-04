@@ -2,16 +2,13 @@
   <div class="header">
 
     {%- if section.settings.instagram-url -%}
-      <a class="header__social" href="{{ section.settings.instagram-url | escape }}">
+      <a class="header__icon" href="{{ section.settings.instagram-url }}">
         {%- render "icon-instagram" -%}
       </a>
     {%- endif -%}
 
     {%- if section.settings.cta -%}
-      <a
-        class="header__cta"
-        href="{{ section.settings.cta }}"
-        href="{{ section.settings.cta }}">{{ section.settings.cta_label }}</a>
+      <a class="header__cta" href="{{ section.settings.cta }}">{{ section.settings.cta_label }}</a>
     {%- endif -%}
 
     <div class="header__icons"></div>

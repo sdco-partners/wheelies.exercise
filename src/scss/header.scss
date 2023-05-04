@@ -1,28 +1,28 @@
-.announcement-bar {
-    height: 40px;
-    padding: 0;
-    background: $black;
-    color: $white;
-}
+// .announcement-bar {
+//     height: 40px;
+//     padding: 0;
+//     background: $black;
+//     color: $white;
+// }
 
-.announcement-bar__message {
-    line-height: 40px;
-    font-size: $small;
-    @include breakpoint($mobile) {
-        font-size: $ui;
-    }
-}
+// .announcement-bar__message {
+//     line-height: 40px;
+//     font-size: $small;
+//     @include breakpoint($mobile) {
+//         font-size: $ui;
+//     }
+// }
 
 .header-container {
     position: fixed;
-    top: 0;
+    bottom: 0;
     width: 100%;
 }
 
 .header-wrapper {
     position: relative;
     width: 100%;
-    top: 0;
+    bottom: 0;
 }
 
 .header {
@@ -39,6 +39,30 @@
         max-width: calc(100% - 200px);
     }
     
+}
+
+.header__icon {
+    width: 32px;
+    font-size: $h3;
+    display: block;
+    color: $blue;
+    svg {
+        display: block;
+        width: 100%;
+    }
+}
+
+.header__cta {
+    background: transparent;
+    text-decoration: none;
+    cursor: pointer;
+    color: $blue;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: $h3;
+    @include breakpoint($tablet) {
+        display: inline-block;
+    }
 }
 
 .header__menu-trigger {
@@ -155,20 +179,20 @@
     }
 }
 
-.header__cta {
-    margin-right: 1rem;
-    background: transparent;
-    text-decoration: none;
-    cursor: pointer;
-    color: $black;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-size: $ui;
-    display: none;
-    @include breakpoint($tablet) {
-        display: inline-block;
-    }
-}
+// .header__cta {
+//     margin-right: 1rem;
+//     background: transparent;
+//     text-decoration: none;
+//     cursor: pointer;
+//     color: $black;
+//     text-transform: uppercase;
+//     letter-spacing: 0.1em;
+//     font-size: $ui;
+//     display: none;
+//     @include breakpoint($tablet) {
+//         display: inline-block;
+//     }
+// }
 
 .header__icons {
     display: flex;
@@ -186,22 +210,22 @@
     }
 }
 
-.header__icon {
-    width: 24px;
-    margin-right: 10px;
-    font-size: $ui;
-    @include breakpoint($tablet) {
-        margin-right: 20px;
-    }
-    display: block;
-    &:last-child {
-        margin-right: 0px;
-    }
-    svg {
-        display: block;
-        width: 100%;
-    }
-}
+// .header__icon {
+//     width: 24px;
+//     margin-right: 10px;
+//     font-size: $ui;
+//     @include breakpoint($tablet) {
+//         margin-right: 20px;
+//     }
+//     display: block;
+//     &:last-child {
+//         margin-right: 0px;
+//     }
+//     svg {
+//         display: block;
+//         width: 100%;
+//     }
+// }
 
 .header__icon--audio {
     border: none;

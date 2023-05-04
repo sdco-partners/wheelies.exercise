@@ -1974,33 +1974,16 @@ button.swiper-pagination-bullet {
 
 /* 	Global Templates
 -------------------------------------------------- */
-.announcement-bar {
-  height: 40px;
-  padding: 0;
-  background: #382932;
-  color: #ECE7E4;
-}
-
-.announcement-bar__message {
-  line-height: 40px;
-  font-size: 0.666rem;
-}
-@media (min-width: 400px) {
-  .announcement-bar__message {
-    font-size: 0.8rem;
-  }
-}
-
 .header-container {
   position: fixed;
-  top: 0;
+  bottom: 0;
   width: 100%;
 }
 
 .header-wrapper {
   position: relative;
   width: 100%;
-  top: 0;
+  bottom: 0;
 }
 
 .header {
@@ -2017,6 +2000,32 @@ button.swiper-pagination-bullet {
 @media (min-width: 960px) {
   .header {
     max-width: calc(100% - 200px);
+  }
+}
+
+.header__icon {
+  width: 32px;
+  font-size: 1.666rem;
+  display: block;
+  color: #5096DC;
+}
+.header__icon svg {
+  display: block;
+  width: 100%;
+}
+
+.header__cta {
+  background: transparent;
+  text-decoration: none;
+  cursor: pointer;
+  color: #5096DC;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 1.666rem;
+}
+@media (min-width: 650px) {
+  .header__cta {
+    display: inline-block;
   }
 }
 
@@ -2127,23 +2136,6 @@ button.swiper-pagination-bullet {
   display: block;
 }
 
-.header__cta {
-  margin-right: 1rem;
-  background: transparent;
-  text-decoration: none;
-  cursor: pointer;
-  color: #382932;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-size: 0.8rem;
-  display: none;
-}
-@media (min-width: 650px) {
-  .header__cta {
-    display: inline-block;
-  }
-}
-
 .header__icons {
   display: flex;
   align-items: center;
@@ -2160,25 +2152,6 @@ button.swiper-pagination-bullet {
   .header__icons .btn {
     display: inline-block;
   }
-}
-
-.header__icon {
-  width: 24px;
-  margin-right: 10px;
-  font-size: 0.8rem;
-  display: block;
-}
-@media (min-width: 650px) {
-  .header__icon {
-    margin-right: 20px;
-  }
-}
-.header__icon:last-child {
-  margin-right: 0px;
-}
-.header__icon svg {
-  display: block;
-  width: 100%;
 }
 
 .header__icon--audio {

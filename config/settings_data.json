@@ -25,7 +25,7 @@
       "header": {
         "type": "header",
         "settings": {
-          "cta": "\/account",
+          "cta": "shopify:\/\/pages\/contact",
           "cta_label": "Contact",
           "instagram-url": "https:\/\/www.instagram.com\/stitchdesignco\/"
         }

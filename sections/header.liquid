@@ -1,6 +1,12 @@
 <div class="header-wrapper js-header">
   <div class="header">
 
+    {%- if section.settings.instagram-url -%}
+      <a class="header__social" href="{{ section.settings.instagram-url | escape }}">
+        {%- render "icon-instagram" -%}
+      </a>
+    {%- endif -%}
+
     {%- if section.settings.cta -%}
       <a
         class="header__cta"
@@ -27,6 +33,10 @@
         "type": "text",
         "id": "cta_label",
         "label": "CTA Label"
+      }, {
+        "type": "url",
+        "id": "instagram-url",
+        "label": "Instagram URL"
       }
     ]
   }

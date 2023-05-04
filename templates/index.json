@@ -86,19 +86,9 @@
       "settings": {
         "title": "Tastiest, Tiniest"
       }
-    },
-    "aab8ac5c-467c-499c-b254-68980a3cc56e": {
-      "type": "contact-footer",
-      "settings": {
-        "instagram": "https:\/\/www.instagram.com\/stitchdesignco\/",
-        "facebook": "",
-        "tiktok": "",
-        "youtube": ""
-      }
     }
   },
   "order": [
-    "hero",
-    "aab8ac5c-467c-499c-b254-68980a3cc56e"
+    "hero"
   ]
 }

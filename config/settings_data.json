@@ -26,7 +26,8 @@
         "type": "header",
         "settings": {
           "cta": "\/account",
-          "cta_label": "Contact"
+          "cta_label": "Contact",
+          "instagram-url": "https:\/\/www.instagram.com\/stitchdesignco\/"
         }
       },
       "footer": {

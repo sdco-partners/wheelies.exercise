@@ -6,18 +6,20 @@ export function initHeroAnimation() {
     if (hero) {
         let images = hero.querySelectorAll("img");
         let tagline = hero.querySelector("h2");
+        let donuts = hero.querySelector(".wheelies-landing-logo");
 
         gsap.set(header, { display: "none" });
         gsap.set(images, { display: "none" });
+        gsap.set(donuts, { display: "none" });
 
         function fadeOut() {
-            let fO = gsap.timeline({ repeat: 0, delay: 0.5 });
-                fO.to(images, { opacity: 0, duration: 1.25, ease: "sine.out" });
-                fO.to(tagline, { opacity: 0, duration: 1.25, ease: "sine.out" });
-                return fO;
+            let fade = gsap.timeline({ repeat: 0, delay: 0.5 });
+                fade.to(images, { opacity: 0, duration: 1.25, ease: "sine.out" });
+                fade.to(tagline, { opacity: 0, duration: 1.25, ease: "sine.out" }, "<");
+                return fade;
         }
 
         let landingAnim = gsap.timeline({ repeat: 0, delay: 0 });
-            landingAnim.to(images, { display: "block", duration: 0.85, stagger: 1, onComplete: fadeOut });
+            landingAnim.to(images, { display: "block", duration: 0.75, stagger: 1, onComplete: fadeOut });
     }
 }

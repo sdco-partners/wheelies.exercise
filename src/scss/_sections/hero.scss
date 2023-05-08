@@ -35,3 +35,21 @@
 
     }
 }
+
+.wheelies-landing-logo {
+    position: absolute;
+    z-index: 200;
+    margin: 0 auto;
+    height: 100vh;
+    width: auto;
+
+    .part-one {
+        fill: $blue;
+    }
+    .part-two, .part-three {
+        fill: $orange;
+    }
+    .part-four, .part-five {
+        fill: white;
+    }
+}

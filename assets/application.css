@@ -3829,6 +3829,23 @@ select:-webkit-autofill:focus {
   text-transform: uppercase;
 }
 
+.wheelies-landing-logo {
+  position: absolute;
+  z-index: 200;
+  margin: 0 auto;
+  height: 100vh;
+  width: auto;
+}
+.wheelies-landing-logo .part-one {
+  fill: #5096DC;
+}
+.wheelies-landing-logo .part-two, .wheelies-landing-logo .part-three {
+  fill: #DE8958;
+}
+.wheelies-landing-logo .part-four, .wheelies-landing-logo .part-five {
+  fill: white;
+}
+
 .split-hero {
   display: flex;
   flex-direction: column;

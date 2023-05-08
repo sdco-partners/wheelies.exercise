@@ -12,6 +12,12 @@ export function initHeroAnimation() {
         gsap.set(images, { display: "none" });
         gsap.set(donuts, { display: "none" });
 
+        function slideshow() {
+            let slide = gsap.timeline({ repeat: 0, delay: 0 });
+                slide.to(images, { display: "block", duration: 0.75, stagger: 1, });
+                return slide;
+        }
+
         function fadeOut() {
             let fade = gsap.timeline({ repeat: 0, delay: 0.5 });
                 fade.to(images, { opacity: 0, duration: 1.25, ease: "sine.out" });
@@ -19,7 +25,8 @@ export function initHeroAnimation() {
                 return fade;
         }
 
-        let landingAnim = gsap.timeline({ repeat: 0, delay: 0 });
-            landingAnim.to(images, { display: "block", duration: 0.75, stagger: 1, onComplete: fadeOut });
+        let landingAnim = gsap.timeline();
+            landingAnim.add(slideshow());
+            landingAnim.add(fadeOut(), ">");
     }
 }

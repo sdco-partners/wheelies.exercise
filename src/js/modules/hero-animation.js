@@ -17,7 +17,7 @@ export function initHeroAnimation() {
             let allButLast = image.slice(0, -1);
             
             let slide = gsap.timeline({ repeat: 0, delay: 0 });
-                slide.to(images, { display: "block", duration: 0.5, stagger: 1, });
+                slide.to(images, { display: "block", duration: 0.4, stagger: 1, });
                 slide.to(allButLast, { display: "none" });
                 
             return slide;
@@ -54,9 +54,18 @@ export function initHeroAnimation() {
             return dance;
         }
 
+        function showHeader() {
+            gsap.set(header, { display: "block", opacity: 0});
+            let nav = gsap.timeline({ repeat: 0, delay: 0.65 });
+                nav.to(header, { opacity: 1, duration: 0.5, ease: "power1.in" });
+
+            return nav;
+        }
+
         let landingAnim = gsap.timeline();
             landingAnim.add(slideshow());
             landingAnim.add(fadeOut(), ">");
             landingAnim.add(donutDance(), ">");
+            landingAnim.add(showHeader(), ">");
     }
 }

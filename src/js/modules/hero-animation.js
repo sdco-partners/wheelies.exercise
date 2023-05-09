@@ -17,7 +17,7 @@ export function initHeroAnimation() {
             let allButLast = image.slice(0, -1);
             
             let slide = gsap.timeline({ repeat: 0, delay: 0 });
-                slide.to(images, { display: "block", duration: 0.4, stagger: 1, });
+                slide.to(images, { display: "block", duration: 0.35, stagger: 1, });
                 slide.to(allButLast, { display: "none" });
                 
             return slide;
@@ -25,8 +25,8 @@ export function initHeroAnimation() {
 
         function fadeOut() {
             let fade = gsap.timeline({ repeat: 0, delay: 0.25 });
-                fade.to(images, { opacity: 0, duration: 1, ease: "power1.out" });
-                fade.to(tagline, { opacity: 0, duration: 1, ease: "power1.out" }, "<");
+                fade.to(images, { opacity: 0, duration: 0.5, ease: "power1.out" });
+                fade.to(tagline, { opacity: 0, duration: 0.5, ease: "power1.out" }, "<");
                 
             return fade;
         }
@@ -45,7 +45,7 @@ export function initHeroAnimation() {
             gsap.set(logoParts, { opacity: 0});
 
             let dance = gsap.timeline({ repeat: 0, delay: 0 });
-                dance.to(part1, { opacity: 1, duration: 0.75, ease: "power1.in" });
+                dance.to(part1, { opacity: 1, duration: 0.5, ease: "power1.in" });
                 dance.to(part5, { opacity: 1, duration: 0, delay: 0.75 });
                 dance.to(part3, { opacity: 1, duration: 0, delay: 0.75 });
                 dance.to(part4, { opacity: 1, duration: 0, delay: 0.75 });
@@ -57,7 +57,7 @@ export function initHeroAnimation() {
         function showHeader() {
             gsap.set(header, { display: "block", opacity: 0});
             let nav = gsap.timeline({ repeat: 0, delay: 0.65 });
-                nav.to(header, { opacity: 1, duration: 0.5, ease: "power1.in" });
+                nav.to(header, { opacity: 1, duration: 0.35, ease: "power1.in" });
 
             return nav;
         }

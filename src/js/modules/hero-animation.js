@@ -4,7 +4,6 @@ export function initHeroAnimation() {
     let header = document.querySelector(".js-header");
     let contact = document.querySelector(".contact-info");
     let contactButton = document.querySelector(".header__cta");
-    console.log(contactButton);
 
     if (hero) {
         let images = hero.querySelectorAll("img");
@@ -70,15 +69,15 @@ export function initHeroAnimation() {
             let slideUp = gsap.timeline({ repeat: 0, delay: 0 });
                 slideUp.to(contact, { yPercent: 0, duration: 1, ease: "power1.in" });
 
-            return nav;
+            return slideUp;
         }
-
+        
         let landingAnim = gsap.timeline();
-            landingAnim.add(slideshow());
-            landingAnim.add(fadeOut(), ">");
-            landingAnim.add(donutDance(), ">");
-            landingAnim.add(showHeader(), ">");
-
-        contactButton.addEventListener("click", showContact());
+        landingAnim.add(slideshow());
+        landingAnim.add(fadeOut(), ">");
+        landingAnim.add(donutDance(), ">");
+        landingAnim.add(showHeader(), ">");
+        
+        contactButton.addEventListener("click", showContact);
     }
 }

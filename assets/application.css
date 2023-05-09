@@ -5570,68 +5570,9 @@ select:-webkit-autofill:focus {
   font-family: "Gestura Display", serif;
 }
 
-.template-contact {
-  background-image: url("contact-bg.jpg");
+.contact-info {
+  position: absolute;
+  z-index: 3;
   min-height: 100dvh;
-}
-
-.contact-footer {
-  margin-top: auto;
-  margin-bottom: 2rem;
-}
-.contact-footer .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.contact-footer__logomark {
-  width: 100%;
-  max-width: 26px;
-}
-.contact-footer__logomark svg {
-  display: block;
-  width: 100%;
-}
-.contact-footer__logomark svg path {
-  fill: #382932;
-}
-
-.contact-footer__nav .social {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 124px;
-  margin: 0;
-}
-.contact-footer__nav .social li {
-  margin-right: 1rem;
-}
-.contact-footer__nav .social li:last-child {
-  margin-right: 0;
-}
-.contact-footer__nav .social li svg {
-  width: 100%;
-}
-.contact-footer__nav .social li svg path {
-  transition: fill 1s;
-  fill: #382932;
-}
-.contact-footer__nav .social li a {
-  display: inline-block;
-}
-.contact-footer__nav .social li a:hover svg path {
-  fill: #605B54;
-}
-.contact-footer__nav .social li a.instagram {
-  width: 14px;
-}
-.contact-footer__nav .social li a.facebook {
-  width: 12px;
-}
-.contact-footer__nav .social li a.tiktok {
-  width: 11px;
-}
-.contact-footer__nav .social li a.youtube {
-  width: 17px;
+  width: 100vw;
 }

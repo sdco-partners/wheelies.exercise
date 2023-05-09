@@ -1,10 +1,10 @@
 {% for block in section.blocks %}
   {% if block.type == 'Header' %}
-    <div class="contact-info__divider"></div>
+
     <h2 class="contact-info__title">
       {{ block.settings.title }}
     </h2>
-  {% elsif block.type == 'Contact-Method' %}
+  {% elsif block.type == 'About' %}
     <p class="contact-info__tagline">
       {{ block.settings.title }}
     </p>
@@ -34,7 +34,7 @@
           {
             "type": "richtext",
             "id": "subheadline",
-            "label": "Contact Copy"
+            "label": "Contact Subheadline"
           }
         ]
       }, {
@@ -46,6 +46,16 @@
             "id": "graphic",
             "label": "Wheelies Illustration",
             "info": "Upload one of the donut people illustrations included in your branding files! For best results, use a PNG with a transparent background."
+          }
+        ]
+      }, {
+        "name": "Contact Info",
+        "type": "copy",
+        "settings": [
+          {
+            "type": "richtext",
+            "id": "copy",
+            "label": "Contact Info"
           }
         ]
       }

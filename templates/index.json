@@ -108,10 +108,10 @@
             "graphic": "shopify:\/\/shop_images\/Wheelies_Illustration-web_a69746ad-7a3e-4b30-8fb5-13af62a01623.png"
           }
         },
-        "71c49192-4799-48ec-9678-bf99a7c2e6b4": {
-          "type": "Subheadline",
+        "c68e2f19-b132-4c0b-91b0-a2b9f2441aa1": {
+          "type": "copy",
           "settings": {
-            "subheadline": "<p>Wheelies Truck<br\/>At the Corner of Peachtree and Wall<br\/>Across from the Five Points MARTA Station<br\/><br\/><a href=\"mailto:gilbert@wheeliesdonuts.com\" target=\"_blank\" title=\"Send an email to gilbert@wheeliesdonuts.com\">gilbert@wheeliesdonuts.com<\/a><br\/><br\/>404.295.7153<\/p>"
+            "copy": "<p>Wheelies Truck<br\/>At the Corner of Peachtree and Wall<br\/>Across from the Five Points MARTA Station<br\/><br\/><a href=\"mailto:gilbert@wheeliesdonuts.com\" target=\"_blank\" title=\"Send an email to gilbert@wheeliesdonuts.com\">gilbert@wheeliesdonuts.com<\/a><br\/><br\/>404.295.7153<\/p>"
           }
         }
       },
@@ -119,7 +119,7 @@
         "e718824d-7465-4479-81a1-854848f1b1b3",
         "51c3284e-b602-4c82-8510-bac2c7e29d2c",
         "77ea9475-b85b-41fb-9317-9896f180e665",
-        "71c49192-4799-48ec-9678-bf99a7c2e6b4"
+        "c68e2f19-b132-4c0b-91b0-a2b9f2441aa1"
       ],
       "settings": {
       }

@@ -17,6 +17,7 @@
     position: fixed;
     bottom: 0;
     width: 100%;
+    z-index: 500;
 }
 
 .header-wrapper {
@@ -31,8 +32,6 @@
     align-items: center;
     height: 5rem;
     width: 100%;
-    position: relative;
-    z-index: 100;
     max-width: calc(100% - 2rem);
     margin: 0 auto;
     @include breakpoint($laptop) {

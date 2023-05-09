@@ -306,12 +306,12 @@ select.btn--outline {
 
 .wrapper, .page-width {
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 4rem;
     width: 100%;
     // max-width: calc(100% - 2rem);
     margin: 0 auto;
     @include breakpoint($laptop) {
-        max-width: calc(100% - 200px);
+        max-width: 33vw;
         padding: 0;
     }
 }

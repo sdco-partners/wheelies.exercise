@@ -1,7 +1,7 @@
 .hero {
     height: 100vh;
     height: 100dvh;
-    position: relative;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     background: $pink;
@@ -38,7 +38,7 @@
 
 .wheelies-landing-logo {
     position: absolute;
-    z-index: 200;
+    z-index: 300;
     margin: 0 auto;
     height: 100vh;
     width: auto;

@@ -1,33 +1,35 @@
 {% if section.blocks %}
-  {% for block in section.blocks %}
+  <div class="wrapper">
+    {% for block in section.blocks %}
 
-    {% if block.type == "header" %}
-      <h2 class="contact-info__title">
-        {{ block.settings.title }}
-      </h2>
+      {% if block.type == "header" %}
+        <h2 class="contact-info__header">
+          {{ block.settings.title }}
+        </h2>
 
-    {% elsif block.type == "subheadline" %}
-      <p class="contact-info__subheadline">
-        {{ block.settings.title }}
-      </p>
+      {% elsif block.type == "subheadline" %}
+        <p class="contact-info__subheadline">
+          {{ block.settings.title }}
+        </p>
 
-    {% elsif block.type == "graphic" %}
-      <img class="contact-info__graphic" src="{{ block.settings.title | img_url: "small"}}">
+      {% elsif block.type == "graphic" %}
+        <img class="contact-info__graphic" src="{{ block.settings.title | img_url: "small"}}">
 
-    {% elsif block.type == "copy" %}
-      <p class="contact-info__copy">
-        {{ block.settings.title }}
-      </p>
+      {% elsif block.type == "copy" %}
+        <p class="contact-info__copy">
+          {{ block.settings.title }}
+        </p>
 
-    {% endif %}
-  {% endfor %}
+      {% endif %}
+    {% endfor %}
+  </div>
 {% endif %}
 
 {% schema %}
   {
     "name": "Contact Info",
     "tag": "section",
-    "class": "contact-info wrapper",
+    "class": "contact-info",
     "blocks": [
       {
         "name": "Header",

@@ -19,28 +19,8 @@ $secondary_bg: #eae6e1;
 $minicart_bg: #F2EEE9;
 
 
-@font-face {
-    font-family: 'Gestura Display';
-    src: url('GesturaDisplay-Regular.eot');
-    src: url('GesturaDisplay-Regular.eot?#iefix') format('embedded-opentype'),
-         url('GesturaDisplay-Regular.woff2') format('woff2'),
-         url('GesturaDisplay-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Pangea Afrikan';
-    src: url('PangeaAfrikan-Regular.woff2') format('woff2'),
-         url('PangeaAfrikan-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-} 
-
-$sans: 'Pangea Afrikan', sans-serif;
-$serif: 'Gestura Display', serif;
+$sans: sans-serif;
+$serif: serif;
 
 $hh: 4rem;
 $h1: 3rem;

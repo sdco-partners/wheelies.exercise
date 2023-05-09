@@ -1,20 +1,5 @@
 /* 	Base Files
 -------------------------------------------------- */
-@font-face {
-  font-family: "Gestura Display";
-  src: url("GesturaDisplay-Regular.eot");
-  src: url("GesturaDisplay-Regular.eot?#iefix") format("embedded-opentype"), url("GesturaDisplay-Regular.woff2") format("woff2"), url("GesturaDisplay-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Pangea Afrikan";
-  src: url("PangeaAfrikan-Regular.woff2") format("woff2"), url("PangeaAfrikan-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
 @-webkit-keyframes spin {
   100% {
     -webkit-transform: rotate(360deg);
@@ -751,7 +736,7 @@ body.menu-open {
 }
 
 html, body {
-  font-family: "Pangea Afrikan", sans-serif;
+  font-family: sans-serif;
   width: 100%;
   color: var(--text-color, #382932);
 }
@@ -966,7 +951,7 @@ select.btn--outline:hover {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  font-family: "Pangea Afrikan", sans-serif;
+  font-family: sans-serif;
   cursor: pointer;
   padding: 0;
   color: #382932;
@@ -974,13 +959,13 @@ select.btn--outline:hover {
 
 .wrapper, .page-width {
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 4rem;
   width: 100%;
   margin: 0 auto;
 }
 @media (min-width: 960px) {
   .wrapper, .page-width {
-    max-width: calc(100% - 200px);
+    max-width: 33vw;
     padding: 0;
   }
 }
@@ -1107,7 +1092,7 @@ em {
 
 .h1 {
   font-size: 2rem;
-  font-family: "Gestura Display", serif;
+  font-family: serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
 }
@@ -1120,7 +1105,7 @@ em {
 .h2 {
   font-size: 1.666rem;
   -webkit-font-smoothing: antialiased;
-  font-family: "Gestura Display", serif;
+  font-family: serif;
 }
 @media (min-width: 960px) {
   .h2 {
@@ -1130,7 +1115,7 @@ em {
 
 .h3 {
   font-size: 1.333rem;
-  font-family: "Gestura Display", serif;
+  font-family: serif;
 }
 @media (min-width: 960px) {
   .h3 {
@@ -1176,7 +1161,7 @@ p {
 }
 
 .label {
-  font-family: "Gestura Display", serif;
+  font-family: serif;
   font-weight: 400;
   font-size: 1.333rem;
 }
@@ -1978,6 +1963,7 @@ button.swiper-pagination-bullet {
   position: fixed;
   bottom: 0;
   width: 100%;
+  z-index: 500;
 }
 
 .header-wrapper {
@@ -1992,8 +1978,6 @@ button.swiper-pagination-bullet {
   align-items: center;
   height: 5rem;
   width: 100%;
-  position: relative;
-  z-index: 100;
   max-width: calc(100% - 2rem);
   margin: 0 auto;
 }
@@ -2188,7 +2172,7 @@ button.swiper-pagination-bullet {
   font-size: 0.8rem;
   color: #382932;
   margin-right: 10px;
-  font-family: "Gestura Display", serif;
+  font-family: serif;
   font-style: italic;
 }
 
@@ -2426,7 +2410,7 @@ button.swiper-pagination-bullet {
 }
 
 .header-nav__tagline {
-  font-family: "Gestura Display", serif;
+  font-family: serif;
   max-width: 300px;
   margin: 0 auto;
 }
@@ -2455,7 +2439,7 @@ button.swiper-pagination-bullet {
   font-size: 0.8rem;
 }
 .header-nav__bottom a em {
-  font-family: "Gestura Display", serif;
+  font-family: serif;
   text-transform: none;
   letter-spacing: normal;
 }
@@ -2792,7 +2776,7 @@ select:-webkit-autofill:focus {
   transition: -webkit-transform 0.4s;
   transition: transform 0.4s;
   transition: transform 0.4s, -webkit-transform 0.4s;
-  font-family: "Pangea Afrikan", sans-serif;
+  font-family: sans-serif;
   display: flex;
   pointer-events: none;
   z-index: 999;
@@ -2839,7 +2823,7 @@ select:-webkit-autofill:focus {
   align-items: baseline;
   justify-content: space-between;
   border-bottom: 1px solid #D6CFC7;
-  font-family: "Gestura Display", serif;
+  font-family: serif;
 }
 @media (min-width: 960px) {
   .minicart__header {
@@ -3195,7 +3179,7 @@ select:-webkit-autofill:focus {
   margin-bottom: 20px;
 }
 .form__group label {
-  font-family: "Pangea Afrikan", sans-serif;
+  font-family: sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   display: block;
@@ -3288,7 +3272,7 @@ select:-webkit-autofill:focus {
 .form__ctas p a {
   display: inline-block;
   color: #382932;
-  font-family: "Pangea Afrikan", sans-serif;
+  font-family: sans-serif;
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 0.1em;
@@ -3320,7 +3304,7 @@ select:-webkit-autofill:focus {
   color: #382932;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  font-family: "Pangea Afrikan", sans-serif;
+  font-family: sans-serif;
   font-size: 0.8rem;
 }
 .address p {
@@ -3407,7 +3391,7 @@ select:-webkit-autofill:focus {
 }
 
 .product__title {
-  font-family: "Gestura Display", serif;
+  font-family: serif;
 }
 
 .article-template {
@@ -3454,7 +3438,7 @@ select:-webkit-autofill:focus {
 }
 .article-template__content h1 {
   font-size: 3rem;
-  font-family: "Gestura Display", serif;
+  font-family: serif;
   text-align: left;
 }
 @media (min-width: 960px) {
@@ -3476,7 +3460,7 @@ select:-webkit-autofill:focus {
 }
 .article-template__content h2 {
   font-size: 1.666rem;
-  font-family: "Gestura Display", serif;
+  font-family: serif;
   margin-bottom: 1rem;
 }
 @media (min-width: 960px) {
@@ -3487,7 +3471,7 @@ select:-webkit-autofill:focus {
 }
 .article-template__content h3 {
   font-size: 1.333rem;
-  font-family: "Gestura Display", serif;
+  font-family: serif;
   margin: 2rem 0 1rem 0;
 }
 @media (min-width: 960px) {
@@ -3590,7 +3574,7 @@ select:-webkit-autofill:focus {
 }
 .shopify-policy__container .shopify-policy__title h1 {
   font-size: 3rem;
-  font-family: "Gestura Display", serif;
+  font-family: serif;
   text-align: left;
 }
 .shopify-policy__container .shopify-policy__body {
@@ -3607,7 +3591,7 @@ select:-webkit-autofill:focus {
 }
 .shopify-policy__container .shopify-policy__body h2 {
   font-size: 1.666rem;
-  font-family: "Gestura Display", serif;
+  font-family: serif;
   margin-bottom: 1rem;
 }
 @media (min-width: 960px) {
@@ -3617,7 +3601,7 @@ select:-webkit-autofill:focus {
 }
 .shopify-policy__container .shopify-policy__body h3 {
   font-size: 1.333rem;
-  font-family: "Gestura Display", serif;
+  font-family: serif;
   margin: 2rem 0 1rem 0;
 }
 @media (min-width: 960px) {
@@ -3703,38 +3687,26 @@ select:-webkit-autofill:focus {
 }
 
 .contact-info {
-  margin: 0 auto 11rem auto;
+  margin: 0 auto;
+  position: absolute;
+  z-index: 500;
+  height: 100dvh;
   width: 100vw;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  background-color: #BFE3ED;
+  color: #5096DC;
+  text-align: center;
+  font-family: sans-serif;
 }
-.contact-info__title {
-  margin: 1.5rem 0 0.5rem 0;
-  font-family: "Gestura Display", serif;
-  font-size: 1.333rem;
+.contact-info__header {
+  font-size: 2.333rem;
+  text-transform: uppercase;
 }
-.contact-info__title:first-of-type {
-  margin-top: 0;
-}
-@media (min-width: 960px) {
-  .contact-info__title {
-    font-size: 1.666rem;
-  }
-}
-.contact-info__tagline {
-  margin-bottom: 0;
-}
-.contact-info__tagline em {
-  font-family: "Gestura Display", serif;
-  padding-right: 2px;
-}
-.contact-info div {
-  display: block;
-  height: 1px;
-  background-color: #382932;
-  max-width: 450px;
-  margin: 1.5rem 0 0 0;
-}
-.contact-info div:first-of-type {
-  display: none;
+.contact-info__copy a {
+  color: #5096DC;
 }
 
 .not-found {
@@ -3797,7 +3769,7 @@ select:-webkit-autofill:focus {
 .hero {
   height: 100vh;
   height: 100dvh;
-  position: relative;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   background: #F5C7B8;
@@ -3831,7 +3803,7 @@ select:-webkit-autofill:focus {
 
 .wheelies-landing-logo {
   position: absolute;
-  z-index: 200;
+  z-index: 300;
   margin: 0 auto;
   height: 100vh;
   width: auto;
@@ -3885,7 +3857,7 @@ select:-webkit-autofill:focus {
   }
 }
 .split-hero .content .h2 {
-  font-family: "Gestura Display", serif;
+  font-family: serif;
 }
 .split-hero .content p:last-child {
   margin-bottom: 0;
@@ -4052,7 +4024,7 @@ select:-webkit-autofill:focus {
 }
 .collection-prefooter > span em {
   text-transform: lowercase;
-  font-family: "Gestura Display", serif;
+  font-family: serif;
   letter-spacing: unset;
 }
 
@@ -4077,7 +4049,7 @@ select:-webkit-autofill:focus {
 }
 .centered-copy p {
   font-size: 1.666rem;
-  font-family: "Gestura Display", serif;
+  font-family: serif;
   position: relative;
   z-index: 3;
 }
@@ -4221,7 +4193,7 @@ select:-webkit-autofill:focus {
   text-align: center;
   text-decoration: none;
   color: inherit;
-  font-family: "Gestura Display", serif;
+  font-family: serif;
   order: 1;
 }
 @media (min-width: 960px) {
@@ -4337,11 +4309,11 @@ select:-webkit-autofill:focus {
   margin-bottom: 1rem;
 }
 .text-slider-container .h5 em {
-  font-family: "Gestura Display", serif;
+  font-family: serif;
   text-transform: none;
 }
 .text-slider-container .h2 {
-  font-family: "Gestura Display", serif;
+  font-family: serif;
   max-width: 630px;
   width: 100%;
   margin: 0 auto;
@@ -4375,7 +4347,7 @@ select:-webkit-autofill:focus {
   margin-bottom: 1em;
 }
 .sustainability .h3 {
-  font-family: "Gestura Display", serif;
+  font-family: serif;
 }
 
 .sustainability__logos {
@@ -4412,7 +4384,7 @@ select:-webkit-autofill:focus {
   }
 }
 .prefooter .h2 {
-  font-family: "Gestura Display", serif;
+  font-family: serif;
 }
 .prefooter form {
   display: inline-flex;
@@ -4527,7 +4499,7 @@ select:-webkit-autofill:focus {
   align-items: baseline;
 }
 .faq__title .h3 {
-  font-family: "Gestura Display", serif;
+  font-family: serif;
   width: 100%;
   margin-right: 1rem;
   margin-bottom: 1em;
@@ -4671,7 +4643,7 @@ select:-webkit-autofill:focus {
 }
 .moment__content .big-btn span {
   font-size: 3rem;
-  font-family: "Gestura Display", serif;
+  font-family: serif;
   color: #ECE7E4;
 }
 @media (min-width: 960px) {
@@ -4723,7 +4695,7 @@ select:-webkit-autofill:focus {
 }
 .moments-trigger em {
   display: inline-block;
-  font-family: "Gestura Display", serif;
+  font-family: serif;
   text-transform: lowercase;
   margin: 0.25em 0 0.5em 0;
 }
@@ -4772,7 +4744,7 @@ select:-webkit-autofill:focus {
   }
 }
 .wellbeing-gallery .h2 {
-  font-family: "Gestura Display", serif;
+  font-family: serif;
 }
 .wellbeing-gallery .text-slider {
   text-align: center;
@@ -5260,7 +5232,7 @@ select:-webkit-autofill:focus {
   text-decoration: none;
 }
 .article-card__title .h3 {
-  font-family: "Gestura Display", serif;
+  font-family: serif;
 }
 
 .blog__filter-container {
@@ -5364,7 +5336,7 @@ select:-webkit-autofill:focus {
   margin: 0 0.25ch;
 }
 .blog__pagination > div em {
-  font-family: "Gestura Display", serif;
+  font-family: serif;
   display: inline;
   margin-right: 0.1ch;
 }
@@ -5466,7 +5438,7 @@ select:-webkit-autofill:focus {
 }
 .article-body h2 {
   font-size: 1.666rem;
-  font-family: "Gestura Display", serif;
+  font-family: serif;
   margin-bottom: 1.5rem;
 }
 @media (min-width: 960px) {
@@ -5476,7 +5448,7 @@ select:-webkit-autofill:focus {
 }
 .article-body h3 {
   font-size: 1.333rem;
-  font-family: "Gestura Display", serif;
+  font-family: serif;
   margin: 2rem 0 1rem 0;
 }
 @media (min-width: 960px) {
@@ -5567,12 +5539,5 @@ select:-webkit-autofill:focus {
   text-align: center;
 }
 .article-footer em {
-  font-family: "Gestura Display", serif;
-}
-
-.contact-info {
-  position: absolute;
-  z-index: 3;
-  min-height: 100dvh;
-  width: 100vw;
+  font-family: serif;
 }

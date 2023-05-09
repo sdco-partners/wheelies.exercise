@@ -2,6 +2,7 @@ export function initHeroAnimation() {
 
     let hero = document.querySelector(".js-hero");
     let header = document.querySelector(".js-header");
+    let contact = document.querySelector(".contact-info");
 
     if (hero) {
         let images = hero.querySelectorAll("img");

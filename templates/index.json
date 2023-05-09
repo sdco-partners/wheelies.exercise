@@ -111,7 +111,7 @@
         "c68e2f19-b132-4c0b-91b0-a2b9f2441aa1": {
           "type": "copy",
           "settings": {
-            "copy": "<p>Wheelies Truck<br\/>At the Corner of Peachtree and Wall<br\/>Across from the Five Points MARTA Station<br\/><br\/><a href=\"mailto:gilbert@wheeliesdonuts.com\" target=\"_blank\" title=\"Send an email to gilbert@wheeliesdonuts.com\">gilbert@wheeliesdonuts.com<\/a><br\/><br\/>404.295.7153<\/p>"
+            "copy": "<p>Wheelies Truck<br\/>At the Corner of Peachtree and Wall<br\/>Across from the Five Points MARTA Station<br\/><br\/><a href=\"mailto:gilbert@wheeliesdonuts.com\" target=\"_blank\" title=\"Send an email to gilbert@wheeliesdonuts.com\">gilbert@wheeliesdonuts.com<\/a><br\/><br\/><a href=\"tel:+1-404-295-7153\" target=\"_blank\" title=\"Call Wheelies Donuts at 404-295-7153\">404.295.7153<\/a><\/p>"
           }
         }
       },

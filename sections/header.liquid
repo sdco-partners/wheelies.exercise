@@ -7,8 +7,8 @@
       </a>
     {%- endif -%}
 
-    {%- if section.settings.cta -%}
-      <a class="header__cta" href="{{ section.settings.cta }}">{{ section.settings.cta_label }}</a>
+    {%- if section.settings.cta_label -%}
+      <p class="header__cta">{{ section.settings.cta_label }}</p>
     {%- endif -%}
 
   </div>
@@ -21,10 +21,6 @@
     "class": "header-container js-header",
     "settings": [
       {
-        "type": "url",
-        "id": "cta",
-        "label": "Call to Action"
-      }, {
         "type": "text",
         "id": "cta_label",
         "label": "CTA Label"

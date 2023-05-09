@@ -90,22 +90,29 @@
     "98eb5e98-7ed3-4ec9-9477-1884854e8e88": {
       "type": "contact",
       "blocks": {
+        "a6462d18-8b84-4f2e-b5f5-8ac7014f009d": {
+          "type": "header",
+          "settings": {
+            "title": "Yum for Everyone"
+          }
+        },
         "c68e2f19-b132-4c0b-91b0-a2b9f2441aa1": {
           "type": "copy",
           "settings": {
             "title": "<p>Wheelies Truck<\/p><p>At the corner of Peachtree and Wall<\/p><p>Across from the Five Points MARTA Station<\/p><p><a href=\"mailto:gilbert@wheeliesdonuts.com\" target=\"_blank\" title=\"Send an email to gilbert@wheeliesdonuts.com\">gilbert@wheeliesdonuts.com<\/a><\/p><p><a href=\"tel:+1-404-295-7153\" target=\"_blank\" title=\"Call Wheelies Donuts at 404-295-7153\">404.295.7153<\/a><\/p>"
           }
         },
-        "a6462d18-8b84-4f2e-b5f5-8ac7014f009d": {
-          "type": "header",
+        "34afe421-42c0-4ed5-b614-87f0ebb0557f": {
+          "type": "graphic",
           "settings": {
-            "title": "Yum for Everyone"
+            "title": "shopify:\/\/shop_images\/Wheelies_Illustration-web_a69746ad-7a3e-4b30-8fb5-13af62a01623.png"
           }
         }
       },
       "block_order": [
+        "a6462d18-8b84-4f2e-b5f5-8ac7014f009d",
         "c68e2f19-b132-4c0b-91b0-a2b9f2441aa1",
-        "a6462d18-8b84-4f2e-b5f5-8ac7014f009d"
+        "34afe421-42c0-4ed5-b614-87f0ebb0557f"
       ],
       "settings": {
       }

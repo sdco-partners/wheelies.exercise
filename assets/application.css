@@ -641,13 +641,13 @@ html {
 }
 
 ::-moz-selection {
-  background: #382932; /* WebKit/Blink Browsers */
+  background: #5096DC; /* WebKit/Blink Browsers */
   color: #ECE7E4;
   fill: #ECE7E4;
 }
 
 ::selection {
-  background: #382932; /* WebKit/Blink Browsers */
+  background: #5096DC; /* WebKit/Blink Browsers */
   color: #ECE7E4;
   fill: #ECE7E4;
 }
@@ -3706,6 +3706,7 @@ select:-webkit-autofill:focus {
   text-transform: uppercase;
 }
 .contact-info__copy a {
+  text-decoration: none;
   color: #5096DC;
 }
 

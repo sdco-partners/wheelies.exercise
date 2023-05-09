@@ -90,35 +90,14 @@
     "98eb5e98-7ed3-4ec9-9477-1884854e8e88": {
       "type": "contact",
       "blocks": {
-        "e718824d-7465-4479-81a1-854848f1b1b3": {
-          "type": "Header",
-          "settings": {
-            "title": "Yum for Everyone"
-          }
-        },
-        "51c3284e-b602-4c82-8510-bac2c7e29d2c": {
-          "type": "Subheadline",
-          "settings": {
-            "subheadline": "<p>Fresh, delicious, handmade-to-order mini donuts and locally roasted coffee served hot from our traveling Citroen kitchen, Wheelies is Atlanta-born and globally inspired.<\/p>"
-          }
-        },
-        "77ea9475-b85b-41fb-9317-9896f180e665": {
-          "type": "Graphic",
-          "settings": {
-            "graphic": "shopify:\/\/shop_images\/Wheelies_Illustration-web_a69746ad-7a3e-4b30-8fb5-13af62a01623.png"
-          }
-        },
         "c68e2f19-b132-4c0b-91b0-a2b9f2441aa1": {
           "type": "copy",
           "settings": {
-            "copy": "<p>Wheelies Truck<br\/>At the Corner of Peachtree and Wall<br\/>Across from the Five Points MARTA Station<br\/><br\/><a href=\"mailto:gilbert@wheeliesdonuts.com\" target=\"_blank\" title=\"Send an email to gilbert@wheeliesdonuts.com\">gilbert@wheeliesdonuts.com<\/a><br\/><br\/><a href=\"tel:+1-404-295-7153\" target=\"_blank\" title=\"Call Wheelies Donuts at 404-295-7153\">404.295.7153<\/a><\/p>"
+            "title": "<p>Wheelies Truck<\/p><p>At the corner of Peachtree and Wall<\/p><p>Across from the Five Points MARTA Station<\/p><p><a href=\"mailto:gilbert@wheeliesdonuts.com\" target=\"_blank\" title=\"Send an email to gilbert@wheeliesdonuts.com\">gilbert@wheeliesdonuts.com<\/a><\/p><p><a href=\"tel:+1-404-295-7153\" target=\"_blank\" title=\"Call Wheelies Donuts at 404-295-7153\">404.295.7153<\/a><\/p>"
           }
         }
       },
       "block_order": [
-        "e718824d-7465-4479-81a1-854848f1b1b3",
-        "51c3284e-b602-4c82-8510-bac2c7e29d2c",
-        "77ea9475-b85b-41fb-9317-9896f180e665",
         "c68e2f19-b132-4c0b-91b0-a2b9f2441aa1"
       ],
       "settings": {

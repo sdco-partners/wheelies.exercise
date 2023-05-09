@@ -1,37 +1,45 @@
 .contact-info {
-  margin: 0 auto;
   position: absolute;
   z-index: 500;
   height: 100dvh;
   width: 100vw;
-
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  justify-content: center;
-
   background-color: $mint;
   color: $blue;
   text-align: center;
   font-family: $sans;
 
-  &__header {
-    font-size: $h2;
-    text-transform: uppercase;
-  }
-
-  &__subheadline {
-
-  }
-
-  &__graphic {
-
-  }
-
-  &__copy {
-    a {
-      text-decoration: none;
-      color: $blue;
+  &__close-btn {
+    max-width: calc(100% - 2rem);
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    svg {
+      stroke: $blue;
+      cursor: pointer;
     }
   }
+
+  &__content {
+    margin: 0 auto;
+    height: 100%;
+    max-width: calc(100% - 4rem);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+
+    &__header {
+      font-size: $h2;
+      text-transform: uppercase;
+    }
+  
+    &__copy {
+      a {
+        text-decoration: none;
+        color: $blue;
+      }
+    }
+  }
+
 }

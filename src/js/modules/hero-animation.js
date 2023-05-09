@@ -4,6 +4,8 @@ export function initHeroAnimation() {
     let header = document.querySelector(".js-header");
     let contact = document.querySelector(".contact-info");
     let contactButton = document.querySelector(".header__cta");
+    let closeContact = document.querySelector(".contact-info__close-btn");
+    let closeContactButton = closeContact.querySelector("svg");
 
     if (hero) {
         let images = hero.querySelectorAll("img");
@@ -67,9 +69,16 @@ export function initHeroAnimation() {
 
         function showContact() {
             let slideUp = gsap.timeline({ repeat: 0, delay: 0 });
-                slideUp.to(contact, { yPercent: 0, duration: 1, ease: "power1.in" });
+                slideUp.to(contact, { yPercent: 0, duration: 0.35, ease: "power1.in" });
 
             return slideUp;
+        }
+        
+        function hideContact() {
+            let slideDown = gsap.timeline({ repeat: 0, delay: 0 });
+                slideDown.to(contact, { yPercent: 100, duration: 0.35, ease: "power1.in" });
+
+            return slideDown;
         }
         
         let landingAnim = gsap.timeline();
@@ -79,5 +88,6 @@ export function initHeroAnimation() {
         landingAnim.add(showHeader(), ">");
         
         contactButton.addEventListener("click", showContact);
+        closeContactButton.addEventListener("click", hideContact);
     }
 }

@@ -96,10 +96,10 @@
             "title": "Yum for Everyone"
           }
         },
-        "c68e2f19-b132-4c0b-91b0-a2b9f2441aa1": {
-          "type": "copy",
+        "2b4c73e3-dd9c-4615-b959-c2bf8da49fb3": {
+          "type": "subheadline",
           "settings": {
-            "title": "<p>Wheelies Truck<\/p><p>At the corner of Peachtree and Wall<\/p><p>Across from the Five Points MARTA Station<\/p><p><a href=\"mailto:gilbert@wheeliesdonuts.com\" target=\"_blank\" title=\"Send an email to gilbert@wheeliesdonuts.com\">gilbert@wheeliesdonuts.com<\/a><\/p><p><a href=\"tel:+1-404-295-7153\" target=\"_blank\" title=\"Call Wheelies Donuts at 404-295-7153\">404.295.7153<\/a><\/p>"
+            "title": "<p>Fresh, delicious, handmade-to-order mini donuts and locally roasted coffee served hot from our traveling Citroen kitchen, Wheelies is Atlanta-born and globally inspired.<\/p>"
           }
         },
         "34afe421-42c0-4ed5-b614-87f0ebb0557f": {
@@ -107,12 +107,19 @@
           "settings": {
             "title": "shopify:\/\/shop_images\/Wheelies_Illustration-web_a69746ad-7a3e-4b30-8fb5-13af62a01623.png"
           }
+        },
+        "c68e2f19-b132-4c0b-91b0-a2b9f2441aa1": {
+          "type": "copy",
+          "settings": {
+            "title": "<p>Wheelies Truck<\/p><p>At the corner of Peachtree and Wall<\/p><p>Across from the Five Points MARTA Station<\/p><p><a href=\"mailto:gilbert@wheeliesdonuts.com\" target=\"_blank\" title=\"Send an email to gilbert@wheeliesdonuts.com\">gilbert@wheeliesdonuts.com<\/a><\/p><p><a href=\"tel:+1-404-295-7153\" target=\"_blank\" title=\"Call Wheelies Donuts at 404-295-7153\">404.295.7153<\/a><\/p>"
+          }
         }
       },
       "block_order": [
         "a6462d18-8b84-4f2e-b5f5-8ac7014f009d",
-        "c68e2f19-b132-4c0b-91b0-a2b9f2441aa1",
-        "34afe421-42c0-4ed5-b614-87f0ebb0557f"
+        "2b4c73e3-dd9c-4615-b959-c2bf8da49fb3",
+        "34afe421-42c0-4ed5-b614-87f0ebb0557f",
+        "c68e2f19-b132-4c0b-91b0-a2b9f2441aa1"
       ],
       "settings": {
       }

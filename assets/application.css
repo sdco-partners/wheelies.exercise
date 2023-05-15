@@ -3783,46 +3783,41 @@ select:-webkit-autofill:focus {
 /* 	Section Templates
 -------------------------------------------------- */
 .hero {
+  position: relative;
   height: 100vh;
   height: 100dvh;
   width: 100vw;
-  display: flex;
-  flex-direction: column;
   background: #F5C7B8;
 }
-.hero__content {
-  height: 100%;
-  width: 100%;
-  display: grid;
-  grid-template-areas: ". tagline ." ". image ." ". . .";
-  grid-template-columns: 1fr 40% 1fr;
-  grid-template-rows: 1fr 60% 1fr;
-  align-items: center;
-}
-@media (min-width: 960px) {
-  .hero__content {
-    grid-template-columns: 1fr 22.5% 1fr;
-  }
-}
 .hero__content img {
-  grid-area: image;
+  position: absolute;
+  left: 0;
+  right: 0;
   margin: 0 auto;
-  width: 100%;
-  height: auto;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 .hero__content__tagline {
-  grid-area: tagline;
-  justify-self: center;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
   color: #DE8958;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .wheelies-landing-logo {
   position: absolute;
   z-index: 300;
-  margin: 0 auto;
-  height: 100vh;
+  height: auto;
   width: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 .wheelies-landing-logo .part-one {
   fill: #5096DC;

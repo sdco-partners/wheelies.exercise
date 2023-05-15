@@ -6,7 +6,7 @@
 
   {%- if section.blocks -%}
     {% for block in section.blocks %}
-      <img src="{{ block.settings.slide | img_url: "medium"}}">
+      {{ block.settings.slide | image_url: width: 200 | image_tag }}
     {% endfor %}
   {%- endif -%}
 

@@ -14,7 +14,7 @@
 
       {% elsif block.type == "subheadline" %}
         <p class="contact-info__content__subheadline">
-          {{ block.settings.title }}
+          {{ block.settings.title | remove: "<p>" | remove: "</p>" }}
         </p>
 
       {% elsif block.type == "graphic" %}

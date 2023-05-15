@@ -3812,12 +3812,15 @@ select:-webkit-autofill:focus {
 .wheelies-landing-logo {
   position: absolute;
   z-index: 300;
-  height: auto;
-  width: auto;
+  height: 100%;
+  width: 100%;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .wheelies-landing-logo .part-one {
   fill: #5096DC;

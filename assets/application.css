@@ -1,5 +1,11 @@
 /* 	Base Files
 -------------------------------------------------- */
+@font-face {
+  font-family: "GT Walsheim";
+  src: url("GT-Walsheim-Bold-Trial.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
 @-webkit-keyframes spin {
   100% {
     -webkit-transform: rotate(360deg);
@@ -736,7 +742,7 @@ body.menu-open {
 }
 
 html, body {
-  font-family: sans-serif;
+  font-family: "GT Walsheim", sans-serif;
   width: 100%;
   color: var(--text-color, #382932);
 }
@@ -951,7 +957,7 @@ select.btn--outline:hover {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  font-family: sans-serif;
+  font-family: "GT Walsheim", sans-serif;
   cursor: pointer;
   padding: 0;
   color: #382932;
@@ -2004,7 +2010,6 @@ button.swiper-pagination-bullet {
   cursor: pointer;
   color: #5096DC;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
   font-size: 1.666rem;
 }
 @media (min-width: 650px) {
@@ -2776,7 +2781,7 @@ select:-webkit-autofill:focus {
   transition: -webkit-transform 0.4s;
   transition: transform 0.4s;
   transition: transform 0.4s, -webkit-transform 0.4s;
-  font-family: sans-serif;
+  font-family: "GT Walsheim", sans-serif;
   display: flex;
   pointer-events: none;
   z-index: 999;
@@ -3179,7 +3184,7 @@ select:-webkit-autofill:focus {
   margin-bottom: 20px;
 }
 .form__group label {
-  font-family: sans-serif;
+  font-family: "GT Walsheim", sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   display: block;
@@ -3272,7 +3277,7 @@ select:-webkit-autofill:focus {
 .form__ctas p a {
   display: inline-block;
   color: #382932;
-  font-family: sans-serif;
+  font-family: "GT Walsheim", sans-serif;
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 0.1em;
@@ -3304,7 +3309,7 @@ select:-webkit-autofill:focus {
   color: #382932;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  font-family: sans-serif;
+  font-family: "GT Walsheim", sans-serif;
   font-size: 0.8rem;
 }
 .address p {
@@ -3694,7 +3699,7 @@ select:-webkit-autofill:focus {
   background-color: #BFE3ED;
   color: #5096DC;
   text-align: center;
-  font-family: sans-serif;
+  font-family: "GT Walsheim", sans-serif;
 }
 .contact-info__close-btn {
   max-width: calc(100% - 2rem);
@@ -3710,17 +3715,24 @@ select:-webkit-autofill:focus {
 .contact-info__content {
   margin: 0 auto;
   height: 100%;
-  max-width: calc(100% - 4rem);
+  width: 60%;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
 }
-.contact-info__content__header {
+.contact-info__header {
   font-size: 2.333rem;
   text-transform: uppercase;
+  margin-bottom: 1.75rem;
 }
-.contact-info__content__copy a {
+.contact-info__graphic {
+  margin: 0 auto;
+}
+.contact-info__copy {
+  font-size: 1.666rem;
+}
+.contact-info__copy a {
   text-decoration: none;
   color: #5096DC;
 }
@@ -3807,6 +3819,7 @@ select:-webkit-autofill:focus {
   color: #DE8958;
   text-transform: uppercase;
   text-align: center;
+  letter-spacing: 0.125rem;
 }
 
 .wheelies-landing-logo {

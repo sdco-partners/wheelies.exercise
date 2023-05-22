@@ -1,5 +1,12 @@
 @import "../bower_components/node_modules/breakpoint-sass/stylesheets/breakpoint";
 
+@font-face {
+    font-family: "GT Walsheim";
+    src: url("GT-Walsheim-Bold-Trial.woff2")
+    format("woff2");
+    font-weight: bold;
+    font-style: normal;
+}
 
 ///WHEELIES PALETTE////
 $blue: #5096DC;
@@ -19,7 +26,7 @@ $secondary_bg: #eae6e1;
 $minicart_bg: #F2EEE9;
 
 
-$sans: sans-serif;
+$sans: "GT Walsheim", sans-serif;
 $serif: serif;
 
 $hh: 4rem;

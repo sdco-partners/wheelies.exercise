@@ -57,7 +57,6 @@
     cursor: pointer;
     color: $blue;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
     font-size: $h3;
     @include breakpoint($tablet) {
         display: inline-block;

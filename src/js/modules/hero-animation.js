@@ -21,7 +21,7 @@ export function initHeroAnimation() {
             let image = gsap.utils.toArray(images);
             let allButLast = image.slice(0, -1);
             
-            let slide = gsap.timeline({ repeat: 0, delay: 0 });
+            let slide = gsap.timeline();
                 slide.to(images, { display: "block", duration: 0.35, stagger: 1, });
                 slide.to(allButLast, { display: "none" });
                 
@@ -29,7 +29,7 @@ export function initHeroAnimation() {
         }
 
         function fadeOut() {
-            let fade = gsap.timeline({ repeat: 0, delay: 0.25 });
+            let fade = gsap.timeline({ delay: 0.25 });
                 fade.to(images, { opacity: 0, duration: 0.5, ease: "power1.out" });
                 fade.to(tagline, { opacity: 0, duration: 0.5, ease: "power1.out" }, "<");
                 
@@ -49,7 +49,7 @@ export function initHeroAnimation() {
             gsap.set(donuts, { display: "block", opacity: 1});
             gsap.set(logoParts, { opacity: 0});
 
-            let dance = gsap.timeline({ repeat: 0, delay: 0 });
+            let dance = gsap.timeline();
                 dance.to(part1, { opacity: 1, duration: 0.5, ease: "power1.in" });
                 dance.to(part5, { opacity: 1, duration: 0, delay: 0.75 });
                 dance.to(part3, { opacity: 1, duration: 0, delay: 0.75 });
@@ -61,21 +61,21 @@ export function initHeroAnimation() {
 
         function showHeader() {
             gsap.set(header, { display: "block", opacity: 0});
-            let nav = gsap.timeline({ repeat: 0, delay: 0.65 });
+            let nav = gsap.timeline({ delay: 0.65 });
                 nav.to(header, { opacity: 1, duration: 0.35, ease: "power1.in" });
 
             return nav;
         }
 
         function showContact() {
-            let slideUp = gsap.timeline({ repeat: 0, delay: 0 });
+            let slideUp = gsap.timeline();
                 slideUp.to(contact, { yPercent: 0, duration: 0.35, ease: "power1.in" });
 
             return slideUp;
         }
         
         function hideContact() {
-            let slideDown = gsap.timeline({ repeat: 0, delay: 0 });
+            let slideDown = gsap.timeline();
                 slideDown.to(contact, { yPercent: 100, duration: 0.35, ease: "power1.in" });
 
             return slideDown;
